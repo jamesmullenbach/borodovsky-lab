@@ -1,0 +1,8 @@
+>gene_id=test|start=1|end=5|strand=POSITIVE
+total score: 14.0
+average score: 2.8
+score variance: 2.96
+>gene_id=test2|start=7|end=12|strand=POSITIVE
+total score: 21.0
+average score: 3.5
+score variance: 15.25

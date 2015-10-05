@@ -1,0 +1,2 @@
+NC_000913	verified	CDS	1	5	.	+	0	gene_id=test start_codon=ATG
+NC_000913	verified	CDS	7	12	.	+	0	gene_id=test2 start_codon=ATG

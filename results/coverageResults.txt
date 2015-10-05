@@ -1,0 +1,3060 @@
+>gene_id=thrA|start=337|end=2799|strand=POSITIVE
+total score: 17949.8237292
+average score: 7.28778876541
+score variance: 723.165620585
+>gene_id=thrC|start=3734|end=5020|strand=POSITIVE
+total score: 10866.3828866
+average score: 8.44318794608
+score variance: 322.440674457
+>gene_id=talB|start=8238|end=9191|strand=POSITIVE
+total score: 22336.6638412
+average score: 23.4136937539
+score variance: 3051.4100929
+>gene_id=dnaK|start=12163|end=14079|strand=POSITIVE
+total score: 205093.681547
+average score: 106.986792669
+score variance: 141438.705986
+>gene_id=dnaJ|start=14168|end=15298|strand=POSITIVE
+total score: 19652.1435551
+average score: 17.3759005792
+score variance: 1765.02616611
+>gene_id=nhaA|start=17489|end=18655|strand=POSITIVE
+total score: 1487.0078934
+average score: 1.27421413316
+score variance: 17.7515131264
+>gene_id=rpsT|start=20815|end=21078|strand=POSITIVE
+total score: 17789.79731
+average score: 67.3855958712
+score variance: 51774.4378541
+>gene_id=ileS|start=22391|end=25207|strand=POSITIVE
+total score: 9931.4541775
+average score: 3.52554283901
+score variance: 82.9802038733
+>gene_id=carA|start=29651|end=30799|strand=POSITIVE
+total score: 6597.4012254
+average score: 5.74186355561
+score variance: 162.813611393
+>gene_id=carB|start=30817|end=34038|strand=POSITIVE
+total score: 16203.2997436
+average score: 5.02895708988
+score variance: 84.5808061779
+>gene_id=caiB|start=37898|end=39115|strand=POSITIVE
+total score: 117.4999918
+average score: 0.0964696155993
+score variance: 0.311993280033
+>gene_id=caiA|start=39244|end=40386|strand=POSITIVE
+total score: 82.999986
+average score: 0.0726159107612
+score variance: 0.0476318818949
+>gene_id=folA|start=49823|end=50302|strand=POSITIVE
+total score: 839.6208978
+average score: 1.74921020375
+score variance: 28.0790169003
+>gene_id=apaH|start=50380|end=51222|strand=POSITIVE
+total score: 675.4997958
+average score: 0.801304621352
+score variance: 6.22365775365
+>gene_id=rluA|start=59687|end=60346|strand=POSITIVE
+total score: 209.0000172
+average score: 0.316666692727
+score variance: 1.15699423984
+>gene_id=rapA|start=60358|end=63264|strand=POSITIVE
+total score: 1029.9999968
+average score: 0.354317164362
+score variance: 0.68146153545
+>gene_id=polB|start=63429|end=65780|strand=POSITIVE
+total score: 138.999969
+average score: 0.0590986262755
+score variance: 0.0554263685507
+>gene_id=araD|start=65855|end=66550|strand=POSITIVE
+total score: 21.0000021
+average score: 0.0301724168103
+score variance: 0.0167363286029
+>gene_id=araA|start=66835|end=68337|strand=POSITIVE
+total score: 81.9999906
+average score: 0.0545575453094
+score variance: 0.0431100800645
+>gene_id=araB|start=68348|end=70048|strand=POSITIVE
+total score: 38.0000022
+average score: 0.0223398014109
+score variance: 0.00954753098096
+>gene_id=araC|start=70387|end=71265|strand=POSITIVE
+total score: 1485.8752309
+average score: 1.69041550728
+score variance: 170.408697375
+>gene_id=leuD|start=78848|end=79453|strand=POSITIVE
+total score: 7391.839721
+average score: 12.1977553152
+score variance: 487.86436512
+>gene_id=leuC|start=79464|end=80864|strand=POSITIVE
+total score: 12887.6346054
+average score: 9.1988826591
+score variance: 292.495554663
+>gene_id=leuB|start=80867|end=81958|strand=POSITIVE
+total score: 14500.7397544
+average score: 13.2790657092
+score variance: 989.195885219
+>gene_id=leuA|start=81958|end=83529|strand=POSITIVE
+total score: 14161.576765
+average score: 9.00863661896
+score variance: 788.567956605
+>gene_id=ilvI|start=85630|end=87354|strand=POSITIVE
+total score: 4690.8782705
+average score: 2.71934972203
+score variance: 87.4328057542
+>gene_id=rsmH|start=90094|end=91035|strand=POSITIVE
+total score: 2008.6110569
+average score: 2.13228349989
+score variance: 30.0528902103
+>gene_id=murE|start=93166|end=94653|strand=POSITIVE
+total score: 1632.649023
+average score: 1.09721036492
+score variance: 7.47844871734
+>gene_id=murF|start=94650|end=96008|strand=POSITIVE
+total score: 803.3510139
+average score: 0.59113393223
+score variance: 2.57793932185
+>gene_id=murD|start=97087|end=98403|strand=POSITIVE
+total score: 1342.199944
+average score: 1.01913435383
+score variance: 8.21998043427
+>gene_id=murG|start=99644|end=100711|strand=POSITIVE
+total score: 663.7180315
+average score: 0.621458830993
+score variance: 4.30936841986
+>gene_id=murC|start=100765|end=102240|strand=POSITIVE
+total score: 852.0998651
+average score: 0.57730343164
+score variance: 2.62961068756
+>gene_id=ddlB|start=102233|end=103153|strand=POSITIVE
+total score: 881.8133177
+average score: 0.957452027904
+score variance: 4.28976002917
+>gene_id=ftsZ|start=105305|end=106456|strand=POSITIVE
+total score: 25849.6702095
+average score: 22.4389498346
+score variance: 2391.23690734
+>gene_id=lpxC|start=106557|end=107474|strand=POSITIVE
+total score: 22226.1238691
+average score: 24.2114639097
+score variance: 7615.57557711
+>gene_id=secA|start=108279|end=110984|strand=POSITIVE
+total score: 4133.4664226
+average score: 1.52751900318
+score variance: 14.2389622814
+>gene_id=mutT|start=111044|end=111433|strand=POSITIVE
+total score: 117.450027
+average score: 0.301153915385
+score variance: 0.652992828438
+>gene_id=guaC|start=113444|end=114487|strand=POSITIVE
+total score: 6591.8603207
+average score: 6.31404245278
+score variance: 167.135593658
+>gene_id=aceE|start=123017|end=125680|strand=POSITIVE
+total score: 25784.0831161
+average score: 9.67870987842
+score variance: 779.371736723
+>gene_id=aceF|start=125695|end=127587|strand=POSITIVE
+total score: 18260.9207417
+average score: 9.64655084083
+score variance: 537.240277149
+>gene_id=lpd|start=127912|end=129336|strand=POSITIVE
+total score: 17967.0714438
+average score: 12.6084711886
+score variance: 695.417147809
+>gene_id=acnB|start=131615|end=134212|strand=POSITIVE
+total score: 34219.4428853
+average score: 13.1714560759
+score variance: 802.196762298
+>gene_id=speD|start=134788|end=135582|strand=POSITIVE
+total score: 2037.5326161
+average score: 2.5629341083
+score variance: 31.7874643105
+>gene_id=speE|start=135598|end=136464|strand=POSITIVE
+total score: 6847.1562683
+average score: 7.89752741442
+score variance: 428.315278368
+>gene_id=gcd|start=138835|end=141225|strand=POSITIVE
+total score: 963.7917223
+average score: 0.403091477332
+score variance: 3.32153215717
+>gene_id=panD|start=146314|end=146694|strand=POSITIVE
+total score: 8068.4008966
+average score: 21.1769052404
+score variance: 2382.40855548
+>gene_id=panB|start=148807|end=149601|strand=POSITIVE
+total score: 6213.3099623
+average score: 7.81548422931
+score variance: 365.922445678
+>gene_id=folK|start=157253|end=157732|strand=POSITIVE
+total score: 79.349963
+average score: 0.165312422917
+score variance: 0.301829518287
+>gene_id=dksA|start=160149|end=160604|strand=POSITIVE
+total score: 13417.7879624
+average score: 29.4249736018
+score variance: 4192.8966758
+>gene_id=ligT|start=161501|end=162031|strand=POSITIVE
+total score: 44.1428471
+average score: 0.0831315387947
+score variance: 0.0544592232016
+>gene_id=dgt|start=179237|end=180754|strand=POSITIVE
+total score: 469.9206209
+average score: 0.309565626416
+score variance: 0.706722786446
+>gene_id=dapD|start=185123|end=185947|strand=POSITIVE
+total score: 9687.1733113
+average score: 11.7420282561
+score variance: 831.093832847
+>gene_id=map|start=188712|end=189506|strand=POSITIVE
+total score: 2122.557223
+average score: 2.66988329937
+score variance: 52.3385158772
+>gene_id=rpsB|start=189874|end=190599|strand=POSITIVE
+total score: 42423.6257543
+average score: 58.434746218
+score variance: 18656.2154209
+>gene_id=tsf|start=190857|end=191708|strand=POSITIVE
+total score: 20409.5338692
+average score: 23.9548519592
+score variance: 3957.50815751
+>gene_id=pyrH|start=191855|end=192580|strand=POSITIVE
+total score: 4098.3569085
+average score: 5.64511970868
+score variance: 297.814002211
+>gene_id=frr|start=192872|end=193429|strand=POSITIVE
+total score: 9171.6992096
+average score: 16.4367369348
+score variance: 1210.94669616
+>gene_id=ispU|start=194903|end=195664|strand=POSITIVE
+total score: 697.8411276
+average score: 0.915802004724
+score variance: 10.3475225047
+>gene_id=lpxD|start=200971|end=201996|strand=POSITIVE
+total score: 1851.6002375
+average score: 1.80467859405
+score variance: 27.0804024873
+>gene_id=fabZ|start=202101|end=202556|strand=POSITIVE
+total score: 3342.7447331
+average score: 7.33058055504
+score variance: 274.49920111
+>gene_id=lpxA|start=202560|end=203348|strand=POSITIVE
+total score: 2978.8406268
+average score: 3.77546340532
+score variance: 146.433134844
+>gene_id=lpxB|start=203348|end=204496|strand=POSITIVE
+total score: 215.3618961
+average score: 0.187434200261
+score variance: 0.451031768504
+>gene_id=rnhB|start=204493|end=205089|strand=POSITIVE
+total score: 165.6249936
+average score: 0.2774288
+score variance: 0.363713060109
+>gene_id=accA|start=208621|end=209580|strand=POSITIVE
+total score: 5967.4672938
+average score: 6.21611176437
+score variance: 257.42963513
+>gene_id=ldcC|start=209679|end=211820|strand=POSITIVE
+total score: 792.8259462
+average score: 0.370133494958
+score variance: 1.67651363366
+>gene_id=rof|start=213678|end=213932|strand=POSITIVE
+total score: 3477.9241986
+average score: 13.6389184259
+score variance: 1212.69564473
+>gene_id=proS|start=217057|end=218775|strand=POSITIVE
+total score: 4256.4378111
+average score: 2.47611274642
+score variance: 27.3302225116
+>gene_id=rnhA|start=235535|end=236002|strand=POSITIVE
+total score: 334.1665502
+average score: 0.714031090171
+score variance: 2.94399241455
+>gene_id=pepD|start=254259|end=255716|strand=POSITIVE
+total score: 11303.6381401
+average score: 7.75283823052
+score variance: 380.384910984
+>gene_id=proB|start=260388|end=261491|strand=POSITIVE
+total score: 2775.8790276
+average score: 2.51438317717
+score variance: 49.9134703792
+>gene_id=proA|start=261503|end=262756|strand=POSITIVE
+total score: 4988.1807681
+average score: 3.97781560455
+score variance: 1124.66271493
+>gene_id=argF|start=289301|end=290305|strand=POSITIVE
+total score: 1345.9861677
+average score: 1.3392897191
+score variance: 32.5498305788
+>gene_id=betB|start=327261|end=328733|strand=POSITIVE
+total score: 812.250829
+average score: 0.551426224711
+score variance: 1.70381547351
+>gene_id=codA|start=356171|end=357454|strand=POSITIVE
+total score: 1011.6396323
+average score: 0.787881333567
+score variance: 4.35164510087
+>gene_id=cynT|start=358799|end=359458|strand=POSITIVE
+total score: 61.200008
+average score: 0.0927272848485
+score variance: 0.0687930400885
+>gene_id=cynS|start=359489|end=359959|strand=POSITIVE
+total score: 5.133334
+average score: 0.0108987983015
+score variance: 0.00259361262614
+>gene_id=lacA|start=361249|end=361860|strand=POSITIVE
+total score: 5.86032
+average score: 0.00957568627451
+score variance: 0.00474862609311
+>gene_id=lacZ|start=363231|end=366305|strand=POSITIVE
+total score: 201.1250336
+average score: 0.0654065149919
+score variance: 0.059938569219
+>gene_id=lacI|start=366428|end=367510|strand=POSITIVE
+total score: 677.372295
+average score: 0.625459182825
+score variance: 3.46544861304
+>gene_id=mhpR|start=367587|end=368420|strand=POSITIVE
+total score: 153.166672
+average score: 0.183653083933
+score variance: 6.19167912078
+>gene_id=mhpB|start=370277|end=371221|strand=POSITIVE
+total score: 33.1666473
+average score: 0.0350969812698
+score variance: 0.0342522831869
+>gene_id=mhpC|start=371239|end=372105|strand=POSITIVE
+total score: 51.2499838
+average score: 0.059111861361
+score variance: 0.0383313436799
+>gene_id=mhpD|start=372115|end=372924|strand=POSITIVE
+total score: 42.0000038
+average score: 0.0518518565432
+score variance: 0.0380444570502
+>gene_id=frmA|start=378462|end=379571|strand=POSITIVE
+total score: 1623.9164795
+average score: 1.46298781937
+score variance: 19.9476232742
+>gene_id=tauD|start=387795|end=388646|strand=POSITIVE
+total score: 1804.1732875
+average score: 2.1175742811
+score variance: 17.6539295374
+>gene_id=hemB|start=388753|end=389727|strand=POSITIVE
+total score: 502.305561
+average score: 0.515185190769
+score variance: 9.85473308601
+>gene_id=ddlA|start=399829|end=400923|strand=POSITIVE
+total score: 2105.5334043
+average score: 1.92286155644
+score variance: 40.9686416549
+>gene_id=proC|start=404835|end=405644|strand=POSITIVE
+total score: 363.4601465
+average score: 0.448716230247
+score variance: 1.59376679631
+>gene_id=aroL|start=406405|end=406929|strand=POSITIVE
+total score: 212.4999012
+average score: 0.404761716571
+score variance: 2.27738874556
+>gene_id=rdgC|start=409108|end=410019|strand=POSITIVE
+total score: 2726.5720607
+average score: 2.98966234726
+score variance: 184.412253733
+>gene_id=sbcC|start=412607|end=415753|strand=POSITIVE
+total score: 294.0999693
+average score: 0.0934540734986
+score variance: 0.0807725211467
+>gene_id=sbcD|start=415750|end=416952|strand=POSITIVE
+total score: 4093.0176902
+average score: 3.40234221962
+score variance: 82.715038697
+>gene_id=tgt|start=426137|end=427264|strand=POSITIVE
+total score: 14144.7595224
+average score: 12.5396804277
+score variance: 3377.69610534
+>gene_id=dxs|start=438315|end=440177|strand=POSITIVE
+total score: 564.9999362
+average score: 0.303274254536
+score variance: 0.669963720846
+>gene_id=ispA|start=440202|end=441101|strand=POSITIVE
+total score: 377.6665586
+average score: 0.419629509556
+score variance: 1.3907774996
+>gene_id=yajQ|start=444683|end=445174|strand=POSITIVE
+total score: 23.39286
+average score: 0.0475464634146
+score variance: 0.0355564984318
+>gene_id=tig|start=455133|end=456431|strand=POSITIVE
+total score: 17150.1716284
+average score: 13.2025955569
+score variance: 1234.83620041
+>gene_id=clpX|start=457426|end=458700|strand=POSITIVE
+total score: 12481.0552733
+average score: 9.78906295945
+score variance: 1690.51740957
+>gene_id=lon|start=458888|end=461242|strand=POSITIVE
+total score: 46014.574179
+average score: 19.5390973159
+score variance: 12139.8148937
+>gene_id=hupB|start=461451|end=461723|strand=POSITIVE
+total score: 1295.137721
+average score: 4.74409421612
+score variance: 194.555869289
+>gene_id=tesB|start=474301|end=475161|strand=POSITIVE
+total score: 12218.0610042
+average score: 14.1905470432
+score variance: 2071.5574865
+>gene_id=maa|start=479367|end=479918|strand=POSITIVE
+total score: 1517.4000382
+average score: 2.74891311268
+score variance: 97.7766640913
+>gene_id=priC|start=490285|end=490812|strand=POSITIVE
+total score: 237.7753508
+average score: 0.450332103788
+score variance: 1.41088226045
+>gene_id=apt|start=491412|end=491963|strand=POSITIVE
+total score: 180.074507
+average score: 0.326221932971
+score variance: 0.602923328378
+>gene_id=dnaX|start=492092|end=494023|strand=POSITIVE
+total score: 4843.1995706
+average score: 2.50683207588
+score variance: 219.096347632
+>gene_id=htpG|start=495120|end=496994|strand=POSITIVE
+total score: 37729.2074488
+average score: 20.1222439727
+score variance: 5367.19039306
+>gene_id=adk|start=497175|end=497819|strand=POSITIVE
+total score: 329.4998357
+average score: 0.51085245845
+score variance: 2.78040820774
+>gene_id=hemH|start=498055|end=499017|strand=POSITIVE
+total score: 129.499974
+average score: 0.134475570093
+score variance: 0.149284863499
+>gene_id=aes|start=499014|end=499973|strand=POSITIVE
+total score: 316.590786
+average score: 0.32978206875
+score variance: 1.05731345465
+>gene_id=gsk|start=500125|end=501429|strand=POSITIVE
+total score: 322.7999967
+average score: 0.24735631931
+score variance: 0.52402933269
+>gene_id=copA|start=508875|end=511379|strand=POSITIVE
+total score: 11297.4917291
+average score: 4.50997673816
+score variance: 277.009552348
+>gene_id=gcl|start=533916|end=535697|strand=POSITIVE
+total score: 137.3968227
+average score: 0.0771025941077
+score variance: 0.0998075409916
+>gene_id=purK|start=551527|end=552594|strand=POSITIVE
+total score: 3276.0912437
+average score: 3.06750116451
+score variance: 157.895502427
+>gene_id=purE|start=552591|end=553100|strand=POSITIVE
+total score: 43.0519313
+average score: 0.0844155515686
+score variance: 0.0917962721566
+>gene_id=ppiB|start=553943|end=554437|strand=POSITIVE
+total score: 727.3271462
+average score: 1.4693477701
+score variance: 17.0466396733
+>gene_id=cysS|start=554611|end=555996|strand=POSITIVE
+total score: 1826.4361609
+average score: 1.31777500786
+score variance: 52.208451246
+>gene_id=folD|start=556875|end=557741|strand=POSITIVE
+total score: 189.3333201
+average score: 0.218377531834
+score variance: 1.27397792142
+>gene_id=rusA|start=573371|end=573733|strand=POSITIVE
+total score: 15.4999973
+average score: 0.0426997170799
+score variance: 0.0306290313611
+>gene_id=nfsB|start=604771|end=605424|strand=POSITIVE
+total score: 515.5833733
+average score: 0.788353781804
+score variance: 16.8137784269
+>gene_id=entF|start=614157|end=618038|strand=POSITIVE
+total score: 117.1999805
+average score: 0.0301906183668
+score variance: 0.0153727632133
+>gene_id=entC|start=624885|end=626060|strand=POSITIVE
+total score: 157.1999659
+average score: 0.133673440391
+score variance: 0.116237786297
+>gene_id=entA|start=628551|end=629297|strand=POSITIVE
+total score: 215.9999616
+average score: 0.2891565751
+score variance: 3.8221053606
+>gene_id=ahpC|start=638945|end=639508|strand=POSITIVE
+total score: 2554.6495478
+average score: 4.52952047482
+score variance: 142.565103868
+>gene_id=uspG|start=641439|end=641867|strand=POSITIVE
+total score: 229.4999646
+average score: 0.534964952448
+score variance: 1.18411962341
+>gene_id=cspE|start=657292|end=657501|strand=POSITIVE
+total score: 618.0907237
+average score: 2.94328916048
+score variance: 26.8588608036
+>gene_id=lipA|start=659251|end=660216|strand=POSITIVE
+total score: 1636.8917177
+average score: 1.69450488375
+score variance: 80.2013710635
+>gene_id=mrdA|start=666316|end=668217|strand=POSITIVE
+total score: 1056.1817767
+average score: 0.555300618665
+score variance: 8.04872039324
+>gene_id=holA|start=670574|end=671605|strand=POSITIVE
+total score: 1539.7001069
+average score: 1.49195746793
+score variance: 9.2156817292
+>gene_id=leuS|start=672201|end=674783|strand=POSITIVE
+total score: 18704.0476026
+average score: 7.24121084111
+score variance: 1081.65056588
+>gene_id=asnB|start=697513|end=699177|strand=POSITIVE
+total score: 4116.4951834
+average score: 2.47236947952
+score variance: 34.5613439743
+>gene_id=glnS|start=706093|end=707757|strand=POSITIVE
+total score: 2098.4441726
+average score: 1.26032683039
+score variance: 10.8463039505
+>gene_id=fur|start=710200|end=710646|strand=POSITIVE
+total score: 7038.9312534
+average score: 15.7470497839
+score variance: 988.116289841
+>gene_id=fldA|start=710935|end=711465|strand=POSITIVE
+total score: 497.6111049
+average score: 0.937120724859
+score variance: 5.23013168485
+>gene_id=seqA|start=712987|end=713532|strand=POSITIVE
+total score: 2117.9664658
+average score: 3.87905946117
+score variance: 40.2781261348
+>gene_id=kdpE|start=721056|end=721733|strand=POSITIVE
+total score: 42.1666682
+average score: 0.0621927259587
+score variance: 0.0483748015951
+>gene_id=phr|start=739507|end=740925|strand=POSITIVE
+total score: 132.1999799
+average score: 0.093164185976
+score variance: 0.137142851468
+>gene_id=nei|start=745935|end=746726|strand=POSITIVE
+total score: 29.914285
+average score: 0.0377705618687
+score variance: 0.0170890245006
+>gene_id=gltA|start=753185|end=754468|strand=POSITIVE
+total score: 9014.48199
+average score: 7.0206246028
+score variance: 468.85073349
+>gene_id=sdhA|start=755907|end=757673|strand=POSITIVE
+total score: 7054.815649
+average score: 3.99253856763
+score variance: 145.677441208
+>gene_id=sdhB|start=757689|end=758405|strand=POSITIVE
+total score: 1379.6550698
+average score: 1.92420511827
+score variance: 57.5605893877
+>gene_id=sucB|start=761522|end=762739|strand=POSITIVE
+total score: 8034.2800971
+average score: 6.59628907808
+score variance: 613.026443653
+>gene_id=sucC|start=763014|end=764180|strand=POSITIVE
+total score: 14045.1951089
+average score: 12.0353000076
+score variance: 576.115297727
+>gene_id=sucD|start=764180|end=765049|strand=POSITIVE
+total score: 1367.5293622
+average score: 1.57187283011
+score variance: 39.9130420053
+>gene_id=cydA|start=771458|end=773026|strand=POSITIVE
+total score: 2839.6903916
+average score: 1.80987277986
+score variance: 16.2970558053
+>gene_id=tolQ|start=775153|end=775845|strand=POSITIVE
+total score: 458.9999572
+average score: 0.662337600577
+score variance: 11.5189052457
+>gene_id=aroG|start=785633|end=786685|strand=POSITIVE
+total score: 48484.7832109
+average score: 46.0444285004
+score variance: 14603.5644126
+>gene_id=gpmA|start=786843|end=787595|strand=POSITIVE
+total score: 3087.4998639
+average score: 4.10026542351
+score variance: 136.896723759
+>gene_id=galK|start=788831|end=789979|strand=POSITIVE
+total score: 1463.2441378
+average score: 1.27349359252
+score variance: 16.9819096896
+>gene_id=galT|start=789983|end=791029|strand=POSITIVE
+total score: 2679.396507
+average score: 2.55911796275
+score variance: 18.5230552331
+>gene_id=galE|start=791039|end=792055|strand=POSITIVE
+total score: 2038.8519937
+average score: 2.00477088859
+score variance: 318.955910538
+>gene_id=bioB|start=809344|end=810384|strand=POSITIVE
+total score: 992.3912297
+average score: 0.953305696158
+score variance: 6.23238615825
+>gene_id=bioD|start=812270|end=812947|strand=POSITIVE
+total score: 1623.4695049
+average score: 2.39449779484
+score variance: 111.207311961
+>gene_id=uvrB|start=813526|end=815547|strand=POSITIVE
+total score: 1323.4832268
+average score: 0.654541655193
+score variance: 4.44363464908
+>gene_id=moaA|start=817044|end=818033|strand=POSITIVE
+total score: 9011.9998876
+average score: 9.10303018949
+score variance: 1446.33606565
+>gene_id=moaB|start=818055|end=818567|strand=POSITIVE
+total score: 2879.5189529
+average score: 5.61309737407
+score variance: 181.071665181
+>gene_id=moaC|start=818570|end=819055|strand=POSITIVE
+total score: 782.9502968
+average score: 1.61100884115
+score variance: 6.78558376305
+>gene_id=moaD|start=819048|end=819293|strand=POSITIVE
+total score: 1548.2990699
+average score: 6.29389865813
+score variance: 468.140663929
+>gene_id=moaE|start=819295|end=819747|strand=POSITIVE
+total score: 1133.0051998
+average score: 2.50111523135
+score variance: 27.4065719333
+>gene_id=ybiB|start=835248|end=836210|strand=POSITIVE
+total score: 4285.9858961
+average score: 4.45066032825
+score variance: 73.0932532285
+>gene_id=dps|start=848408|end=848911|strand=POSITIVE
+total score: 48.1428372
+average score: 0.095521502381
+score variance: 0.140517931876
+>gene_id=fsaA|start=863642|end=864304|strand=POSITIVE
+total score: 160.5000043
+average score: 0.242081454449
+score variance: 0.33756403102
+>gene_id=grxA|start=890496|end=890753|strand=POSITIVE
+total score: 393.8498549
+average score: 1.52654982519
+score variance: 8.55061558577
+>gene_id=ltaE|start=908293|end=909294|strand=POSITIVE
+total score: 2122.1989473
+average score: 2.11796302126
+score variance: 22.0210838998
+>gene_id=poxB|start=909331|end=911049|strand=POSITIVE
+total score: 6202.3666476
+average score: 3.60812486771
+score variance: 156.432250722
+>gene_id=macA|start=919235|end=920350|strand=POSITIVE
+total score: 217.3332899
+average score: 0.194743091308
+score variance: 0.286012570276
+>gene_id=cspD|start=922366|end=922590|strand=POSITIVE
+total score: 4058.4545198
+average score: 18.0375756436
+score variance: 1822.21722998
+>gene_id=clpA|start=923264|end=925540|strand=POSITIVE
+total score: 30781.1671172
+average score: 13.5182991292
+score variance: 1497.05407999
+>gene_id=infA|start=926225|end=926443|strand=POSITIVE
+total score: 214.1334034
+average score: 0.977778097717
+score variance: 8.61007900439
+>gene_id=trxB|start=931085|end=932050|strand=POSITIVE
+total score: 8086.6837612
+average score: 8.37130824141
+score variance: 3387.8817929
+>gene_id=lrp|start=932595|end=933089|strand=POSITIVE
+total score: 493.799984
+average score: 0.997575725253
+score variance: 5.19098290544
+>gene_id=dmsB|start=943414|end=944031|strand=POSITIVE
+total score: 62.9142815
+average score: 0.101803044498
+score variance: 0.122796993967
+>gene_id=ycaC|start=944931|end=945557|strand=POSITIVE
+total score: 208.1110183
+average score: 0.331915499681
+score variance: 1.42923393144
+>gene_id=pflA|start=950340|end=951080|strand=POSITIVE
+total score: 5129.5002202
+average score: 6.92240245641
+score variance: 270.985631082
+>gene_id=pflB|start=951272|end=953554|strand=POSITIVE
+total score: 20864.8713606
+average score: 9.13923406071
+score variance: 723.217629713
+>gene_id=serC|start=957653|end=958741|strand=POSITIVE
+total score: 4495.0640524
+average score: 4.12769885436
+score variance: 293.910071787
+>gene_id=aroA|start=958812|end=960095|strand=POSITIVE
+total score: 1140.9185588
+average score: 0.888565855763
+score variance: 8.47450601535
+>gene_id=rpsA|start=961995|end=963668|strand=POSITIVE
+total score: 34050.6708626
+average score: 20.3409025464
+score variance: 7832.5775171
+>gene_id=ihfB|start=963828|end=964112|strand=POSITIVE
+total score: 1.1
+average score: 0.00385964912281
+score variance: 0.00351417040601
+>gene_id=kdsB|start=970852|end=971598|strand=POSITIVE
+total score: 198.8077379
+average score: 0.266141550067
+score variance: 0.638498639509
+>gene_id=mukB|start=976326|end=980786|strand=POSITIVE
+total score: 1618.4286079
+average score: 0.362795025308
+score variance: 2.4762337865
+>gene_id=aspC|start=984519|end=985709|strand=POSITIVE
+total score: 38690.7745318
+average score: 32.4859567857
+score variance: 12038.196484
+>gene_id=asnS|start=987585|end=988985|strand=POSITIVE
+total score: 6453.7584689
+average score: 4.60653709415
+score variance: 195.104229133
+>gene_id=pncB|start=989154|end=990356|strand=POSITIVE
+total score: 2376.0244134
+average score: 1.97508263791
+score variance: 24.1418068837
+>gene_id=pepN|start=990622|end=993234|strand=POSITIVE
+total score: 3648.2499774
+average score: 1.39619210769
+score variance: 13.5654921722
+>gene_id=ssuD|start=994843|end=995988|strand=POSITIVE
+total score: 75.8461309
+average score: 0.0661833602967
+score variance: 0.052412360015
+>gene_id=ssuE|start=996937|end=997512|strand=POSITIVE
+total score: 92.500009
+average score: 0.160590293403
+score variance: 0.317248620662
+>gene_id=pyrD|start=1004768|end=1005778|strand=POSITIVE
+total score: 996.6672762
+average score: 0.985823220772
+score variance: 5.62532128897
+>gene_id=rmf|start=1015715|end=1015882|strand=POSITIVE
+total score: 227.1428501
+average score: 1.3520407744
+score variance: 25.9803564316
+>gene_id=fabA|start=1015952|end=1016470|strand=POSITIVE
+total score: 73.023788
+average score: 0.14070094027
+score variance: 0.248895395514
+>gene_id=helD|start=1024471|end=1026525|strand=POSITIVE
+total score: 3207.500271
+average score: 1.56082738248
+score variance: 129.366911542
+>gene_id=mgsA|start=1026557|end=1027015|strand=POSITIVE
+total score: 105.1000247
+average score: 0.228976088671
+score variance: 0.352121278943
+>gene_id=yccU|start=1027946|end=1028359|strand=POSITIVE
+total score: 825.7588786
+average score: 1.99458666329
+score variance: 247.545572865
+>gene_id=hspQ|start=1028404|end=1028721|strand=POSITIVE
+total score: 174.5714173
+average score: 0.548966721069
+score variance: 1.64018581463
+>gene_id=hyaB|start=1033254|end=1035047|strand=POSITIVE
+total score: 44.1249953
+average score: 0.0245958725195
+score variance: 0.0103095490462
+>gene_id=etk|start=1042030|end=1044210|strand=POSITIVE
+total score: 181.1428573
+average score: 0.083054955204
+score variance: 0.0937161554018
+>gene_id=torR|start=1057262|end=1057954|strand=POSITIVE
+total score: 5.1999976
+average score: 0.0075036040404
+score variance: 0.00187752034794
+>gene_id=cbpA|start=1062855|end=1063775|strand=POSITIVE
+total score: 991.8230051
+average score: 1.07689794256
+score variance: 37.0217851968
+>gene_id=yccJ|start=1066864|end=1067091|strand=POSITIVE
+total score: 7117.629628
+average score: 31.217673807
+score variance: 9334.2709754
+>gene_id=wrbA|start=1067112|end=1067708|strand=POSITIVE
+total score: 2927.165883
+average score: 4.90312543216
+score variance: 402.433693845
+>gene_id=putP|start=1079305|end=1080813|strand=POSITIVE
+total score: 161.0999774
+average score: 0.106759428363
+score variance: 0.0895282817668
+>gene_id=phoH|start=1084992|end=1086056|strand=POSITIVE
+total score: 1073.3324182
+average score: 1.00782386685
+score variance: 21.7293686034
+>gene_id=ghrA|start=1097886|end=1098824|strand=POSITIVE
+total score: 1971.8229094
+average score: 2.09991790138
+score variance: 23.8099298798
+>gene_id=pyrC|start=1121561|end=1122607|strand=POSITIVE
+total score: 2775.7969297
+average score: 2.65119095482
+score variance: 46.3834263936
+>gene_id=grxB|start=1123407|end=1124054|strand=POSITIVE
+total score: 8.25
+average score: 0.0127314814815
+score variance: 0.0072523175445
+>gene_id=rne|start=1141182|end=1144367|strand=POSITIVE
+total score: 3466.9992143
+average score: 1.08819812125
+score variance: 28.5556567613
+>gene_id=rpmF|start=1147367|end=1147540|strand=POSITIVE
+total score: 12.408726
+average score: 0.0713145172414
+score variance: 0.0557685602531
+>gene_id=fabH|start=1148759|end=1149712|strand=POSITIVE
+total score: 8577.4005916
+average score: 8.99098594507
+score variance: 449.833753239
+>gene_id=fabD|start=1149728|end=1150657|strand=POSITIVE
+total score: 10236.2271639
+average score: 11.0066958752
+score variance: 1020.9040183
+>gene_id=acpP|start=1151615|end=1151851|strand=POSITIVE
+total score: 1440.3886665
+average score: 6.07758931013
+score variance: 129.764615243
+>gene_id=fabF|start=1151939|end=1153180|strand=POSITIVE
+total score: 2185.11156
+average score: 1.75934908213
+score variance: 38.8601740773
+>gene_id=pabC|start=1153300|end=1154109|strand=POSITIVE
+total score: 396.7999652
+average score: 0.489876500247
+score variance: 1.51430934627
+>gene_id=holB|start=1155762|end=1156766|strand=POSITIVE
+total score: 565.0039418
+average score: 0.562192976915
+score variance: 2.31838705913
+>gene_id=ptsG|start=1157869|end=1159302|strand=POSITIVE
+total score: 1171.2531466
+average score: 0.816773463459
+score variance: 11.5701236848
+>gene_id=ndh|start=1166085|end=1167389|strand=POSITIVE
+total score: 1667.4028227
+average score: 1.27770331241
+score variance: 9.35473631905
+>gene_id=lolC|start=1175427|end=1176626|strand=POSITIVE
+total score: 554.333221
+average score: 0.461944350833
+score variance: 1.70041779033
+>gene_id=lolD|start=1176619|end=1177320|strand=POSITIVE
+total score: 74.8333425
+average score: 0.106600202991
+score variance: 0.0950943573956
+>gene_id=lolE|start=1177320|end=1178564|strand=POSITIVE
+total score: 561.0333228
+average score: 0.45062917494
+score variance: 2.68043830513
+>gene_id=nagK|start=1178593|end=1179504|strand=POSITIVE
+total score: 1501.8668853
+average score: 1.64678386546
+score variance: 9.20019967006
+>gene_id=purB|start=1190616|end=1191986|strand=POSITIVE
+total score: 2573.1660108
+average score: 1.87685339956
+score variance: 76.1078254884
+>gene_id=icd|start=1195123|end=1196373|strand=POSITIVE
+total score: 20624.8516993
+average score: 16.4866920058
+score variance: 2688.27567764
+>gene_id=minD|start=1224549|end=1225361|strand=POSITIVE
+total score: 918.5821685
+average score: 1.12986736593
+score variance: 15.4468592588
+>gene_id=hlyE|start=1229483|end=1230394|strand=POSITIVE
+total score: 71.4999749
+average score: 0.0783990952851
+score variance: 0.144533364986
+>gene_id=fadR|start=1234938|end=1235657|strand=POSITIVE
+total score: 536.3316876
+average score: 0.744905121667
+score variance: 3.48044125358
+>gene_id=ychF|start=1256721|end=1257812|strand=POSITIVE
+total score: 4448.4674465
+average score: 4.07368813782
+score variance: 402.994666236
+>gene_id=pth|start=1257929|end=1258513|strand=POSITIVE
+total score: 3628.8893971
+average score: 6.20322973863
+score variance: 261.878862448
+>gene_id=prs|start=1260928|end=1261875|strand=POSITIVE
+total score: 1035.7916798
+average score: 1.09260725717
+score variance: 5.44142794495
+>gene_id=kdsA|start=1268165|end=1269019|strand=POSITIVE
+total score: 445.8499963
+average score: 0.521461983977
+score variance: 9.97475118126
+>gene_id=narG|start=1279864|end=1283607|strand=POSITIVE
+total score: 151.9999961
+average score: 0.0405982895566
+score variance: 0.055216265959
+>gene_id=narH|start=1283604|end=1285142|strand=POSITIVE
+total score: 120.5332916
+average score: 0.0783192278103
+score variance: 0.183423971753
+>gene_id=narJ|start=1285139|end=1285849|strand=POSITIVE
+total score: 189.9197236
+average score: 0.267116348242
+score variance: 0.505044301421
+>gene_id=narI|start=1285849|end=1286526|strand=POSITIVE
+total score: 6977.6607843
+average score: 10.2915350801
+score variance: 5791.38343634
+>gene_id=purU|start=1287782|end=1288624|strand=POSITIVE
+total score: 1377.6847374
+average score: 1.63426421993
+score variance: 35.675688287
+>gene_id=galU|start=1291457|end=1292365|strand=POSITIVE
+total score: 32805.0898036
+average score: 36.0892077047
+score variance: 18497.6714195
+>gene_id=hns|start=1292509|end=1292922|strand=POSITIVE
+total score: 692.2749384
+average score: 1.67216168696
+score variance: 53.1389214876
+>gene_id=adhE|start=1295446|end=1298121|strand=POSITIVE
+total score: 12002.9590179
+average score: 4.48541069428
+score variance: 158.817086767
+>gene_id=yciI|start=1310569|end=1310865|strand=POSITIVE
+total score: 360.5832525
+average score: 1.21408502525
+score variance: 4.76553613024
+>gene_id=yciE|start=1314718|end=1315224|strand=POSITIVE
+total score: 4423.7169482
+average score: 8.72527997673
+score variance: 256.713133984
+>gene_id=yciF|start=1315270|end=1315770|strand=POSITIVE
+total score: 1946.5402224
+average score: 3.88530982515
+score variance: 84.5418347095
+>gene_id=trpA|start=1316416|end=1317222|strand=POSITIVE
+total score: 901.0000971
+average score: 1.11648091338
+score variance: 15.838228643
+>gene_id=trpB|start=1317222|end=1318415|strand=POSITIVE
+total score: 1745.2775723
+average score: 1.46170650946
+score variance: 11.7531369403
+>gene_id=trpD|start=1319789|end=1321384|strand=POSITIVE
+total score: 7286.1663305
+average score: 4.56526712437
+score variance: 1472.79777897
+>gene_id=trpE|start=1321384|end=1322946|strand=POSITIVE
+total score: 2715.0831566
+average score: 1.73709734907
+score variance: 47.5019244819
+>gene_id=yciN|start=1330417|end=1330668|strand=POSITIVE
+total score: 67.3246542
+average score: 0.26716132619
+score variance: 0.198020146097
+>gene_id=topA|start=1331048|end=1333645|strand=POSITIVE
+total score: 5710.7631309
+average score: 2.1981382336
+score variance: 65.3184031433
+>gene_id=cysB|start=1333855|end=1334829|strand=POSITIVE
+total score: 4990.5863908
+average score: 5.11855014441
+score variance: 346.229000858
+>gene_id=acnA|start=1335831|end=1338506|strand=POSITIVE
+total score: 4216.6335048
+average score: 1.57572253543
+score variance: 51.7028025987
+>gene_id=ribA|start=1338570|end=1339160|strand=POSITIVE
+total score: 407.9999958
+average score: 0.690355322843
+score variance: 5.21144284079
+>gene_id=fabI|start=1350251|end=1351039|strand=POSITIVE
+total score: 272.1000311
+average score: 0.344866959569
+score variance: 0.936490756667
+>gene_id=puuD|start=1361120|end=1361884|strand=POSITIVE
+total score: 325.8333326
+average score: 0.425925924967
+score variance: 0.603053774313
+>gene_id=pspA|start=1368079|end=1368747|strand=POSITIVE
+total score: 4.5
+average score: 0.0067264573991
+score variance: 0.00372204793929
+>gene_id=tyrR|start=1386720|end=1388261|strand=POSITIVE
+total score: 15035.5998925
+average score: 9.75071328956
+score variance: 5617.11947642
+>gene_id=tpx|start=1388305|end=1388811|strand=POSITIVE
+total score: 210.6009568
+average score: 0.415386502564
+score variance: 1.23327029582
+>gene_id=uspE|start=1397672|end=1398622|strand=POSITIVE
+total score: 221.0833446
+average score: 0.2324746
+score variance: 1.12605418727
+>gene_id=fnr|start=1398774|end=1399526|strand=POSITIVE
+total score: 4.2
+average score: 0.00557768924303
+score variance: 0.00161867590247
+>gene_id=ogt|start=1399721|end=1400236|strand=POSITIVE
+total score: 16.1249929
+average score: 0.0312499862403
+score variance: 0.0341335615507
+>gene_id=abgB|start=1401810|end=1403255|strand=POSITIVE
+total score: 121.0000112
+average score: 0.083679122545
+score variance: 0.0618191279869
+>gene_id=abgA|start=1403255|end=1404565|strand=POSITIVE
+total score: 1823.0073127
+average score: 1.39054714928
+score variance: 18.1964135205
+>gene_id=recT|start=1413984|end=1414793|strand=POSITIVE
+total score: 27.3333387
+average score: 0.0337448625926
+score variance: 0.0266377445858
+>gene_id=recE|start=1414786|end=1417386|strand=POSITIVE
+total score: 114.6666598
+average score: 0.0440856054594
+score variance: 0.0614015901786
+>gene_id=racC|start=1417488|end=1417763|strand=POSITIVE
+total score: 1.333332
+average score: 0.00483091304348
+score variance: 0.00156396552369
+>gene_id=uspF|start=1435185|end=1435619|strand=POSITIVE
+total score: 113.0000013
+average score: 0.259770117931
+score variance: 0.473015964064
+>gene_id=feaR|start=1446378|end=1447283|strand=POSITIVE
+total score: 71.5000129
+average score: 0.0789183365342
+score variance: 0.0529255799058
+>gene_id=feaB|start=1447519|end=1449018|strand=POSITIVE
+total score: 39.750008
+average score: 0.0265000053333
+score variance: 0.0366473890429
+>gene_id=azoR|start=1482255|end=1482860|strand=POSITIVE
+total score: 101.1999953
+average score: 0.166996691914
+score variance: 0.293547605435
+>gene_id=aldA|start=1488232|end=1489671|strand=POSITIVE
+total score: 5626.3993101
+average score: 3.90722174312
+score variance: 678.64615892
+>gene_id=narY|start=1537309|end=1538853|strand=POSITIVE
+total score: 53.0000017
+average score: 0.0343042082201
+score variance: 0.0170593993634
+>gene_id=sra|start=1555826|end=1555963|strand=POSITIVE
+total score: 0.5
+average score: 0.0036231884058
+score variance: 0.00178543434122
+>gene_id=osmC|start=1556625|end=1557056|strand=POSITIVE
+total score: 16.249987
+average score: 0.0376157106481
+score variance: 0.0542683236174
+>gene_id=gadB|start=1570645|end=1572045|strand=POSITIVE
+total score: 34.7777644
+average score: 0.0248235291934
+score variance: 0.0183100801907
+>gene_id=hipB|start=1592176|end=1592442|strand=POSITIVE
+total score: 6.2
+average score: 0.0232209737828
+score variance: 0.0155770400831
+>gene_id=tam|start=1607346|end=1608104|strand=POSITIVE
+total score: 12.1428541
+average score: 0.0159984902503
+score variance: 0.00553737846453
+>gene_id=uxaB|start=1609229|end=1610680|strand=POSITIVE
+total score: 103.1666568
+average score: 0.0710514165289
+score variance: 0.0655368848794
+>gene_id=dcp|start=1625335|end=1627380|strand=POSITIVE
+total score: 8894.6658681
+average score: 4.34734402155
+score variance: 166.392472755
+>gene_id=ydfG|start=1627517|end=1628263|strand=POSITIVE
+total score: 23.1999955
+average score: 0.0310575575636
+score variance: 0.0170077596575
+>gene_id=ydfZ|start=1629215|end=1629418|strand=POSITIVE
+total score: 4.5
+average score: 0.0220588235294
+score variance: 0.0137541662426
+>gene_id=speG|start=1656184|end=1656744|strand=POSITIVE
+total score: 27.533319
+average score: 0.049079
+score variance: 0.0314317772308
+>gene_id=dmsD|start=1664506|end=1665120|strand=POSITIVE
+total score: 469.4696469
+average score: 0.763365279512
+score variance: 4.17623758399
+>gene_id=pntB|start=1674972|end=1676360|strand=POSITIVE
+total score: 14870.0480648
+average score: 10.7055781604
+score variance: 1155.8021316
+>gene_id=pntA|start=1676371|end=1677903|strand=POSITIVE
+total score: 6313.8334278
+average score: 4.11861280352
+score variance: 261.128575098
+>gene_id=tus|start=1684259|end=1685188|strand=POSITIVE
+total score: 1713.2250639
+average score: 1.84217748806
+score variance: 57.1993882204
+>gene_id=fumC|start=1685185|end=1686588|strand=POSITIVE
+total score: 1745.8927828
+average score: 1.24351337806
+score variance: 7.70351997843
+>gene_id=fumA|start=1686731|end=1688377|strand=POSITIVE
+total score: 4307.1388979
+average score: 2.61514201451
+score variance: 56.3733922581
+>gene_id=uidB|start=1692890|end=1694263|strand=POSITIVE
+total score: 12.999996
+average score: 0.00946142358079
+score variance: 0.0065550746861
+>gene_id=uidA|start=1694260|end=1696071|strand=POSITIVE
+total score: 15331.9987715
+average score: 8.46136797544
+score variance: 1744.94105223
+>gene_id=hdhA|start=1697273|end=1698040|strand=POSITIVE
+total score: 170.500047
+average score: 0.222005269531
+score variance: 2.42279652288
+>gene_id=nth|start=1711523|end=1712158|strand=POSITIVE
+total score: 14.1999921
+average score: 0.0223270316038
+score variance: 0.0111165968779
+>gene_id=gstA|start=1714377|end=1714982|strand=POSITIVE
+total score: 2284.0714229
+average score: 3.76909475726
+score variance: 118.361407493
+>gene_id=tyrS|start=1715948|end=1717222|strand=POSITIVE
+total score: 1122.4499818
+average score: 0.880352926902
+score variance: 3.68297568608
+>gene_id=pdxH|start=1717351|end=1718007|strand=POSITIVE
+total score: 9786.3603718
+average score: 14.8955256801
+score variance: 4556.65068599
+>gene_id=gloA|start=1727837|end=1728244|strand=POSITIVE
+total score: 16.166662
+average score: 0.0396241715686
+score variance: 0.0216515967916
+>gene_id=sodB|start=1735378|end=1735959|strand=POSITIVE
+total score: 5925.9844373
+average score: 10.1821038442
+score variance: 2995.79492201
+>gene_id=cfa|start=1741413|end=1742561|strand=POSITIVE
+total score: 2276.3332489
+average score: 1.98114294943
+score variance: 28.4914401704
+>gene_id=pykF|start=1755698|end=1757110|strand=POSITIVE
+total score: 6575.4875642
+average score: 4.65356515513
+score variance: 169.561724787
+>gene_id=sufS|start=1759303|end=1760523|strand=POSITIVE
+total score: 1165.6666495
+average score: 0.954681940622
+score variance: 5.59827841152
+>gene_id=aroD|start=1774686|end=1775444|strand=POSITIVE
+total score: 31.2500011
+average score: 0.0411725969697
+score variance: 0.0202226541369
+>gene_id=ppsA|start=1784734|end=1787112|strand=POSITIVE
+total score: 5292.2045847
+average score: 2.22455005662
+score variance: 118.878846838
+>gene_id=aroH|start=1788435|end=1789481|strand=POSITIVE
+total score: 309.6666251
+average score: 0.295765640019
+score variance: 0.826203424159
+>gene_id=ihfA|start=1795253|end=1795552|strand=POSITIVE
+total score: 603.2907018
+average score: 2.010969006
+score variance: 17.3040197381
+>gene_id=rplT|start=1799393|end=1799749|strand=POSITIVE
+total score: 1555.7246395
+average score: 4.35777209944
+score variance: 129.227320803
+>gene_id=rpmI|start=1799802|end=1799999|strand=POSITIVE
+total score: 1097.4291049
+average score: 5.54257123687
+score variance: 613.797541243
+>gene_id=pfkB|start=1806370|end=1807299|strand=POSITIVE
+total score: 1329.0442321
+average score: 1.42907981946
+score variance: 16.9372103375
+>gene_id=katE|start=1813867|end=1816128|strand=POSITIVE
+total score: 1622.5890085
+average score: 0.717324937445
+score variance: 11.6820516334
+>gene_id=chbF|start=1817148|end=1818500|strand=POSITIVE
+total score: 271.666698
+average score: 0.200788394678
+score variance: 1.67738181754
+>gene_id=nadE|start=1822458|end=1823285|strand=POSITIVE
+total score: 413.8250778
+average score: 0.499788741304
+score variance: 5.53112110001
+>gene_id=ves|start=1824362|end=1824937|strand=POSITIVE
+total score: 14.500002
+average score: 0.0251736145833
+score variance: 0.0116229774371
+>gene_id=gdhA|start=1842371|end=1843714|strand=POSITIVE
+total score: 133.1428503
+average score: 0.0990646207589
+score variance: 0.108071148485
+>gene_id=topB|start=1844999|end=1846960|strand=POSITIVE
+total score: 8333.0803252
+average score: 4.24723767849
+score variance: 290.918189771
+>gene_id=gapA|start=1862771|end=1863766|strand=POSITIVE
+total score: 486.3635266
+average score: 0.488316793775
+score variance: 2.04655596048
+>gene_id=yeaD|start=1863850|end=1864734|strand=POSITIVE
+total score: 9418.7857013
+average score: 10.6426957077
+score variance: 403.659416233
+>gene_id=rnd|start=1886864|end=1887991|strand=POSITIVE
+total score: 185.5833394
+average score: 0.164524237057
+score variance: 0.258401651406
+>gene_id=fadD|start=1888061|end=1889746|strand=POSITIVE
+total score: 3120.4995714
+average score: 1.85083011352
+score variance: 113.02550563
+>gene_id=sdaA|start=1896932|end=1898296|strand=POSITIVE
+total score: 96.999952
+average score: 0.0710622358974
+score variance: 0.125780016801
+>gene_id=manX|start=1902048|end=1903019|strand=POSITIVE
+total score: 6909.9171485
+average score: 7.10896825977
+score variance: 292.963470246
+>gene_id=cspC|start=1907226|end=1907435|strand=POSITIVE
+total score: 71.900016
+average score: 0.342381028571
+score variance: 0.957861573514
+>gene_id=holE|start=1925108|end=1925338|strand=POSITIVE
+total score: 10.2500016
+average score: 0.0443723012987
+score variance: 0.0287205937226
+>gene_id=ptrB|start=1926779|end=1928839|strand=POSITIVE
+total score: 13960.1986778
+average score: 6.77350736429
+score variance: 1232.5876035
+>gene_id=purT|start=1930881|end=1932059|strand=POSITIVE
+total score: 126.611085
+average score: 0.107388536896
+score variance: 0.0751246434364
+>gene_id=eda|start=1932115|end=1932756|strand=POSITIVE
+total score: 59.3333087
+average score: 0.0924194839564
+score variance: 0.0519933781534
+>gene_id=pykA|start=1937649|end=1939091|strand=POSITIVE
+total score: 1312.327305
+average score: 0.909443731809
+score variance: 11.1627093844
+>gene_id=ruvC|start=1946855|end=1947376|strand=POSITIVE
+total score: 1048.0726788
+average score: 2.00780206667
+score variance: 21.2493383935
+>gene_id=aspS|start=1948750|end=1950522|strand=POSITIVE
+total score: 3316.3120681
+average score: 1.87045237908
+score variance: 218.089945945
+>gene_id=argS|start=1960062|end=1961795|strand=POSITIVE
+total score: 25.4999963
+average score: 0.0147058802191
+score variance: 0.00532549683962
+>gene_id=cheA|start=1973360|end=1975324|strand=POSITIVE
+total score: 96.4500104
+average score: 0.0490839747583
+score variance: 0.0576089304773
+>gene_id=otsA|start=1980188|end=1981612|strand=POSITIVE
+total score: 770.2498812
+average score: 0.540526232421
+score variance: 5.54705418413
+>gene_id=otsB|start=1981587|end=1982387|strand=POSITIVE
+total score: 59.075007
+average score: 0.0737515692884
+score variance: 0.0535403391602
+>gene_id=ftnA|start=1988716|end=1989213|strand=POSITIVE
+total score: 629.6429911
+average score: 1.26434335562
+score variance: 7.74237432355
+>gene_id=uvrC|start=1992874|end=1994706|strand=POSITIVE
+total score: 3267.9426388
+average score: 1.78283831904
+score variance: 40.3379904565
+>gene_id=dcyD|start=1998494|end=1999480|strand=POSITIVE
+total score: 137.166662
+average score: 0.138973315096
+score variance: 0.19956205606
+>gene_id=fliC|start=2002110|end=2003606|strand=POSITIVE
+total score: 94.1428452
+average score: 0.0628876721443
+score variance: 0.0540224172179
+>gene_id=rcsA|start=2023968|end=2024591|strand=POSITIVE
+total score: 900.7226773
+average score: 1.44346582901
+score variance: 9.36744328065
+>gene_id=vsr|start=2030448|end=2030918|strand=POSITIVE
+total score: 457.4956291
+average score: 0.971328299575
+score variance: 3.55865311177
+>gene_id=hchA|start=2035835|end=2036686|strand=POSITIVE
+total score: 278.2361287
+average score: 0.326568226174
+score variance: 0.796592351618
+>gene_id=amn|start=2055061|end=2056515|strand=POSITIVE
+total score: 2187.99916
+average score: 1.50377949141
+score variance: 92.6008933375
+>gene_id=yeeX|start=2079032|end=2079361|strand=POSITIVE
+total score: 2001.245692
+average score: 6.06438088485
+score variance: 296.131467771
+>gene_id=sbmC|start=2080789|end=2081262|strand=POSITIVE
+total score: 48.62856
+average score: 0.102591898734
+score variance: 0.0648481529635
+>gene_id=sbcB|start=2082756|end=2084183|strand=POSITIVE
+total score: 1296.1551459
+average score: 0.907671670798
+score variance: 9.09454722654
+>gene_id=hisD|start=2091097|end=2092401|strand=POSITIVE
+total score: 1877.8999541
+average score: 1.43900379625
+score variance: 8.37621688413
+>gene_id=hisB|start=2093468|end=2094535|strand=POSITIVE
+total score: 1732.0516697
+average score: 1.62177122631
+score variance: 10.1952536418
+>gene_id=hisH|start=2094535|end=2095125|strand=POSITIVE
+total score: 1526.2035343
+average score: 2.58240868748
+score variance: 22.3559890875
+>gene_id=gnd|start=2099862|end=2101268|strand=POSITIVE
+total score: 163.1874623
+average score: 0.11598256027
+score variance: 1.06242403154
+>gene_id=glf|start=2107226|end=2108329|strand=POSITIVE
+total score: 995.2713904
+average score: 0.90151394058
+score variance: 5.66424739296
+>gene_id=dcd|start=2141634|end=2142215|strand=POSITIVE
+total score: 17.666665
+average score: 0.0303550945017
+score variance: 0.0291692843253
+>gene_id=alkA|start=2146692|end=2147540|strand=POSITIVE
+total score: 46.9999931
+average score: 0.0553592380448
+score variance: 0.0259738629096
+>gene_id=gatB|start=2174282|end=2174566|strand=POSITIVE
+total score: 5554.3404001
+average score: 19.4889136846
+score variance: 3965.5812828
+>gene_id=gatZ|start=2175059|end=2176321|strand=POSITIVE
+total score: 19222.0754504
+average score: 15.2193788206
+score variance: 2505.25276871
+>gene_id=gatY|start=2176350|end=2177204|strand=POSITIVE
+total score: 4317.5139771
+average score: 5.04972394982
+score variance: 356.13514621
+>gene_id=fbaB|start=2177512|end=2178564|strand=POSITIVE
+total score: 68.3333159
+average score: 0.064893937227
+score variance: 0.0435492913443
+>gene_id=metG|start=2194300|end=2196333|strand=POSITIVE
+total score: 190.0702364
+average score: 0.093446527237
+score variance: 0.558010795732
+>gene_id=dld|start=2222185|end=2223900|strand=POSITIVE
+total score: 1445.7859481
+average score: 0.842532603788
+score variance: 7.51635945407
+>gene_id=cdd|start=2231844|end=2232728|strand=POSITIVE
+total score: 134.4999871
+average score: 0.151977386554
+score variance: 0.267001363985
+>gene_id=preT|start=2234033|end=2235271|strand=POSITIVE
+total score: 64.9999808
+average score: 0.0524616471348
+score variance: 0.0333410009047
+>gene_id=preA|start=2235265|end=2236500|strand=POSITIVE
+total score: 89.9999938
+average score: 0.0728155289644
+score variance: 0.0678149923655
+>gene_id=galS|start=2240628|end=2241668|strand=POSITIVE
+total score: 2926.0994189
+average score: 2.81085438895
+score variance: 67.8668870685
+>gene_id=folE|start=2242984|end=2243652|strand=POSITIVE
+total score: 27.2500012
+average score: 0.0407324382661
+score variance: 0.0196712324424
+>gene_id=lysP|start=2247063|end=2248532|strand=POSITIVE
+total score: 807.5831841
+average score: 0.549376315714
+score variance: 2.81649156144
+>gene_id=rsuA|start=2279788|end=2280483|strand=POSITIVE
+total score: 12.461045
+average score: 0.0179038002874
+score variance: 0.00877904637315
+>gene_id=rplY|start=2282517|end=2282801|strand=POSITIVE
+total score: 46.699987
+average score: 0.163859603509
+score variance: 0.250366884314
+>gene_id=yejK|start=2282940|end=2283947|strand=POSITIVE
+total score: 66.6666527
+average score: 0.0661375522817
+score variance: 0.0397514630066
+>gene_id=ccmE|start=2294901|end=2295380|strand=POSITIVE
+total score: 31.142842
+average score: 0.0648809208333
+score variance: 0.241711312996
+>gene_id=alkB|start=2308691|end=2309341|strand=POSITIVE
+total score: 31.0000015
+average score: 0.0476190499232
+score variance: 0.0215153171675
+>gene_id=ada|start=2309341|end=2310405|strand=POSITIVE
+total score: 87042.4300367
+average score: 81.7299812551
+score variance: 42289.9065647
+>gene_id=gyrA|start=2336793|end=2339420|strand=POSITIVE
+total score: 4017.578073
+average score: 1.52875877968
+score variance: 36.0745427178
+>gene_id=nrdA|start=2344865|end=2347150|strand=POSITIVE
+total score: 3514.3245412
+average score: 1.53732482117
+score variance: 27.8619561452
+>gene_id=nrdB|start=2347384|end=2348514|strand=POSITIVE
+total score: 516.2000208
+average score: 0.456410274801
+score variance: 9.68987122919
+>gene_id=glpA|start=2352647|end=2354275|strand=POSITIVE
+total score: 41.7499876
+average score: 0.0256292127686
+score variance: 0.0135879346096
+>gene_id=glpB|start=2354265|end=2355524|strand=POSITIVE
+total score: 19.4038433
+average score: 0.0153998756349
+score variance: 0.00822802506116
+>gene_id=glpC|start=2355521|end=2356711|strand=POSITIVE
+total score: 583.0821509
+average score: 0.489573594374
+score variance: 4.56216928831
+>gene_id=arnA|start=2368039|end=2370021|strand=POSITIVE
+total score: 435.4532675
+average score: 0.219593175744
+score variance: 2.33916724539
+>gene_id=nuoI|start=2395908|end=2396450|strand=POSITIVE
+total score: 400.2736975
+average score: 0.737152297422
+score variance: 3.69413884484
+>gene_id=nuoG|start=2397439|end=2400165|strand=POSITIVE
+total score: 5943.0626102
+average score: 2.17934089116
+score variance: 41.3883173751
+>gene_id=nuoF|start=2400218|end=2401555|strand=POSITIVE
+total score: 1785.2120711
+average score: 1.33423921607
+score variance: 11.6687759462
+>gene_id=nuoE|start=2401552|end=2402052|strand=POSITIVE
+total score: 972.8094476
+average score: 1.94173542435
+score variance: 32.4297404616
+>gene_id=nuoC|start=2402055|end=2403845|strand=POSITIVE
+total score: 4122.4473483
+average score: 2.3017573134
+score variance: 90.9373565187
+>gene_id=nuoB|start=2403951|end=2404613|strand=POSITIVE
+total score: 189.0333531
+average score: 0.285118179638
+score variance: 0.545706183853
+>gene_id=pta|start=2414747|end=2416891|strand=POSITIVE
+total score: 818.7500318
+average score: 0.381701646527
+score variance: 2.35928824
+>gene_id=folX|start=2421325|end=2421687|strand=POSITIVE
+total score: 0.631818
+average score: 0.00174054545455
+score variance: 0.00109365729677
+>gene_id=purF|start=2428721|end=2430238|strand=POSITIVE
+total score: 1498.0002038
+average score: 0.986824903689
+score variance: 6.46833523914
+>gene_id=folC|start=2431674|end=2432942|strand=POSITIVE
+total score: 3713.690123
+average score: 2.92646975808
+score variance: 228.717178605
+>gene_id=truA|start=2434824|end=2435636|strand=POSITIVE
+total score: 1203.9999153
+average score: 1.48093470517
+score variance: 5.95241142893
+>gene_id=usg|start=2435636|end=2436649|strand=POSITIVE
+total score: 848.2000606
+average score: 0.836489211637
+score variance: 8.73945129775
+>gene_id=fabB|start=2440385|end=2441605|strand=POSITIVE
+total score: 142.4999954
+average score: 0.11670761294
+score variance: 0.166090193053
+>gene_id=aroC|start=2446388|end=2447473|strand=POSITIVE
+total score: 829.0252657
+average score: 0.763375014457
+score variance: 7.34304493022
+>gene_id=dsdA|start=2479202|end=2480530|strand=POSITIVE
+total score: 9.124999
+average score: 0.00686606395786
+score variance: 0.00524243873427
+>gene_id=ligA|start=2528161|end=2530176|strand=POSITIVE
+total score: 5358.5012886
+average score: 2.6579867503
+score variance: 95.7984249633
+>gene_id=cysK|start=2532409|end=2533380|strand=POSITIVE
+total score: 7109.5489858
+average score: 7.31435080844
+score variance: 296.666919414
+>gene_id=ptsH|start=2533764|end=2534021|strand=POSITIVE
+total score: 23411.2717396
+average score: 90.7413633318
+score variance: 60939.4829529
+>gene_id=ptsI|start=2534066|end=2535793|strand=POSITIVE
+total score: 14565.3988816
+average score: 8.4290502787
+score variance: 1108.60588151
+>gene_id=crr|start=2535834|end=2536343|strand=POSITIVE
+total score: 90.000003
+average score: 0.176470594118
+score variance: 0.428777035776
+>gene_id=cysM|start=2538672|end=2539583|strand=POSITIVE
+total score: 2152.018485
+average score: 2.35966939145
+score variance: 96.0548390946
+>gene_id=eutC|start=2556410|end=2557297|strand=POSITIVE
+total score: 484.3332716
+average score: 0.545420350901
+score variance: 4.13989370045
+>gene_id=eutB|start=2557318|end=2558679|strand=POSITIVE
+total score: 161.3295858
+average score: 0.118450503524
+score variance: 0.323917808525
+>gene_id=purC|start=2596905|end=2597618|strand=POSITIVE
+total score: 4310.3720831
+average score: 6.03693569062
+score variance: 205.3313679
+>gene_id=dapA|start=2598882|end=2599760|strand=POSITIVE
+total score: 172.9999315
+average score: 0.196814484073
+score variance: 1.04469780517
+>gene_id=gcvR|start=2599906|end=2600478|strand=POSITIVE
+total score: 2.1999991
+average score: 0.0038394399651
+score variance: 0.000393431127973
+>gene_id=bcp|start=2600478|end=2600948|strand=POSITIVE
+total score: 1.133333
+average score: 0.00240622717622
+score variance: 0.000564088588549
+>gene_id=upp|start=2620246|end=2620872|strand=POSITIVE
+total score: 716.969842
+average score: 1.14349257097
+score variance: 10.4883178579
+>gene_id=purM|start=2621197|end=2622234|strand=POSITIVE
+total score: 409.6999892
+average score: 0.394701338343
+score variance: 1.06504824502
+>gene_id=purN|start=2622234|end=2622872|strand=POSITIVE
+total score: 85.0499857
+average score: 0.133098569171
+score variance: 0.166354153249
+>gene_id=ppk|start=2623044|end=2625110|strand=POSITIVE
+total score: 615.3333003
+average score: 0.297693904354
+score variance: 1.55459130287
+>gene_id=ppx|start=2625115|end=2626656|strand=POSITIVE
+total score: 12.166671
+average score: 0.00789018871595
+score variance: 0.00469380589126
+>gene_id=guaA|start=2630958|end=2632535|strand=POSITIVE
+total score: 9305.1143761
+average score: 5.89677717117
+score variance: 204.631110825
+>gene_id=guaB|start=2632604|end=2634070|strand=POSITIVE
+total score: 818.1252884
+average score: 0.55768594983
+score variance: 24.2544762608
+>gene_id=xseA|start=2634232|end=2635602|strand=POSITIVE
+total score: 2023.0035697
+average score: 1.47556788454
+score variance: 13.2337170607
+>gene_id=hisS|start=2639301|end=2640575|strand=POSITIVE
+total score: 1426.1440901
+average score: 1.11854438439
+score variance: 7.5781709844
+>gene_id=ndk|start=2644433|end=2644864|strand=POSITIVE
+total score: 14.25
+average score: 0.0329861111111
+score variance: 0.040374328998
+>gene_id=sseA|start=2652494|end=2653339|strand=POSITIVE
+total score: 717.5880338
+average score: 0.84821280591
+score variance: 8.9541270277
+>gene_id=fdx|start=2656748|end=2657083|strand=POSITIVE
+total score: 721.8449431
+average score: 2.14834804494
+score variance: 21.262551843
+>gene_id=iscS|start=2660317|end=2661531|strand=POSITIVE
+total score: 2086.7494576
+average score: 1.71748926551
+score variance: 39.4200853097
+>gene_id=glyA|start=2684254|end=2685507|strand=POSITIVE
+total score: 3309.2678653
+average score: 2.63896958955
+score variance: 41.2983321042
+>gene_id=hmp|start=2685835|end=2687025|strand=POSITIVE
+total score: 244.9999391
+average score: 0.205709436692
+score variance: 0.31359527223
+>gene_id=glnB|start=2687070|end=2687408|strand=POSITIVE
+total score: 74.0000001
+average score: 0.218289085841
+score variance: 0.534934206904
+>gene_id=purL|start=2691656|end=2695543|strand=POSITIVE
+total score: 5056.8979937
+average score: 1.30064248809
+score variance: 21.6214611658
+>gene_id=acpS|start=2700618|end=2700998|strand=POSITIVE
+total score: 201.2499885
+average score: 0.528215192913
+score variance: 1.58377681415
+>gene_id=pdxJ|start=2700998|end=2701729|strand=POSITIVE
+total score: 1329.5416202
+average score: 1.8163136888
+score variance: 25.4031484393
+>gene_id=era|start=2702481|end=2703386|strand=POSITIVE
+total score: 754.2862435
+average score: 0.832545522627
+score variance: 5.51761520931
+>gene_id=rnc|start=2703383|end=2704063|strand=POSITIVE
+total score: 426.447812
+average score: 0.626208240822
+score variance: 2.58764677216
+>gene_id=nadB|start=2710420|end=2712042|strand=POSITIVE
+total score: 1790.2500501
+average score: 1.10304993845
+score variance: 9.26648716933
+>gene_id=grcA|start=2716066|end=2716449|strand=POSITIVE
+total score: 868.3366814
+average score: 2.26129344115
+score variance: 22.8426412413
+>gene_id=ung|start=2716754|end=2717443|strand=POSITIVE
+total score: 2444.268762
+average score: 3.54241849565
+score variance: 87.6601908932
+>gene_id=pssA|start=2722727|end=2724082|strand=POSITIVE
+total score: 13429.8300027
+average score: 9.90400442677
+score variance: 7086.1514148
+>gene_id=clpB|start=2731600|end=2734173|strand=POSITIVE
+total score: 31164.0271616
+average score: 12.1072366595
+score variance: 2932.40559388
+>gene_id=rluD|start=2735031|end=2736011|strand=POSITIVE
+total score: 40320.0018677
+average score: 41.1009193351
+score variance: 18668.5235386
+>gene_id=raiA|start=2737154|end=2737495|strand=POSITIVE
+total score: 406.4434572
+average score: 1.1884311614
+score variance: 4.27089547761
+>gene_id=pheA|start=2737745|end=2738905|strand=POSITIVE
+total score: 2652.2533962
+average score: 2.28445598295
+score variance: 22.4558032107
+>gene_id=tyrA|start=2738948|end=2740069|strand=POSITIVE
+total score: 1066.3890431
+average score: 0.950435867291
+score variance: 8.94971375893
+>gene_id=aroF|start=2740080|end=2741150|strand=POSITIVE
+total score: 76.4761829
+average score: 0.07140633324
+score variance: 0.0860420117489
+>gene_id=rplS|start=2744183|end=2744530|strand=POSITIVE
+total score: 690.586946
+average score: 1.98444524713
+score variance: 29.6177452935
+>gene_id=trmD|start=2744572|end=2745339|strand=POSITIVE
+total score: 862.3333421
+average score: 1.12282987253
+score variance: 6.69535828575
+>gene_id=rpsP|start=2745937|end=2746185|strand=POSITIVE
+total score: 186.5000597
+average score: 0.748996223695
+score variance: 6.91198112527
+>gene_id=grpE|start=2750115|end=2750708|strand=POSITIVE
+total score: 279.4523397
+average score: 0.470458484343
+score variance: 1.05256820941
+>gene_id=nadK|start=2750831|end=2751709|strand=POSITIVE
+total score: 2031.6781601
+average score: 2.31135171797
+score variance: 212.555543071
+>gene_id=smpB|start=2754896|end=2755378|strand=POSITIVE
+total score: 176.1666417
+average score: 0.364734247826
+score variance: 0.571898764681
+>gene_id=csiD|start=2788985|end=2789962|strand=POSITIVE
+total score: 1543.5000963
+average score: 1.57822095736
+score variance: 12.2574358901
+>gene_id=gabT|start=2792735|end=2794015|strand=POSITIVE
+total score: 381.124952
+average score: 0.297521430133
+score variance: 1.9221447821
+>gene_id=ygaU|start=2796337|end=2796786|strand=POSITIVE
+total score: 3794.6353021
+average score: 8.43252289356
+score variance: 1031.03174973
+>gene_id=stpA|start=2798091|end=2798495|strand=POSITIVE
+total score: 11012.594649
+average score: 27.1915917259
+score variance: 10124.7103583
+>gene_id=luxS|start=2814218|end=2814733|strand=POSITIVE
+total score: 584.3651415
+average score: 1.1324905843
+score variance: 14.73238828
+>gene_id=gshA|start=2814883|end=2816439|strand=POSITIVE
+total score: 647.1747525
+average score: 0.415654947013
+score variance: 2.59562617567
+>gene_id=alaS|start=2819381|end=2822011|strand=POSITIVE
+total score: 17647.2567485
+average score: 6.70743319973
+score variance: 3180.64446595
+>gene_id=recA|start=2822708|end=2823769|strand=POSITIVE
+total score: 718.9285171
+average score: 0.676957172411
+score variance: 3.70396892163
+>gene_id=srlD|start=2827737|end=2828516|strand=POSITIVE
+total score: 514.7322451
+average score: 0.659913134744
+score variance: 2.53576054642
+>gene_id=hycI|start=2842573|end=2843043|strand=POSITIVE
+total score: 40.999991
+average score: 0.0870488131635
+score variance: 0.0842526711978
+>gene_id=hycE|start=2844762|end=2846471|strand=POSITIVE
+total score: 16.142851
+average score: 0.00944026374269
+score variance: 0.00572606861905
+>gene_id=hypB|start=2851001|end=2851873|strand=POSITIVE
+total score: 209.9999845
+average score: 0.240549810424
+score variance: 0.250626050507
+>gene_id=hypC|start=2851864|end=2852136|strand=POSITIVE
+total score: 42.9166444
+average score: 0.157203825641
+score variance: 0.116064423048
+>gene_id=pcm|start=2868893|end=2869519|strand=POSITIVE
+total score: 524.9998943
+average score: 0.837320405582
+score variance: 3.72986478217
+>gene_id=truD|start=2870255|end=2871304|strand=POSITIVE
+total score: 373.0762352
+average score: 0.35531070019
+score variance: 1.1288815548
+>gene_id=ispD|start=2871780|end=2872490|strand=POSITIVE
+total score: 1502.6480564
+average score: 2.1134290526
+score variance: 25.1884958438
+>gene_id=cysC|start=2873387|end=2873992|strand=POSITIVE
+total score: 3912.7205026
+average score: 6.45663449274
+score variance: 282.837870147
+>gene_id=cysN|start=2873992|end=2875419|strand=POSITIVE
+total score: 2926.3821786
+average score: 2.04928723992
+score variance: 128.270067363
+>gene_id=cysD|start=2875421|end=2876329|strand=POSITIVE
+total score: 70.2678665
+average score: 0.0773023833883
+score variance: 0.277461883998
+>gene_id=cysH|start=2887578|end=2888312|strand=POSITIVE
+total score: 1282.6024302
+average score: 1.74503732
+score variance: 14.5402021178
+>gene_id=cysI|start=2888387|end=2890099|strand=POSITIVE
+total score: 2183.7030867
+average score: 1.27478288774
+score variance: 8.82167839157
+>gene_id=cysJ|start=2890099|end=2891898|strand=POSITIVE
+total score: 495.8927083
+average score: 0.275495949056
+score variance: 1.31437214991
+>gene_id=eno|start=2906643|end=2907941|strand=POSITIVE
+total score: 3618.3381649
+average score: 2.78547972664
+score variance: 85.068226233
+>gene_id=pyrG|start=2908029|end=2909666|strand=POSITIVE
+total score: 1339.4693618
+average score: 0.817746863126
+score variance: 9.98276283556
+>gene_id=gudD|start=2918045|end=2919385|strand=POSITIVE
+total score: 20.1428588
+average score: 0.0150207746458
+score variance: 0.00758735017698
+>gene_id=syd|start=2924735|end=2925280|strand=POSITIVE
+total score: 481.9277365
+average score: 0.882651532051
+score variance: 3.10809008794
+>gene_id=fucP|start=2934235|end=2935551|strand=POSITIVE
+total score: 92.9234719
+average score: 0.0705569262718
+score variance: 0.039324751818
+>gene_id=fucI|start=2935584|end=2937359|strand=POSITIVE
+total score: 3001.2002781
+average score: 1.68986502145
+score variance: 93.4265704508
+>gene_id=csdA|start=2943337|end=2944542|strand=POSITIVE
+total score: 705.553299
+average score: 0.585035902985
+score variance: 3.08890558172
+>gene_id=argA|start=2949242|end=2950573|strand=POSITIVE
+total score: 331.9332641
+average score: 0.249199147222
+score variance: 0.31026945744
+>gene_id=recD|start=2950635|end=2952461|strand=POSITIVE
+total score: 61.4904752
+average score: 0.0336565272031
+score variance: 0.0378925956872
+>gene_id=recB|start=2952461|end=2956003|strand=POSITIVE
+total score: 529.5929039
+average score: 0.149475840785
+score variance: 0.35548527532
+>gene_id=recC|start=2959060|end=2962428|strand=POSITIVE
+total score: 314.5222234
+average score: 0.0933577392104
+score variance: 0.574244640962
+>gene_id=thyA|start=2964361|end=2965155|strand=POSITIVE
+total score: 196.5928175
+average score: 0.247286562893
+score variance: 0.692901405657
+>gene_id=mutH|start=2969662|end=2970351|strand=POSITIVE
+total score: 3119.8854264
+average score: 4.52157308174
+score variance: 62.5870564929
+>gene_id=kduI|start=2983288|end=2984124|strand=POSITIVE
+total score: 217.5238308
+average score: 0.259885102509
+score variance: 0.596289961613
+>gene_id=ssnA|start=3019161|end=3020489|strand=POSITIVE
+total score: 80.1666726
+average score: 0.0603210478555
+score variance: 0.0576678458417
+>gene_id=lysS|start=3033657|end=3035174|strand=POSITIVE
+total score: 5430.7067224
+average score: 3.57754066034
+score variance: 97.5203649212
+>gene_id=xerD|start=3038847|end=3039743|strand=POSITIVE
+total score: 4212.4250223
+average score: 4.69612600033
+score variance: 253.881328326
+>gene_id=ygfZ|start=3041313|end=3042293|strand=POSITIVE
+total score: 2638.9998776
+average score: 2.69011200571
+score variance: 122.954268515
+>gene_id=gcvP|start=3046168|end=3049041|strand=POSITIVE
+total score: 5513.1247726
+average score: 1.91827584294
+score variance: 32.000465727
+>gene_id=gcvH|start=3049160|end=3049549|strand=POSITIVE
+total score: 109.4127152
+average score: 0.28054542359
+score variance: 0.39244500343
+>gene_id=gcvT|start=3049573|end=3050667|strand=POSITIVE
+total score: 558.4968986
+average score: 0.510042829772
+score variance: 5.5040313589
+>gene_id=pepP|start=3053515|end=3054840|strand=POSITIVE
+total score: 1273.111295
+average score: 0.960114098793
+score variance: 19.8649741157
+>gene_id=serA|start=3057178|end=3058410|strand=POSITIVE
+total score: 4375.0658197
+average score: 3.54830966723
+score variance: 223.092326765
+>gene_id=rpiA|start=3058666|end=3059325|strand=POSITIVE
+total score: 2.3333326
+average score: 0.00353535242424
+score variance: 0.0010274747427
+>gene_id=argP|start=3059753|end=3060646|strand=POSITIVE
+total score: 0
+average score: 0
+score variance: 0
+>gene_id=fbaA|start=3070165|end=3071244|strand=POSITIVE
+total score: 21542.5467639
+average score: 19.9468025592
+score variance: 5293.08635054
+>gene_id=pgk|start=3071459|end=3072622|strand=POSITIVE
+total score: 456.9090442
+average score: 0.392533543127
+score variance: 4.8340829376
+>gene_id=epd|start=3072672|end=3073691|strand=POSITIVE
+total score: 67.8749935
+average score: 0.0665441112745
+score variance: 0.064660913252
+>gene_id=tktA|start=3079644|end=3081635|strand=POSITIVE
+total score: 3095.704654
+average score: 1.55406860141
+score variance: 12.9771834554
+>gene_id=metK|start=3086706|end=3087860|strand=POSITIVE
+total score: 219.0908797
+average score: 0.189689073333
+score variance: 0.546281340021
+>gene_id=gshB|start=3091878|end=3092828|strand=POSITIVE
+total score: 68.1250098
+average score: 0.0716351312303
+score variance: 0.0785647189359
+>gene_id=yggX|start=3104093|end=3104368|strand=POSITIVE
+total score: 28.500006
+average score: 0.103260891304
+score variance: 0.124046885768
+>gene_id=glcB|start=3121634|end=3123805|strand=POSITIVE
+total score: 1505.5499105
+average score: 0.693162942219
+score variance: 9.68706466363
+>gene_id=hybC|start=3141286|end=3142989|strand=POSITIVE
+total score: 30.1111105
+average score: 0.0176708394953
+score variance: 0.00519396935899
+>gene_id=metC|start=3152236|end=3153423|strand=POSITIVE
+total score: 688.4457417
+average score: 0.579499782576
+score variance: 3.4049223794
+>gene_id=dkgA|start=3156623|end=3157450|strand=POSITIVE
+total score: 118.5833076
+average score: 0.143216555072
+score variance: 0.145359790279
+>gene_id=plsC|start=3162744|end=3163481|strand=POSITIVE
+total score: 260.9047129
+average score: 0.353529421274
+score variance: 0.898817174139
+>gene_id=mdaB|start=3172530|end=3173111|strand=POSITIVE
+total score: 402.3636176
+average score: 0.691346421993
+score variance: 2.45557186358
+>gene_id=ygiN|start=3173142|end=3173456|strand=POSITIVE
+total score: 339.2001252
+average score: 1.07682579429
+score variance: 8.51090992989
+>gene_id=cpdA|start=3176006|end=3176833|strand=POSITIVE
+total score: 7227.6975626
+average score: 8.72910333647
+score variance: 718.335188358
+>gene_id=nudF|start=3177281|end=3177910|strand=POSITIVE
+total score: 4461.7031845
+average score: 7.08206854683
+score variance: 1816.75266006
+>gene_id=ribB|start=3183813|end=3184466|strand=POSITIVE
+total score: 2.166666
+average score: 0.00331294495413
+score variance: 0.00129483229174
+>gene_id=yqiC|start=3184840|end=3185130|strand=POSITIVE
+total score: 0
+average score: 0
+score variance: 0
+>gene_id=folB|start=3204221|end=3204589|strand=POSITIVE
+total score: 19.333328
+average score: 0.0523938428184
+score variance: 0.0694392496232
+>gene_id=rpsU|start=3210781|end=3210996|strand=POSITIVE
+total score: 8.2000048
+average score: 0.0379629851852
+score variance: 0.00704567631253
+>gene_id=dnaG|start=3211107|end=3212852|strand=POSITIVE
+total score: 11102.7569932
+average score: 6.35896735006
+score variance: 372.917022818
+>gene_id=rpoD|start=3213047|end=3214888|strand=POSITIVE
+total score: 2550.2003808
+average score: 1.38447360521
+score variance: 11.5266901297
+>gene_id=ebgA|start=3222633|end=3225725|strand=POSITIVE
+total score: 26.9999991
+average score: 0.00872938865179
+score variance: 0.00406101089369
+>gene_id=fadH|start=3231665|end=3233683|strand=POSITIVE
+total score: 1089.0001587
+average score: 0.539376007281
+score variance: 3.90119188993
+>gene_id=tdcB|start=3265039|end=3266028|strand=POSITIVE
+total score: 2.25
+average score: 0.00227272727273
+score variance: 0.00156797311963
+>gene_id=garL|start=3272787|end=3273557|strand=POSITIVE
+total score: 16.3333363
+average score: 0.0211846125811
+score variance: 0.0148957735608
+>gene_id=deaD|start=3305971|end=3307860|strand=POSITIVE
+total score: 4429.3162035
+average score: 2.34355354683
+score variance: 53.0228426669
+>gene_id=pnp|start=3309033|end=3311168|strand=POSITIVE
+total score: 8216.8077096
+average score: 3.84682008876
+score variance: 247.241827691
+>gene_id=rpsO|start=3311415|end=3311684|strand=POSITIVE
+total score: 501.3347433
+average score: 1.85679534556
+score variance: 12.293513075
+>gene_id=truB|start=3311833|end=3312777|strand=POSITIVE
+total score: 2209.5038149
+average score: 2.33809927503
+score variance: 27.5757073875
+>gene_id=rbfA|start=3312777|end=3313178|strand=POSITIVE
+total score: 1507.8858417
+average score: 3.75095980522
+score variance: 86.9996389362
+>gene_id=infB|start=3313342|end=3316014|strand=POSITIVE
+total score: 9692.3784768
+average score: 3.6260301073
+score variance: 70.7115218137
+>gene_id=nusA|start=3316039|end=3317526|strand=POSITIVE
+total score: 8876.450756
+average score: 5.96535669086
+score variance: 205.542417701
+>gene_id=argG|start=3318637|end=3319980|strand=POSITIVE
+total score: 16.571427
+average score: 0.0123299308036
+score variance: 0.00987611235994
+>gene_id=glmM|start=3322733|end=3324070|strand=POSITIVE
+total score: 4009.9233891
+average score: 2.99695320561
+score variance: 102.632724263
+>gene_id=folP|start=3324063|end=3324911|strand=POSITIVE
+total score: 3669.4104769
+average score: 4.32203825312
+score variance: 151.067090189
+>gene_id=greA|start=3328239|end=3328715|strand=POSITIVE
+total score: 170.1000096
+average score: 0.356603793711
+score variance: 1.86715544816
+>gene_id=rpmA|start=3332862|end=3333119|strand=POSITIVE
+total score: 177.3636221
+average score: 0.687455899612
+score variance: 1.65623650249
+>gene_id=rplU|start=3333140|end=3333451|strand=POSITIVE
+total score: 375.0664668
+average score: 1.20213611154
+score variance: 7.9673474127
+>gene_id=murA|start=3335235|end=3336494|strand=POSITIVE
+total score: 8896.738145
+average score: 7.06090328968
+score variance: 719.521764286
+>gene_id=kdsC|start=3342273|end=3342839|strand=POSITIVE
+total score: 330.2634585
+average score: 0.58247523545
+score variance: 2.65420754788
+>gene_id=lptB|start=3343944|end=3344669|strand=POSITIVE
+total score: 4565.2842448
+average score: 6.28827030964
+score variance: 837.601600181
+>gene_id=hpf|start=3346173|end=3346460|strand=POSITIVE
+total score: 61.5545191
+average score: 0.213730969097
+score variance: 0.323170327258
+>gene_id=elbB|start=3349806|end=3350459|strand=POSITIVE
+total score: 40.099996
+average score: 0.0613149785933
+score variance: 0.040107207178
+>gene_id=gltD|start=3359198|end=3360616|strand=POSITIVE
+total score: 718.1668032
+average score: 0.506107683721
+score variance: 2.80193348087
+>gene_id=nanA|start=3372683|end=3373576|strand=POSITIVE
+total score: 4.000004
+average score: 0.00447427740492
+score variance: 0.00257026921684
+>gene_id=sspB|start=3376279|end=3376776|strand=POSITIVE
+total score: 22926.7291851
+average score: 46.0376088054
+score variance: 12820.7895219
+>gene_id=sspA|start=3376782|end=3377420|strand=POSITIVE
+total score: 149.2500099
+average score: 0.23356809061
+score variance: 0.444423869934
+>gene_id=rpsI|start=3377815|end=3378207|strand=POSITIVE
+total score: 69.249992
+average score: 0.176208631043
+score variance: 0.241483260012
+>gene_id=rplM|start=3378223|end=3378651|strand=POSITIVE
+total score: 3979.2047289
+average score: 9.2755354986
+score variance: 472.052810654
+>gene_id=mdh|start=3383330|end=3384268|strand=POSITIVE
+total score: 1733.9996832
+average score: 1.84664503003
+score variance: 73.5680275663
+>gene_id=argR|start=3384703|end=3385173|strand=POSITIVE
+total score: 1.2500003
+average score: 0.00265392845011
+score variance: 0.000282137806935
+>gene_id=rng|start=3396326|end=3397795|strand=POSITIVE
+total score: 247.6250027
+average score: 0.168452382789
+score variance: 0.331846246329
+>gene_id=mreB|start=3400044|end=3401087|strand=POSITIVE
+total score: 283.425048
+average score: 0.271479931034
+score variance: 0.976493637134
+>gene_id=accB|start=3405436|end=3405906|strand=POSITIVE
+total score: 126.1666967
+average score: 0.267869844374
+score variance: 0.242199955759
+>gene_id=accC|start=3405917|end=3407266|strand=POSITIVE
+total score: 199.3637038
+average score: 0.14767681763
+score variance: 0.625131294475
+>gene_id=fis|start=3411271|end=3411567|strand=POSITIVE
+total score: 1.2
+average score: 0.0040404040404
+score variance: 0.00178569698619
+>gene_id=aroE|start=3430020|end=3430838|strand=POSITIVE
+total score: 1359.8139849
+average score: 1.6603345359
+score variance: 54.185318727
+>gene_id=def|start=3433690|end=3434199|strand=POSITIVE
+total score: 164.0000063
+average score: 0.321568639804
+score variance: 0.496994683629
+>gene_id=fmt|start=3434214|end=3435161|strand=POSITIVE
+total score: 597.4999647
+average score: 0.630274224367
+score variance: 10.5602493303
+>gene_id=rsmB|start=3435207|end=3436496|strand=POSITIVE
+total score: 9871.8337777
+average score: 7.6525843238
+score variance: 1509.23060852
+>gene_id=trkA|start=3436518|end=3437894|strand=POSITIVE
+total score: 31793.8254455
+average score: 23.0891978544
+score variance: 9100.56676012
+>gene_id=mscL|start=3438024|end=3438434|strand=POSITIVE
+total score: 5190.4830661
+average score: 12.6289125696
+score variance: 535.606022034
+>gene_id=rplQ|start=3439616|end=3439999|strand=POSITIVE
+total score: 6254.4780147
+average score: 16.2877031633
+score variance: 1289.97734726
+>gene_id=rpoA|start=3440040|end=3441029|strand=POSITIVE
+total score: 37840.06023
+average score: 38.2222830606
+score variance: 111907.115132
+>gene_id=rpsD|start=3441055|end=3441675|strand=POSITIVE
+total score: 1593.3336334
+average score: 2.56575464316
+score variance: 46.3776473429
+>gene_id=rpsK|start=3441709|end=3442098|strand=POSITIVE
+total score: 1152.9669387
+average score: 2.95632548385
+score variance: 40.2969866014
+>gene_id=rpsM|start=3442115|end=3442471|strand=POSITIVE
+total score: 11180.851861
+average score: 31.3189127759
+score variance: 4046.1893469
+>gene_id=rpmJ|start=3442618|end=3442734|strand=POSITIVE
+total score: 7215.017562
+average score: 61.6668167692
+score variance: 17585.3064998
+>gene_id=rplO|start=3444105|end=3444539|strand=POSITIVE
+total score: 12284.4650512
+average score: 28.240149543
+score variance: 24026.0915625
+>gene_id=rpmD|start=3444543|end=3444722|strand=POSITIVE
+total score: 5276.2628806
+average score: 29.3125715589
+score variance: 3096.32234858
+>gene_id=rpsE|start=3444726|end=3445229|strand=POSITIVE
+total score: 21456.7187655
+average score: 42.5728546935
+score variance: 20286.1052425
+>gene_id=rplR|start=3445244|end=3445597|strand=POSITIVE
+total score: 43942.4853163
+average score: 124.131314453
+score variance: 112367.020974
+>gene_id=rplF|start=3445607|end=3446140|strand=POSITIVE
+total score: 47123.8067094
+average score: 88.2468290438
+score variance: 23360.0217861
+>gene_id=rpsH|start=3446153|end=3446545|strand=POSITIVE
+total score: 4228.8406951
+average score: 10.7604088934
+score variance: 868.28056173
+>gene_id=rpsN|start=3446579|end=3446884|strand=POSITIVE
+total score: 16052.0718833
+average score: 52.4577512526
+score variance: 22618.6649261
+>gene_id=rplE|start=3446899|end=3447438|strand=POSITIVE
+total score: 14980.010976
+average score: 27.7407610667
+score variance: 4167.01184446
+>gene_id=rplX|start=3447453|end=3447767|strand=POSITIVE
+total score: 10992.8377851
+average score: 34.8978977305
+score variance: 3662.9659656
+>gene_id=rplN|start=3447778|end=3448149|strand=POSITIVE
+total score: 10445.8321365
+average score: 28.0801939153
+score variance: 6627.46899713
+>gene_id=rpsQ|start=3448314|end=3448568|strand=POSITIVE
+total score: 13050.8873033
+average score: 51.179950209
+score variance: 21859.0351648
+>gene_id=rpmC|start=3448568|end=3448759|strand=POSITIVE
+total score: 5154.1777594
+average score: 26.8446758302
+score variance: 1803.35663091
+>gene_id=rplP|start=3448759|end=3449169|strand=POSITIVE
+total score: 9823.0163923
+average score: 23.9002831929
+score variance: 2145.96368625
+>gene_id=rpsC|start=3449182|end=3449883|strand=POSITIVE
+total score: 27767.02826
+average score: 39.5541713105
+score variance: 28303.2337825
+>gene_id=rplV|start=3449901|end=3450233|strand=POSITIVE
+total score: 14259.6884021
+average score: 42.8218870934
+score variance: 5295.04155712
+>gene_id=rpsS|start=3450248|end=3450526|strand=POSITIVE
+total score: 7627.5404876
+average score: 27.3388547943
+score variance: 3567.02712753
+>gene_id=rplB|start=3450543|end=3451364|strand=POSITIVE
+total score: 32752.0478665
+average score: 39.8443404702
+score variance: 6316.89698958
+>gene_id=rplW|start=3451382|end=3451684|strand=POSITIVE
+total score: 24.999989
+average score: 0.0825082145215
+score variance: 0.0750742802352
+>gene_id=rplD|start=3451681|end=3452286|strand=POSITIVE
+total score: 15.3333317
+average score: 0.0253025275578
+score variance: 0.0156452982276
+>gene_id=rplC|start=3452297|end=3452926|strand=POSITIVE
+total score: 4.8095217
+average score: 0.00763416142857
+score variance: 0.00209710669402
+>gene_id=rpsJ|start=3452959|end=3453270|strand=POSITIVE
+total score: 5.190473
+average score: 0.0166361314103
+score variance: 0.00826200569067
+>gene_id=bfr|start=3466249|end=3466725|strand=POSITIVE
+total score: 33.3333414
+average score: 0.0698812188679
+score variance: 0.0404274536747
+>gene_id=tufA|start=3470145|end=3471329|strand=POSITIVE
+total score: 14685.3987282
+average score: 12.3927415428
+score variance: 591.339590054
+>gene_id=fusA|start=3471400|end=3473514|strand=POSITIVE
+total score: 68090.5609414
+average score: 32.1941186484
+score variance: 9735.14684691
+>gene_id=rpsG|start=3473542|end=3474081|strand=POSITIVE
+total score: 401.9998932
+average score: 0.744444246667
+score variance: 3.58375879119
+>gene_id=rpsL|start=3474178|end=3474552|strand=POSITIVE
+total score: 1032.2994574
+average score: 2.75279855307
+score variance: 51.3456005987
+>gene_id=slyD|start=3477907|end=3478497|strand=POSITIVE
+total score: 93.2289813
+average score: 0.157747853299
+score variance: 0.289366429116
+>gene_id=crp|start=3486120|end=3486752|strand=POSITIVE
+total score: 7.5625001
+average score: 0.0119470775671
+score variance: 0.00628826159618
+>gene_id=argD|start=3488960|end=3490180|strand=POSITIVE
+total score: 2240.3655602
+average score: 1.83486122867
+score variance: 24.2149879944
+>gene_id=cysG|start=3497828|end=3499201|strand=POSITIVE
+total score: 9.2500062
+average score: 0.00673217336245
+score variance: 0.00150849025948
+>gene_id=php|start=3507712|end=3508590|strand=POSITIVE
+total score: 5.125
+average score: 0.00583048919226
+score variance: 0.00124665009058
+>gene_id=trpS|start=3512634|end=3513638|strand=POSITIVE
+total score: 3550.5967686
+average score: 3.53293210806
+score variance: 265.550206845
+>gene_id=aroB|start=3517398|end=3518486|strand=POSITIVE
+total score: 14.4999983
+average score: 0.0133149662994
+score variance: 0.00922930696078
+>gene_id=aroK|start=3518543|end=3519064|strand=POSITIVE
+total score: 13.4999966
+average score: 0.0258620624521
+score variance: 0.0252342624853
+>gene_id=hslR|start=3529348|end=3529749|strand=POSITIVE
+total score: 2.000002
+average score: 0.00497512935323
+score variance: 0.00285308472489
+>gene_id=pck|start=3532818|end=3534440|strand=POSITIVE
+total score: 4854.4169618
+average score: 2.99101476389
+score variance: 160.13610048
+>gene_id=greB|start=3536812|end=3537288|strand=POSITIVE
+total score: 444.4427955
+average score: 0.931745902516
+score variance: 5.04202664554
+>gene_id=malP|start=3550080|end=3552473|strand=POSITIVE
+total score: 1344.6857225
+average score: 0.561689942565
+score variance: 4.22239115751
+>gene_id=glpG|start=3560622|end=3561452|strand=POSITIVE
+total score: 156.4304248
+average score: 0.188243591817
+score variance: 0.158035302761
+>gene_id=glpD|start=3562013|end=3563518|strand=POSITIVE
+total score: 869.9999754
+average score: 0.577689226693
+score variance: 4.32938904873
+>gene_id=glgA|start=3566600|end=3568033|strand=POSITIVE
+total score: 4900.8088071
+average score: 3.41757936339
+score variance: 103.546055404
+>gene_id=glgC|start=3568033|end=3569328|strand=POSITIVE
+total score: 544.7905001
+average score: 0.420363040201
+score variance: 1.67097606625
+>gene_id=asd|start=3573775|end=3574878|strand=POSITIVE
+total score: 10.499998
+average score: 0.00951086775362
+score variance: 0.00274488312777
+>gene_id=gntK|start=3577065|end=3577592|strand=POSITIVE
+total score: 692.0664921
+average score: 1.31073199261
+score variance: 4.22944436949
+>gene_id=ftsY|start=3602750|end=3604243|strand=POSITIVE
+total score: 1448.8460121
+average score: 0.969776447189
+score variance: 8.50871490266
+>gene_id=uspA|start=3640111|end=3640545|strand=POSITIVE
+total score: 46.2857162
+average score: 0.106403945287
+score variance: 0.166747312198
+>gene_id=prlC|start=3643140|end=3645182|strand=POSITIVE
+total score: 3577.1568784
+average score: 1.75093337171
+score variance: 20.7416375159
+>gene_id=gadA|start=3666180|end=3667580|strand=POSITIVE
+total score: 33.1110994
+average score: 0.0236339039258
+score variance: 0.0129749644403
+>gene_id=treF|start=3669592|end=3671241|strand=POSITIVE
+total score: 498.1999676
+average score: 0.301939374303
+score variance: 0.58241652988
+>gene_id=tag|start=3713092|end=3713655|strand=POSITIVE
+total score: 161.9999679
+average score: 0.287233985638
+score variance: 0.401276241054
+>gene_id=ghrB|start=3717310|end=3718284|strand=POSITIVE
+total score: 135842.272775
+average score: 139.325407974
+score variance: 1700371.00223
+>gene_id=cspA|start=3720049|end=3720261|strand=POSITIVE
+total score: 1.249999
+average score: 0.0058685399061
+score variance: 0.00179013656188
+>gene_id=glyS|start=3722328|end=3724397|strand=POSITIVE
+total score: 5078.1433746
+average score: 2.45320935971
+score variance: 36.4095365645
+>gene_id=glyQ|start=3724407|end=3725318|strand=POSITIVE
+total score: 35.9999941
+average score: 0.0394736777412
+score variance: 0.0290614857194
+>gene_id=aldB|start=3754973|end=3756511|strand=POSITIVE
+total score: 228.199862
+average score: 0.148278012995
+score variance: 0.268594396848
+>gene_id=selB|start=3758017|end=3759861|strand=POSITIVE
+total score: 1066.9028885
+average score: 0.578267148238
+score variance: 1.82765466449
+>gene_id=mtlD|start=3774424|end=3775572|strand=POSITIVE
+total score: 600.2500119
+average score: 0.52241080235
+score variance: 4.38849413976
+>gene_id=grxC|start=3784191|end=3784442|strand=POSITIVE
+total score: 1242.8427663
+average score: 4.93191573929
+score variance: 75.3209450332
+>gene_id=tdh|start=3790320|end=3791345|strand=POSITIVE
+total score: 432.2575841
+average score: 0.421303688207
+score variance: 1.40803015682
+>gene_id=kbl|start=3791355|end=3792551|strand=POSITIVE
+total score: 5714.464062
+average score: 4.77398835589
+score variance: 155.570310708
+>gene_id=hldD|start=3793987|end=3794919|strand=POSITIVE
+total score: 339.5000257
+average score: 0.363879984673
+score variance: 5.21252217199
+>gene_id=waaC|start=3795979|end=3796938|strand=POSITIVE
+total score: 150.4999757
+average score: 0.156770808021
+score variance: 0.229712434711
+>gene_id=coaD|start=3809825|end=3810304|strand=POSITIVE
+total score: 35.357564
+average score: 0.0736615916667
+score variance: 0.635772697105
+>gene_id=mutM|start=3810343|end=3811152|strand=POSITIVE
+total score: 1416.3428036
+average score: 1.74857136247
+score variance: 30.7971339124
+>gene_id=rpmG|start=3811250|end=3811417|strand=POSITIVE
+total score: 105.8249747
+average score: 0.62991056369
+score variance: 1.59102112354
+>gene_id=rpmB|start=3811438|end=3811674|strand=POSITIVE
+total score: 148.3055109
+average score: 0.625761649367
+score variance: 1.67639894009
+>gene_id=dfp|start=3812731|end=3813951|strand=POSITIVE
+total score: 797.4659002
+average score: 0.653125225389
+score variance: 3.17803227275
+>gene_id=pyrE|start=3815127|end=3815768|strand=POSITIVE
+total score: 677.5500858
+average score: 1.05537396542
+score variance: 5.72425407189
+>gene_id=rpoZ|start=3822106|end=3822381|strand=POSITIVE
+total score: 6.33333
+average score: 0.0229468478261
+score variance: 0.0146691784115
+>gene_id=uhpA|start=3850136|end=3850726|strand=POSITIVE
+total score: 2847.734395
+average score: 4.81850151438
+score variance: 99.39769798
+>gene_id=ilvB|start=3851096|end=3852784|strand=POSITIVE
+total score: 92.9999917
+average score: 0.0550621620485
+score variance: 0.074092566282
+>gene_id=ibpB|start=3866469|end=3866897|strand=POSITIVE
+total score: 174.2499509
+average score: 0.406177041725
+score variance: 0.788677578717
+>gene_id=ibpA|start=3867009|end=3867422|strand=POSITIVE
+total score: 207.8333038
+average score: 0.502012811111
+score variance: 1.65016758033
+>gene_id=dgoD|start=3871850|end=3872998|strand=POSITIVE
+total score: 322.0908629
+average score: 0.280322770148
+score variance: 0.655698442931
+>gene_id=gyrB|start=3877705|end=3880119|strand=POSITIVE
+total score: 3522.3190254
+average score: 1.45851719478
+score variance: 21.2389094831
+>gene_id=recF|start=3880148|end=3881221|strand=POSITIVE
+total score: 2041.1115683
+average score: 1.90047632058
+score variance: 98.2806036226
+>gene_id=dnaN|start=3881221|end=3882321|strand=POSITIVE
+total score: 2096.8003345
+average score: 1.90445080336
+score variance: 56.8368546542
+>gene_id=rpmH|start=3884336|end=3884476|strand=POSITIVE
+total score: 155.2999863
+average score: 1.10141834255
+score variance: 8.58943094586
+>gene_id=tnaA|start=3888730|end=3890145|strand=POSITIVE
+total score: 50.499992
+average score: 0.0356638361582
+score variance: 0.0790699539689
+>gene_id=phoU|start=3906853|end=3907578|strand=POSITIVE
+total score: 446.3916734
+average score: 0.614864563912
+score variance: 1.37552895777
+>gene_id=glmS|start=3911839|end=3913668|strand=POSITIVE
+total score: 3496.4769552
+average score: 1.91064314492
+score variance: 171.952751453
+>gene_id=atpC|start=3915553|end=3915972|strand=POSITIVE
+total score: 1596.8719462
+average score: 3.80207606238
+score variance: 135.935285511
+>gene_id=atpD|start=3915993|end=3917375|strand=POSITIVE
+total score: 17284.6378521
+average score: 12.4979304787
+score variance: 1109.92118565
+>gene_id=atpG|start=3917402|end=3918265|strand=POSITIVE
+total score: 12001.2962288
+average score: 13.8903891537
+score variance: 1928.16367726
+>gene_id=atpA|start=3918316|end=3919857|strand=POSITIVE
+total score: 26923.6536361
+average score: 17.4602163658
+score variance: 3390.19795017
+>gene_id=atpH|start=3919870|end=3920403|strand=POSITIVE
+total score: 2344.8398599
+average score: 4.39108587996
+score variance: 110.197489706
+>gene_id=atpF|start=3920418|end=3920888|strand=POSITIVE
+total score: 52.3075299
+average score: 0.111056326752
+score variance: 0.191457485027
+>gene_id=atpE|start=3920950|end=3921189|strand=POSITIVE
+total score: 31.5381004
+average score: 0.131408751667
+score variance: 0.185716896495
+>gene_id=atpI|start=3922060|end=3922440|strand=POSITIVE
+total score: 201.2361397
+average score: 0.528178844357
+score variance: 1.00079171006
+>gene_id=mioC|start=3926012|end=3926455|strand=POSITIVE
+total score: 170.0491582
+average score: 0.38299359955
+score variance: 0.841318993704
+>gene_id=asnA|start=3927155|end=3928147|strand=POSITIVE
+total score: 44.1250032
+average score: 0.0444360555891
+score variance: 0.0207754286774
+>gene_id=rbsD|start=3933351|end=3933770|strand=POSITIVE
+total score: 51.4999831
+average score: 0.122619007381
+score variance: 0.133835206128
+>gene_id=rbsA|start=3933778|end=3935283|strand=POSITIVE
+total score: 3496.6214133
+average score: 2.32179376713
+score variance: 38.4412832713
+>gene_id=rbsK|start=3937294|end=3938223|strand=POSITIVE
+total score: 13.999996
+average score: 0.0150537591398
+score variance: 0.00995407108365
+>gene_id=rbsR|start=3938227|end=3939219|strand=POSITIVE
+total score: 624.1110408
+average score: 0.628510615106
+score variance: 2.87996869762
+>gene_id=yifE|start=3948086|end=3948424|strand=POSITIVE
+total score: 603.5064791
+average score: 1.78025510059
+score variance: 59.03016435
+>gene_id=ilvE|start=3952484|end=3953413|strand=POSITIVE
+total score: 976.7498981
+average score: 1.05026870763
+score variance: 3.87628380476
+>gene_id=ilvD|start=3953478|end=3955328|strand=POSITIVE
+total score: 707.4999548
+average score: 0.38222579946
+score variance: 0.862062654699
+>gene_id=ilvC|start=3957970|end=3959445|strand=POSITIVE
+total score: 560.9998672
+average score: 0.38008121084
+score variance: 6.90256548517
+>gene_id=ppiC|start=3959532|end=3959813|strand=POSITIVE
+total score: 15.333335
+average score: 0.0543735283688
+score variance: 0.0731920147052
+>gene_id=rep|start=3960677|end=3962698|strand=POSITIVE
+total score: 1364.6686692
+average score: 0.674910321068
+score variance: 5.75241886494
+>gene_id=rhlB|start=3964365|end=3965630|strand=POSITIVE
+total score: 5185.4503626
+average score: 4.09593235592
+score variance: 72.6678398451
+>gene_id=trxA|start=3965761|end=3966090|strand=POSITIVE
+total score: 134.65269
+average score: 0.408038454545
+score variance: 2.95571566244
+>gene_id=rho|start=3966417|end=3967676|strand=POSITIVE
+total score: 386.7667494
+average score: 0.306957737619
+score variance: 0.983802049731
+>gene_id=hemX|start=3987885|end=3989066|strand=POSITIVE
+total score: 949.3301336
+average score: 0.803155781387
+score variance: 10.7191784178
+>gene_id=hemC|start=3989825|end=3990766|strand=POSITIVE
+total score: 372.9999517
+average score: 0.39596597845
+score variance: 1.43870999838
+>gene_id=cyaA|start=3991153|end=3993699|strand=POSITIVE
+total score: 2705.7779348
+average score: 1.06233919702
+score variance: 26.979900936
+>gene_id=dapF|start=3994762|end=3995586|strand=POSITIVE
+total score: 461.9331447
+average score: 0.559918963273
+score variance: 2.66428730466
+>gene_id=xerC|start=3996287|end=3997183|strand=POSITIVE
+total score: 107.6666801
+average score: 0.120029743701
+score variance: 0.124985314055
+>gene_id=uvrD|start=3997983|end=4000145|strand=POSITIVE
+total score: 4720.0010836
+average score: 2.18215491613
+score variance: 59.6626978868
+>gene_id=recQ|start=4005864|end=4007693|strand=POSITIVE
+total score: 1757.0178665
+average score: 0.960119052732
+score variance: 10.2425406636
+>gene_id=pldB|start=4009170|end=4010192|strand=POSITIVE
+total score: 1046.0142998
+average score: 1.02249687175
+score variance: 16.5729272396
+>gene_id=metR|start=4011863|end=4012816|strand=POSITIVE
+total score: 66540.6678332
+average score: 69.7491277078
+score variance: 15239.1738455
+>gene_id=metE|start=4013053|end=4015314|strand=POSITIVE
+total score: 41779.3114955
+average score: 18.4700758159
+score variance: 6497.0701103
+>gene_id=udp|start=4016431|end=4017192|strand=POSITIVE
+total score: 1738.9990442
+average score: 2.28215097664
+score variance: 137.447538165
+>gene_id=tatD|start=4023554|end=4024336|strand=POSITIVE
+total score: 860.0236643
+average score: 1.09836994163
+score variance: 6.17727485949
+>gene_id=fre|start=4026527|end=4027228|strand=POSITIVE
+total score: 128.499988
+average score: 0.183048415954
+score variance: 0.247206712365
+>gene_id=fadA|start=4027609|end=4028772|strand=POSITIVE
+total score: 105.2777829
+average score: 0.0904448306701
+score variance: 0.0799312180886
+>gene_id=fadB|start=4028782|end=4030971|strand=POSITIVE
+total score: 3680.7212293
+average score: 1.68069462525
+score variance: 103.56570169
+>gene_id=hemG|start=4034608|end=4035153|strand=POSITIVE
+total score: 165.4667322
+average score: 0.303052623077
+score variance: 2.63910166755
+>gene_id=mobB|start=4040906|end=4041433|strand=POSITIVE
+total score: 255.3110461
+average score: 0.483543647917
+score variance: 1.72514470116
+>gene_id=mobA|start=4041415|end=4041999|strand=POSITIVE
+total score: 8341.4408808
+average score: 14.2588733005
+score variance: 986.211906817
+>gene_id=yihD|start=4042069|end=4042338|strand=POSITIVE
+total score: 51.499981
+average score: 0.19074067037
+score variance: 1.93766312508
+>gene_id=glnL|start=4055290|end=4056339|strand=POSITIVE
+total score: 13761.8007384
+average score: 13.1064768937
+score variance: 750.248990062
+>gene_id=glnA|start=4056625|end=4058034|strand=POSITIVE
+total score: 5989.0331187
+average score: 4.24754121894
+score variance: 98.6267469704
+>gene_id=typA|start=4058407|end=4060230|strand=POSITIVE
+total score: 104.4999949
+average score: 0.0572916638706
+score variance: 0.0434979922555
+>gene_id=dtd|start=4077015|end=4077452|strand=POSITIVE
+total score: 12.2142848
+average score: 0.0278864949772
+score variance: 0.0189636382619
+>gene_id=sodA|start=4100810|end=4101430|strand=POSITIVE
+total score: 1698.6886309
+average score: 2.73540842335
+score variance: 19.3025769067
+>gene_id=pfkA|start=4107552|end=4108514|strand=POSITIVE
+total score: 268.7999926
+average score: 0.279127718172
+score variance: 0.383723544774
+>gene_id=tpiA|start=4110740|end=4111507|strand=POSITIVE
+total score: 4902.8061387
+average score: 6.38386215977
+score variance: 863.487375098
+>gene_id=fpr|start=4113726|end=4114472|strand=POSITIVE
+total score: 272.1111563
+average score: 0.364271962918
+score variance: 0.666010896698
+>gene_id=glpK|start=4115714|end=4117222|strand=POSITIVE
+total score: 14839.9969837
+average score: 9.83432537025
+score variance: 2653.51538451
+>gene_id=hslV|start=4121757|end=4122287|strand=POSITIVE
+total score: 39.1111122
+average score: 0.0736555785311
+score variance: 0.0583091859716
+>gene_id=priA|start=4124612|end=4126810|strand=POSITIVE
+total score: 36345.9930954
+average score: 16.5284188701
+score variance: 6063.45151238
+>gene_id=rpmE|start=4127013|end=4127225|strand=POSITIVE
+total score: 1190.7130049
+average score: 5.59020190094
+score variance: 127.418720894
+>gene_id=metJ|start=4128078|end=4128395|strand=POSITIVE
+total score: 966.9654453
+average score: 3.04077184057
+score variance: 22.6194973756
+>gene_id=metB|start=4128672|end=4129832|strand=POSITIVE
+total score: 2460.4976252
+average score: 2.11929166684
+score variance: 25.9899679612
+>gene_id=metL|start=4129835|end=4132267|strand=POSITIVE
+total score: 16540.2425154
+average score: 6.7982912106
+score variance: 830.263983414
+>gene_id=gldA|start=4137932|end=4139035|strand=POSITIVE
+total score: 10.9999995
+average score: 0.00996376766304
+score variance: 0.00510386577115
+>gene_id=oxyR|start=4158490|end=4159407|strand=POSITIVE
+total score: 557.0173637
+average score: 0.606772727342
+score variance: 2.94366164688
+>gene_id=sthA|start=4159390|end=4160790|strand=POSITIVE
+total score: 1354.2819981
+average score: 0.966653817345
+score variance: 6.36253894567
+>gene_id=trmA|start=4162170|end=4163270|strand=POSITIVE
+total score: 310.0909155
+average score: 0.281644791553
+score variance: 0.415538373972
+>gene_id=tufB|start=4175944|end=4177128|strand=POSITIVE
+total score: 58233.3054647
+average score: 49.142029928
+score variance: 15521.5182415
+>gene_id=nusG|start=4177743|end=4178288|strand=POSITIVE
+total score: 29177.3737251
+average score: 53.4384134159
+score variance: 29708.2673729
+>gene_id=rplK|start=4178447|end=4178875|strand=POSITIVE
+total score: 38332.7975758
+average score: 89.353840503
+score variance: 33100.6590137
+>gene_id=rplA|start=4178879|end=4179583|strand=POSITIVE
+total score: 10874.1387632
+average score: 15.4243103024
+score variance: 4017.9803093
+>gene_id=rplJ|start=4179996|end=4180493|strand=POSITIVE
+total score: 1637.3805687
+average score: 3.28791278855
+score variance: 36.9093283054
+>gene_id=rplL|start=4180560|end=4180925|strand=POSITIVE
+total score: 995.9237334
+average score: 2.72110309672
+score variance: 20.3888113801
+>gene_id=rpoB|start=4181245|end=4185273|strand=POSITIVE
+total score: 10128.9307041
+average score: 2.51400613157
+score variance: 40.0204425194
+>gene_id=rpoC|start=4185350|end=4189573|strand=POSITIVE
+total score: 5274.8681355
+average score: 1.24878506996
+score variance: 16.9109634281
+>gene_id=rsd|start=4196332|end=4196808|strand=POSITIVE
+total score: 506.7410488
+average score: 1.06235020713
+score variance: 7.316789255
+>gene_id=nfi|start=4198790|end=4199461|strand=POSITIVE
+total score: 53.9166429
+average score: 0.0802330995536
+score variance: 0.0814182640813
+>gene_id=hupA|start=4200281|end=4200553|strand=POSITIVE
+total score: 13.999992
+average score: 0.051282021978
+score variance: 0.069660685012
+>gene_id=purH|start=4205943|end=4207532|strand=POSITIVE
+total score: 3513.3752057
+average score: 2.20966994069
+score variance: 122.638685188
+>gene_id=aceA|start=4217109|end=4218413|strand=POSITIVE
+total score: 70.2500025
+average score: 0.0538314195402
+score variance: 0.107677530078
+>gene_id=aceK|start=4218596|end=4220332|strand=POSITIVE
+total score: 2.75
+average score: 0.00158318940702
+score variance: 0.00125434944773
+>gene_id=iclR|start=4222804|end=4223628|strand=POSITIVE
+total score: 640.7499567
+average score: 0.776666614182
+score variance: 2.69521086701
+>gene_id=metH|start=4223828|end=4227511|strand=POSITIVE
+total score: 2191.9996782
+average score: 0.595005341531
+score variance: 6.12194319163
+>gene_id=lysC|start=4231884|end=4233233|strand=POSITIVE
+total score: 12024.4558446
+average score: 8.90700432933
+score variance: 647.157162734
+>gene_id=ubiC|start=4252506|end=4253003|strand=POSITIVE
+total score: 27.111119
+average score: 0.054439997992
+score variance: 0.0329680205187
+>gene_id=plsB|start=4254043|end=4256466|strand=POSITIVE
+total score: 5845.3326757
+average score: 2.41144087281
+score variance: 168.90667628
+>gene_id=dgkA|start=4256637|end=4257005|strand=POSITIVE
+total score: 5.249999
+average score: 0.0142276395664
+score variance: 0.00528588405542
+>gene_id=yjbJ|start=4259237|end=4259446|strand=POSITIVE
+total score: 2.333333
+average score: 0.0111111095238
+score variance: 0.00742739466129
+>gene_id=zur|start=4259488|end=4260003|strand=POSITIVE
+total score: 795.7696183
+average score: 1.54218918275
+score variance: 25.6376154519
+>gene_id=dnaB|start=4264314|end=4265729|strand=POSITIVE
+total score: 2236.5917729
+average score: 1.57951396391
+score variance: 15.2433054255
+>gene_id=tyrB|start=4267114|end=4268307|strand=POSITIVE
+total score: 268.0834024
+average score: 0.224525462647
+score variance: 0.387531921372
+>gene_id=yjbR|start=4270658|end=4271014|strand=POSITIVE
+total score: 180.8636595
+average score: 0.506620894958
+score variance: 1.46754343009
+>gene_id=uvrA|start=4271049|end=4273871|strand=POSITIVE
+total score: 14402.5122894
+average score: 5.10184636536
+score variance: 414.198585558
+>gene_id=ssb|start=4274125|end=4274661|strand=POSITIVE
+total score: 21.200009
+average score: 0.0394786014898
+score variance: 0.0403426306264
+>gene_id=soxS|start=4277060|end=4277383|strand=POSITIVE
+total score: 171.8154756
+average score: 0.530294677778
+score variance: 1.2807358288
+>gene_id=adiA|start=4338254|end=4340521|strand=POSITIVE
+total score: 136.9999371
+average score: 0.0604056160053
+score variance: 0.0807656651281
+>gene_id=melA|start=4341911|end=4343266|strand=POSITIVE
+total score: 63.1428603
+average score: 0.0465655311947
+score variance: 0.0310835764491
+>gene_id=melB|start=4343369|end=4344790|strand=POSITIVE
+total score: 48.1249953
+average score: 0.0338431753165
+score variance: 0.0249414114743
+>gene_id=lysU|start=4353200|end=4354717|strand=POSITIVE
+total score: 25.9999981
+average score: 0.0171277984848
+score variance: 0.00878749390844
+>gene_id=cadA|start=4356470|end=4358617|strand=POSITIVE
+total score: 23.3333432
+average score: 0.0108628227188
+score variance: 0.012279035279
+>gene_id=aspA|start=4366891|end=4368327|strand=POSITIVE
+total score: 726.715507
+average score: 0.505717123869
+score variance: 5.45527016099
+>gene_id=groS|start=4370688|end=4370981|strand=POSITIVE
+total score: 6697.5479806
+average score: 22.7807754442
+score variance: 5202.08083776
+>gene_id=groL|start=4371025|end=4372671|strand=POSITIVE
+total score: 4057.6811639
+average score: 2.4636801238
+score variance: 191.313717002
+>gene_id=efp|start=4375699|end=4376265|strand=POSITIVE
+total score: 227.3332858
+average score: 0.40094053933
+score variance: 8.40940806244
+>gene_id=frdB|start=4379783|end=4380517|strand=POSITIVE
+total score: 943.9999898
+average score: 1.28435372762
+score variance: 18.8111795405
+>gene_id=psd|start=4389392|end=4390360|strand=POSITIVE
+total score: 2862.078017
+average score: 2.95364088442
+score variance: 101.936593667
+>gene_id=orn|start=4391604|end=4392149|strand=POSITIVE
+total score: 621.0015624
+average score: 1.1373654989
+score variance: 116.788995884
+>gene_id=hfq|start=4400288|end=4400596|strand=POSITIVE
+total score: 649.3301098
+average score: 2.1013919411
+score variance: 16.9638285157
+>gene_id=purA|start=4404687|end=4405985|strand=POSITIVE
+total score: 3295.9487595
+average score: 2.53729696651
+score variance: 22.9962331109
+>gene_id=rnr|start=4406654|end=4409095|strand=POSITIVE
+total score: 2847.6998061
+average score: 1.16613423673
+score variance: 17.2700880767
+>gene_id=ulaD|start=4422186|end=4422836|strand=POSITIVE
+total score: 124.1666553
+average score: 0.190732189401
+score variance: 0.265629232684
+>gene_id=rpsF|start=4425118|end=4425513|strand=POSITIVE
+total score: 5.666666
+average score: 0.0143097626263
+score variance: 0.00421396404634
+>gene_id=priB|start=4425520|end=4425834|strand=POSITIVE
+total score: 0
+average score: 0
+score variance: 0
+>gene_id=rpsR|start=4425839|end=4426066|strand=POSITIVE
+total score: 0
+average score: 0
+score variance: 0
+>gene_id=rplI|start=4426108|end=4426557|strand=POSITIVE
+total score: 1164.2557591
+average score: 2.58723502022
+score variance: 42.1037405443
+>gene_id=fklB|start=4428935|end=4429555|strand=POSITIVE
+total score: 93.8441409
+average score: 0.151117779227
+score variance: 0.135944999146
+>gene_id=msrA|start=4441538|end=4442176|strand=POSITIVE
+total score: 84.9999539
+average score: 0.133020272144
+score variance: 0.112077025762
+>gene_id=ppa|start=4449122|end=4449652|strand=POSITIVE
+total score: 11.587301
+average score: 0.0218216591337
+score variance: 0.012971776149
+>gene_id=nrdD|start=4460522|end=4462660|strand=POSITIVE
+total score: 886.887763
+average score: 0.41462728518
+score variance: 5.86817613052
+>gene_id=ridA|start=4470527|end=4470913|strand=POSITIVE
+total score: 572.0908351
+average score: 1.47827089173
+score variance: 61.9852689409
+>gene_id=pyrI|start=4470986|end=4471447|strand=POSITIVE
+total score: 401.3572799
+average score: 0.868738701082
+score variance: 5.92336291748
+>gene_id=pyrB|start=4471460|end=4472395|strand=POSITIVE
+total score: 317.0907883
+average score: 0.338772209722
+score variance: 1.83505126196
+>gene_id=argI|start=4477307|end=4478311|strand=POSITIVE
+total score: 615.7362094
+average score: 0.612672845174
+score variance: 17.2483590273
+>gene_id=valS|start=4480982|end=4483837|strand=POSITIVE
+total score: 7216.9769438
+average score: 2.52695271141
+score variance: 45.432302087
+>gene_id=holC|start=4483837|end=4484280|strand=POSITIVE
+total score: 8721.2840165
+average score: 19.6425315687
+score variance: 12055.7502578
+>gene_id=pepA|start=4484440|end=4485951|strand=POSITIVE
+total score: 1098.0909868
+average score: 0.726250652646
+score variance: 6.19721540642
+>gene_id=iadA|start=4558354|end=4559526|strand=POSITIVE
+total score: 258.5000473
+average score: 0.220375146888
+score variance: 0.66221158573
+>gene_id=mcrC|start=4576912|end=4577958|strand=POSITIVE
+total score: 214.0999598
+average score: 0.204488977841
+score variance: 0.29212301428
+>gene_id=mcrB|start=4577958|end=4579337|strand=POSITIVE
+total score: 113.0110816
+average score: 0.0818920881159
+score variance: 0.0967373612127
+>gene_id=dnaC|start=4600238|end=4600975|strand=POSITIVE
+total score: 48.1909079
+average score: 0.0652993331978
+score variance: 0.0513330302732
+>gene_id=dnaT|start=4600978|end=4601517|strand=POSITIVE
+total score: 9.1424171
+average score: 0.016930402037
+score variance: 0.0172405767422
+>gene_id=rsmC|start=4606669|end=4607700|strand=POSITIVE
+total score: 1899.2083584
+average score: 1.84031817674
+score variance: 14.6400027808
+>gene_id=holD|start=4607803|end=4608216|strand=POSITIVE
+total score: 415.3155294
+average score: 1.00317760725
+score variance: 4.1927216627
+>gene_id=prfC|start=4609414|end=4611003|strand=POSITIVE
+total score: 32636.5493043
+average score: 20.5261316379
+score variance: 4040.01976214
+>gene_id=deoC|start=4617323|end=4618102|strand=POSITIVE
+total score: 7555.2977345
+average score: 9.68627914679
+score variance: 981.036822867
+>gene_id=deoB|start=4619603|end=4620826|strand=POSITIVE
+total score: 689.0909744
+average score: 0.562982822222
+score variance: 6.03441285944
+>gene_id=deoD|start=4620883|end=4621602|strand=POSITIVE
+total score: 295.639354
+average score: 0.410610213889
+score variance: 0.676331858071
+>gene_id=lplA|start=4623101|end=4624117|strand=POSITIVE
+total score: 1444.4042531
+average score: 1.42025983589
+score variance: 112.844777655
+>gene_id=yjjK|start=4628855|end=4630522|strand=POSITIVE
+total score: 1163.0521368
+average score: 0.697273463309
+score variance: 2.41902366391
+>gene_id=trpR|start=4632760|end=4633086|strand=POSITIVE
+total score: 1094.4344451
+average score: 3.34689432752
+score variance: 95.512139383
+>gene_id=rob|start=4634441|end=4635310|strand=POSITIVE
+total score: 104.9682444
+average score: 0.120653154483
+score variance: 0.140515504256
+>gene_id=arcA|start=4639590|end=4640306|strand=POSITIVE
+total score: 0.361111
+average score: 0.000503641562064
+score variance: 0

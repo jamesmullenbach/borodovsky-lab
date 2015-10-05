@@ -1,0 +1,2 @@
+gene average: 1.552
+gene variance: 7.420

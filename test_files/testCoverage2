@@ -1,0 +1,10 @@
+track type=wiggle_0 name="test" description="test data set"
+chr	4	5	1
+chr	5	6	2
+chr	7	8	3
+chr	9	10	4
+chr	10	11	5
+chr	24	25	6
+chr	25	26	7
+chr	26	27	8
+chr	27	28	9.0

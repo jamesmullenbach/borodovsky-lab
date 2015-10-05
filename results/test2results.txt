@@ -1,0 +1,4 @@
+>gene_id=test|start=2|end=30|strand=POSITIVE
+total score: 45.0
+average score: 1.55172413793
+score variance: 7.41973840666
