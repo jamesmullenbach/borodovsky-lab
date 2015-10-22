@@ -185,7 +185,8 @@ for line in GENE_LINES:
         gene_scores.append(gene_average)
         gene_variances.append(gene_variance)
         gene_stds.append(gene_variance ** 0.5)
-        gene_numPeaks.append(gene_peaks)
+        if args['peaksOnly'] is not None:
+            gene_numPeaks.append(gene_peaks)
 
     if args['out'] is not None:
         #write values to file
@@ -221,16 +222,16 @@ for line in GENE_LINES:
 #plt.show()
 
 #plot gene std deviations versus length
-#plt.figure()
-#plt.plot(gene_lengths, gene_stds, 'ro')
-#plt.xlabel('Gene length')
-#plt.ylabel('Gene score standard deviation')
-#image_name = "variance.png"
-#if args["noPeaks"] is not None:
-#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-#else:
-#    image_name = ROOT_PLOT_DIR + image_name
-#plt.savefig(image_name, bbox_inches="tight")
+plt.figure()
+plt.plot(gene_lengths, gene_stds, 'ro')
+plt.xlabel('Gene length')
+plt.ylabel('Gene score standard deviation')
+image_name = "std.png"
+if args["noPeaks"] is not None:
+    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+else:
+    image_name = ROOT_PLOT_DIR + image_name
+plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
 #plot histogram of gene average score
