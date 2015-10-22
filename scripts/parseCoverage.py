@@ -12,20 +12,24 @@ import argparse
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
 parser.add_argument('COVERAGE_FILE', help="path to the coverage file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
-parser.add_argument('OUTPUT_FILE_NAME', help="name of output file to create")
+parser.add_argument('--out', help="name of output file to create")
 parser.add_argument('--noPeaks', help="use this option to set a threshold value for coverage", type=int)
-parser.add_argument('--peaksOnly', help="use this option to consider only peaks in genes")
+parser.add_argument('--peaksOnly', help="use this option to consider only peaks in genes", type=int)
 args = vars(parser.parse_args())
 
 ROOT_PLOT_DIR = "/home/james/borodovsky-lab/plots/"
 THRESHOLD_COVERAGE = sys.maxint
 PEAK_VALUE = 0
+if args['out'] is not None:
+    out_name = args['out']
+    OUT_FILE = open(out_name, 'w')
 if args['noPeaks'] is not None:
     THRESHOLD_COVERAGE = args['noPeaks']
     ROOT_PLOT_DIR += "ceiling-values/"
     print "running for value " + str(THRESHOLD_COVERAGE)
 if args['peaksOnly'] is not None:
     PEAK_VALUE = args['peaksOnly']
+    print "PEAK_VALUE: " + str(PEAK_VALUE)
     ROOT_PLOT_DIR += "peak-values/"
 
 coverage_name = args['COVERAGE_FILE']
@@ -49,8 +53,6 @@ if gene_filetype == 'ptt':
 
 GENE_LINES = GENES_FILE.read().splitlines()
 
-out_name = args['OUTPUT_FILE_NAME']
-OUT_FILE = open(out_name, 'w')
 coverage_line = 0
 gene_scores = []
 gene_lengths = []
@@ -135,7 +137,7 @@ for line in GENE_LINES:
                 coverage_value = float(line_data[3])
                 if (coverage_value - gene_average) > PEAK_VALUE:
                     gene_peaks += 1
-        gene_numPeaks.append(gene_peaks)
+        #print "addin " + str(gene_peaks) + " to gene_numPeaks"
 
     #########VARIANCE CALCULATION###############
     #go back through the array to get the variance
@@ -183,30 +185,32 @@ for line in GENE_LINES:
         gene_scores.append(gene_average)
         gene_variances.append(gene_variance)
         gene_stds.append(gene_variance ** 0.5)
+        gene_numPeaks.append(gene_peaks)
 
-    #write values to file
-    out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
-    out_line += "|strand=POSITIVE\n"
-    out_line += "total score: " + str(gene_score) + '\n'
-    out_line += "average score: " + str(gene_average) + '\n'
-    out_line += "score variance: " + str(gene_variance) + '\n'
-    OUT_FILE.write(out_line)
+    if args['out'] is not None:
+        #write values to file
+        out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
+        out_line += "|strand=POSITIVE\n"
+        out_line += "total score: " + str(gene_score) + '\n'
+        out_line += "average score: " + str(gene_average) + '\n'
+        out_line += "score variance: " + str(gene_variance) + '\n'
+        OUT_FILE.write(out_line)
 
 
 
 ##############PLOTTING#############
 #plot average scores with std error bars
 #plt.figure()
-plt.plot(gene_lengths, gene_scores, 'ro')
+#plt.plot(gene_lengths, gene_scores, 'ro')
 #plt.errorbar(gene_lengths, gene_scores, gene_stds, fmt='bo')
-plt.xlabel('Gene length')
-plt.ylabel('Gene average coverage score')
-image_name = "score.png"
-if args["noPeaks"] is not None:
-    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-else:
-    image_name = ROOT_PLOT_DIR + image_name
-plt.savefig(image_name, bbox_inches='tight')
+#plt.xlabel('Gene length')
+#plt.ylabel('Gene average coverage score')
+#image_name = "score.png"
+#if args["noPeaks"] is not None:
+#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+#else:
+#    image_name = ROOT_PLOT_DIR + image_name
+#plt.savefig(image_name, bbox_inches='tight')
 #plt.show()
 
 #plot gene variances versus length
@@ -217,29 +221,29 @@ plt.savefig(image_name, bbox_inches='tight')
 #plt.show()
 
 #plot gene std deviations versus length
-plt.figure()
-plt.plot(gene_lengths, gene_stds, 'ro')
-plt.xlabel('Gene length')
-plt.ylabel('Gene score standard deviation')
-image_name = "variance.png"
-if args["noPeaks"] is not None:
-    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-else:
-    image_name = ROOT_PLOT_DIR + image_name
-plt.savefig(image_name, bbox_inches="tight")
+#plt.figure()
+#plt.plot(gene_lengths, gene_stds, 'ro')
+#plt.xlabel('Gene length')
+#plt.ylabel('Gene score standard deviation')
+#image_name = "variance.png"
+#if args["noPeaks"] is not None:
+#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+#else:
+#    image_name = ROOT_PLOT_DIR + image_name
+#plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
 #plot histogram of gene average score
-plt.figure()
-plt.hist(gene_scores, 50)
-plt.xlabel("Gene average coverage score")
-plt.ylabel("Frequency")
-image_name = "hist.png"
-if args["noPeaks"] is not None:
-    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-else:
-    image_name = ROOT_PLOT_DIR + image_name
-plt.savefig(image_name, bbox_inches="tight")
+#plt.figure()
+#plt.hist(gene_scores, 50)
+#plt.xlabel("Gene average coverage score")
+#plt.ylabel("Frequency")
+#image_name = "hist.png"
+#if args["noPeaks"] is not None:
+#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+#else:
+#    image_name = ROOT_PLOT_DIR + image_name
+#plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
 #plot 2d histogram of gene length and average score
@@ -252,10 +256,18 @@ plt.savefig(image_name, bbox_inches="tight")
 #plot number of peaks for each gene against length
 if len(gene_numPeaks) > 0:
     plt.figure()
-    plt.plot(gene_length, gene_numPeaks, 'ro')
+    plt.plot(gene_lengths, gene_numPeaks, 'ro')
     plt.xlabel("Gene length")
     ylabelstr = "Gene number of peaks for peak value " + str(PEAK_VALUE)
     plt.ylabel(ylabelstr)
     image_name = ROOT_PLOT_DIR + str(PEAK_VALUE) + "peaks.png"
+    plt.savefig(image_name, bbox_inches="tight")
+
+    #plot histogram of number of peaks
+    plt.figure()
+    plt.hist(gene_numPeaks, 50)
+    plt.xlabel(ylabelstr)
+    plt.ylabel("Frequency")
+    image_name = ROOT_PLOT_DIR + str(PEAK_VALUE) + "peakshist.png"
     plt.savefig(image_name, bbox_inches="tight")
 
