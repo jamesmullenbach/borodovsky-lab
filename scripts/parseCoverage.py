@@ -9,13 +9,6 @@ import argparse
 #over each range, get average and variance, accounting for 0's which are omitted
 #need to figure out the strand the ribosomes were on
 
-#if (len(sys.argv) < 3):
-#    print "Usage: python " + sys.argv[0] + " COVERAGE_FILE GENES_FILE OUTPUT_FILE_NAME"
-#    print "Acceptable file types for GENES_FILE are: .gff, .ptt"
-#    sys.exit()
-
-#gene_file_name = sys.argv[2]
-
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
 parser.add_argument('COVERAGE_FILE', help="path to the coverage file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
@@ -24,12 +17,16 @@ parser.add_argument('--noPeaks', help="use this option to set a threshold value 
 parser.add_argument('--peaksOnly', help="use this option to consider only peaks in genes")
 args = vars(parser.parse_args())
 
+ROOT_PLOT_DIR = "/home/james/borodovsky-lab/plots/"
 THRESHOLD_COVERAGE = sys.maxint
+PEAK_VALUE = 0
 if args['noPeaks'] is not None:
     THRESHOLD_COVERAGE = args['noPeaks']
+    ROOT_PLOT_DIR += "ceiling-values/"
     print "running for value " + str(THRESHOLD_COVERAGE)
 if args['peaksOnly'] is not None:
-    peaksOnly = True
+    PEAK_VALUE = args['peaksOnly']
+    ROOT_PLOT_DIR += "peak-values/"
 
 coverage_name = args['COVERAGE_FILE']
 BIG_COVERAGE_FILE = open(coverage_name, 'r')
@@ -59,6 +56,7 @@ gene_scores = []
 gene_lengths = []
 gene_variances = []
 gene_stds = []
+gene_numPeaks = []
 
 ######BEGIN LOOP THROUGH GFF FILE######
 for line in GENE_LINES:
@@ -101,7 +99,6 @@ for line in GENE_LINES:
             #we have reached the end of the coverage file
             #last gene has some locations without scores
             #break while
-            #print "blahbalh hax"
             break
         line_data = coverage_list[coverage_line].split('\t')
         #print "line_data: " + str(line_data)
@@ -115,6 +112,30 @@ for line in GENE_LINES:
     gene_average = gene_score / gene_length
     #print "gene average: " + str(gene_average)
 
+    if args['peaksOnly'] is not None:
+        ##################PEAKS CALCULATION###############
+        gene_peaks = 0
+        #reset to starting line in coverage file
+        coverage_line = starting_coverage_line 
+        line_data = coverage_list[coverage_line].split('\t')
+        base = int(line_data[1])
+        score = float(line_data[3])
+        last_base = base
+        if (base >= start):
+            #add value if it is a peak
+            if (score - gene_average) > PEAK_VALUE:
+                gene_peaks += 1
+        while (base <= end):
+            coverage_line += 1
+            if (coverage_line >= len(coverage_list)):
+                break
+            line_data = coverage_list[coverage_line].split('\t')
+            base = int(line_data[1])
+            if base >= start:
+                coverage_value = float(line_data[3])
+                if (coverage_value - gene_average) > PEAK_VALUE:
+                    gene_peaks += 1
+        gene_numPeaks.append(gene_peaks)
 
     #########VARIANCE CALCULATION###############
     #go back through the array to get the variance
@@ -122,7 +143,7 @@ for line in GENE_LINES:
     coverage_line = starting_coverage_line
     line_data = coverage_list[coverage_line].split('\t')
     base = int(line_data[1])
-    score = float(line_data[3])
+    score = min(THRESHOLD_COVERAGE, float(line_data[3]))
     last_base = base
     if (base > start):
         #handle edge case in which first nonzero-coverage entry is after start
@@ -147,7 +168,7 @@ for line in GENE_LINES:
                 else:
                     num_zeroes = base - last_base - 1
                 gene_variance += ((gene_average) ** 2) * num_zeroes
-            score = float(line_data[3])
+            score = min(THRESHOLD_COVERAGE, float(line_data[3]))
             gene_variance += (gene_average - score) ** 2
         last_base = base
     #now the last base is the final base that has a nonzero coverage score
@@ -155,6 +176,7 @@ for line in GENE_LINES:
         gene_variance += ((gene_average) **2) * (end - last_base)
     gene_variance = gene_variance / gene_length
   
+    #remove outliers
     if gene_average < 4000:
         #store values
         gene_lengths.append(gene_length)
@@ -179,7 +201,11 @@ plt.plot(gene_lengths, gene_scores, 'ro')
 #plt.errorbar(gene_lengths, gene_scores, gene_stds, fmt='bo')
 plt.xlabel('Gene length')
 plt.ylabel('Gene average coverage score')
-image_name = "/home/james/plots/ceilingvalues/" + str(THRESHOLD_COVERAGE) + ".png"
+image_name = "score.png"
+if args["noPeaks"] is not None:
+    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+else:
+    image_name = ROOT_PLOT_DIR + image_name
 plt.savefig(image_name, bbox_inches='tight')
 #plt.show()
 
@@ -191,10 +217,16 @@ plt.savefig(image_name, bbox_inches='tight')
 #plt.show()
 
 #plot gene std deviations versus length
-#plt.figure()
-#plt.plot(gene_lengths, gene_stds, 'ro')
-#plt.xlabel('Gene length')
-#plt.ylabel('Gene score standard deviation')
+plt.figure()
+plt.plot(gene_lengths, gene_stds, 'ro')
+plt.xlabel('Gene length')
+plt.ylabel('Gene score standard deviation')
+image_name = "variance.png"
+if args["noPeaks"] is not None:
+    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+else:
+    image_name = ROOT_PLOT_DIR + image_name
+plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
 #plot histogram of gene average score
@@ -202,7 +234,11 @@ plt.figure()
 plt.hist(gene_scores, 50)
 plt.xlabel("Gene average coverage score")
 plt.ylabel("Frequency")
-image_name = "/home/james/plots/ceilingvalues/" + str(THRESHOLD_COVERAGE) + "hist.png"
+image_name = "hist.png"
+if args["noPeaks"] is not None:
+    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+else:
+    image_name = ROOT_PLOT_DIR + image_name
 plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
@@ -212,3 +248,14 @@ plt.savefig(image_name, bbox_inches="tight")
 #plt.xlabel("Gene length")
 #plt.ylabel("Gene average coverage score")
 #plt.show()
+
+#plot number of peaks for each gene against length
+if len(gene_numPeaks) > 0:
+    plt.figure()
+    plt.plot(gene_length, gene_numPeaks, 'ro')
+    plt.xlabel("Gene length")
+    ylabelstr = "Gene number of peaks for peak value " + str(PEAK_VALUE)
+    plt.ylabel(ylabelstr)
+    image_name = ROOT_PLOT_DIR + str(PEAK_VALUE) + "peaks.png"
+    plt.savefig(image_name, bbox_inches="tight")
+
