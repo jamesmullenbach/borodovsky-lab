@@ -1,0 +1,10 @@
+keeping a file to keep track of the steps to take next
+will first try to implement argument parsing
+add --noPeaks and --peaksOnly options that vary the processing
+else:
+going to make a new .py file that parses almost the exact same
+
+TODO:
+figure out why the thresholding isn't working
+change variance calculation after applying ceiling value
+maybe consider preprocessing the coverage file into a dict {start1: score1, ...} format
