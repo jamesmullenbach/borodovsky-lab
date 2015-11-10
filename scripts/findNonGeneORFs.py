@@ -110,7 +110,7 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
                         #print "frame: %s, start: %i, end: %i, start_codon %s, stop_codon %s" % (frame, start, end, nuc[start-1:start+2], nuc[end-3:end])
                     #print "adding data to answer: " + str(data)
                     answer.append(data)
-                orf_start = orf_end + 3
+                orf_start = orf_start + 3
             #for pro in nuc[frame:frame + length].translate(NCBI_TABLE).split("*"):
                 #if len(pro) >= MIN_ORF_LENGTH / 3:
                     #print("%s...%s - length %i, strand %i, frame %i" % (pro[:30], pro[-3:],  len(pro), strand, frame))
