@@ -32,13 +32,15 @@ if gene_filetype == 'ptt':
         values = line.split('\t')
         start = int(values[0].split('..')[0])
         end = int(values[0].split('..')[1])
-        gene_coords.append((start, end))
+        strand = 1 if values[1] == '+' else -1
+        gene_coords.append((start, end, strand))
 elif gene_filetype == "gff":
     for line in GENES_FILE.read().splitlines():
         values = line.split('\t')
         start = int(values[3])
         end = int(values[4])
-        gene_coords.append((start, end))
+        strand = 1 if values[6] == '+' else -1
+        gene_coords.append((start, end, strand))
 gene_coords.sort()
 print "gene_coords[0][0], gene_coords[0][1]: %i, %i" % (gene_coords[0][0], gene_coords[0][1])
 for gene_coord in gene_coords:
@@ -111,41 +113,54 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
 answer.sort()
 #remove ORFs that are verified genes as found in GENES_FILE
 #ORFs are scurrently stored in answer, sorted by start nucleotide
+#classify ORFs as: 
+#    1) intergenic (existing wholly between genes)
+#    2) overlapping (ending stop codon exists within a gene)
+#    3) in a gene shadow (within a gene that lies on the opposite strand)
 gene_ind = 0
 gene_orfs = []
-for start, end, strand, prot, frame in answer:
+non_gene_orfs = []
+for i in range(len(answer)):
+    start, end, strand, prot, frame = answer[i][0], answer[i][1], answer[i][2], answer[i][3], answer[i][4]
     if (gene_ind >= len(gene_coords)):
         break
     #add one to start because gene files have one-base offset
-    if end == gene_coords[gene_ind][1]:
+    if end == gene_coords[gene_ind][1] and start < gene_coords[gene_ind][0]:
         #this ORF contains a gene
         print "this ORF contains a gene: start %i, end %i, strand %i, frame %i" % (start, end, strand, frame)
-        gene_orfs.append((start, end, strand, prot, frame))
+        answer[i] = (start, end, strand, prot, frame, "gene")
+        gene_orfs.append((start, end, strand, prot, frame, "gene"))
         gene_ind += 1
     elif start > gene_coords[gene_ind][0]:
+        if end > gene_coords[gene_ind][1]:
+            #this ORF starts inside a gene and ends outside one
+            answer[i] = (start, end, strand, prot, frame, "overlapping")
+        elif end < gene_coords[gene_ind][1] and strand == gene_coords[gene_ind][2] * -1:
+            #this ORF lies in the shadow of a gene on the opposite strand
+            answer[i] = (start, end, strand, prot, frame, "shadow")
         gene_ind += 1
+    elif start < gene_coords[gene_ind][0] and end > gene_coords[gene_ind][1]:
+        #this ORF starts outside a gene and ends inside one 
+        answer[i] = (start, end, strand, prot, frame, "overlapping")
+        gene_ind += 1
+    elif start > gene_coords[gene_ind][1]:
+        #this ORF starts after the end of current gene
+        #so move to the next gene
+        gene_ind += 1
+        if end < gene_coords[gene_ind][0]:
+            #this ORF starts after the end of a gene and ends before the start of the next
+            #so it is intergenic
+            answer[i] = (start, end, strand, prot, frame, "intergenic")
 
 print "number of genes found: " + str(len(gene_orfs))
 for gene_orf in gene_orfs:
     answer.remove(gene_orf)
 
-#classify ORFs as: 
-#    1) intergenic (existing wholly between genes)
-#    2) overlapping (ending stop codon exists within a gene)
-#    3) in a gene shadow (within a gene that lies on the opposite strand)
-intergenic_orfs = []
-overlapping_orfs = []
-shadows_orfs = []
-for start, end, strand, prot, frame in answer:
-    orf = (start, end, strand, prot, frame)
-    intergenic_orfs.append(orf)
-
-
 if args['OUT_FILE'] is not None:
     #write file in GFF format
     out_file_name = args['OUT_FILE']
     OUT_FILE = open(out_file_name, 'w')
-    for start, end, strand, prot, frame in answer:
+    for start, end, strand, prot, frame, category in non_gene_orfs:
         #GFF format: NC_000913 \t non-gene ORF \t . \t start \t end \t . \t strand \t frame \t start_codon=
         details = "start_codon=" + str(prot[0:3])
         strand = "+" if strand == 1 else "-"
