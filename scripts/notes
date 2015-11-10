@@ -5,6 +5,18 @@ else:
 going to make a new .py file that parses almost the exact same
 
 TODO:
-figure out why the thresholding isn't working
 change variance calculation after applying ceiling value
 maybe consider preprocessing the coverage file into a dict {start1: score1, ...} format
+
+making a separate file to classify each gene as "upward trending" or "downward trending"
+maybe split a gene into a certain number of segments (based on user input)
+to start: split gene into two, and if part 1 avg > part 2 avg, downward trending
+else upward trending
+
+
+11/9/15
+ORFs can be overlapping and anywhere
+so we need to look at end-to-end ORFs in calculations
+and exclude those that have the send stop codon in the gene file
+then classify the non-gene ORFs 
+

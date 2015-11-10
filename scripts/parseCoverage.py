@@ -60,7 +60,7 @@ gene_variances = []
 gene_stds = []
 gene_numPeaks = []
 
-######BEGIN LOOP THROUGH GFF FILE######
+######BEGIN LOOP THROUGH GENE FILE######
 for line in GENE_LINES:
     values = line.split('\t')
     if (len(values) < 5 and gene_filetype == 'gff'):
@@ -235,17 +235,17 @@ plt.savefig(image_name, bbox_inches="tight")
 #plt.show()
 
 #plot histogram of gene average score
-#plt.figure()
-#plt.hist(gene_scores, 50)
-#plt.xlabel("Gene average coverage score")
-#plt.ylabel("Frequency")
-#image_name = "hist.png"
-#if args["noPeaks"] is not None:
-#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-#else:
-#    image_name = ROOT_PLOT_DIR + image_name
-#plt.savefig(image_name, bbox_inches="tight")
-#plt.show()
+plt.figure()
+plt.hist(gene_scores, 200)
+plt.xlabel("Gene average coverage score")
+plt.ylabel("Frequency")
+image_name = "hist.png"
+if args["noPeaks"] is not None:
+    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+else:
+    image_name = ROOT_PLOT_DIR + image_name
+plt.savefig(image_name, bbox_inches="tight")
+plt.show()
 
 #plot 2d histogram of gene length and average score
 #plt.figure()

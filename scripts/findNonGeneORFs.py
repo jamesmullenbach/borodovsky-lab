@@ -49,7 +49,9 @@ NCBI_TABLE = 11
 MIN_ORF_LENGTH = 90
 
 START_CODONS = ["ATG", "GTG", "TTG"]
+START_REGEX = "(A|G|T)TG"
 STOP_CODONS = ["TAA", "TGA", "TAG"]
+STOP_REGEX = "T(AA|GA|AG)"
 answer = []
 i = 0
 for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
@@ -95,8 +97,9 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
                 if (i > frame_len - 3):
                     #no stop codon found
                     #so break
+                    print "no stop codon found"
                     break
-                if orf_end - orf_start >= MIN_ORF_LENGTH:
+                if orf_end - orf_start + 1 >= MIN_ORF_LENGTH:
                     if strand == 1:
                         abs_start = frame + orf_start
                         abs_end = min(seq_len, frame + orf_end)

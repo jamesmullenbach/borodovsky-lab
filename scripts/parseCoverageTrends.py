@@ -48,7 +48,7 @@ gene_upwards_lengths = []
 gene_downwards = []
 gene_downwards_lengths = []
 
-######BEGIN LOOP THROUGH GFF FILE######
+######BEGIN LOOP THROUGH GENE FILE######
 for line in GENE_LINES:
     values = line.split('\t')
     if (len(values) < 5 and gene_filetype == 'gff'):
@@ -62,10 +62,12 @@ for line in GENE_LINES:
         start = int(values[3])
         end = int(values[4])
         details = values[len(values) - 1]
+	strand = values[6] 
         gene_id = details.split(' ')[0]
     elif gene_filetype == "ptt":
 	start = int(values[0].split('..')[0])
         end = int(values[0].split('..')[1])
+	strand = values[1]
         #print "start: " + str(start) + " end: " + str(end)
     gene_length = end - start + 1
     #go through coverage file until you find an index >= start
@@ -116,16 +118,27 @@ for line in GENE_LINES:
     trend = ""
     if gene_average < 4000:
         if gene_right_score > gene_left_score:
-            #upward trending
-            gene_upwards.append(gene_average)
-            gene_upwards_lengths.append(gene_length)
-            trend = "upwards"
+	    if strand == "+":
+                #upward trending
+                gene_upwards.append(gene_average)
+                gene_upwards_lengths.append(gene_length)
+                trend = "upwards"
+            elif strand == "-":
+                #downard trending
+                gene_downwards.append(gene_average)
+                gene_downwards_lengths.append(gene_length)
+                trend = "downwards"
         else:
-            #downard trending
-            gene_downwards.append(gene_average)
-            gene_downwards_lengths.append(gene_length)
-            trend = "downwards"
-
+            if strand == "+":
+                #downard trending
+                gene_downwards.append(gene_average)
+                gene_downwards_lengths.append(gene_length)
+                trend = "downwards"
+            elif strand == "-":
+                #upward trending
+                gene_upwards.append(gene_average)
+                gene_upwards_lengths.append(gene_length)
+                trend = "upwards"
     #write values to file
     out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
     out_line += "|strand=POSITIVE\n"
