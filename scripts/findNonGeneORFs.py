@@ -63,58 +63,46 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
             print "this frame: " + str(nuc[frame:frame + 30]) + "..." + str(nuc[-3:])
             frame_seq = nuc[frame:]
             frame_len = len(frame_seq)
-            #initialize starting amino acid index and ending amino acid index
+            #initialize first stop codon and second stop codon
             orf_start = 0
             orf_end = 0
+            last_stop = 0
+            this_stop = 0
             #this loop finds all orfs of min length or greater and adds them to the answer list
             i = 0
-            while orf_start < frame_len:
+            while last_stop < frame_len:
                 #search for orf_start
-                isStart = False
-                while (not isStart and i <= frame_len - 3):
-                    triple = frame_seq[i:i+3]
-                    for start in START_CODONS:
-                        if triple == start:
-                            isStart = True
-                            orf_start = i
-                            break
-                    i += 3
-                if (i > frame_len - 3):
-                    #no start codon found
-                    #so break
-                    print "no start codon found"
-                    break
-                #search for orf_end
+                #search for first available stop codon
                 isStop = False
                 while (not isStop and i <= frame_len - 3):
                     triple = frame_seq[i:i+3]
                     for stop in STOP_CODONS:
                         if triple == stop:
                             isStop = True
-                            orf_end = i + 3
+                            this_stop = i + 3
                             break
                     i += 3
                 if (i > frame_len - 3):
-                    #no stop codon found
+                    #no start codon found
                     #so break
                     print "no stop codon found"
                     break
-                if orf_end - orf_start + 1 >= MIN_ORF_LENGTH:
+                if this_stop - last_stop + 1 >= MIN_ORF_LENGTH:
                     if strand == 1:
-                        abs_start = frame + orf_start
-                        abs_end = min(seq_len, frame + orf_end)
+                        abs_start = frame + last_stop
+                        abs_end = min(seq_len, frame + this_stop)
                     else:
-                        abs_start = max(0, seq_len - frame - orf_end)
-                        abs_end = seq_len - frame - orf_start
+                        abs_start = max(0, seq_len - frame - this_stop)
+                        abs_end = seq_len - frame - last_stop
                     #append found ORF to answer list
-                    data = (abs_start, abs_end, strand, frame_seq[orf_start : orf_end], frame)
+                    data = (abs_start, abs_end, strand, frame_seq[last_stop : this_stop], frame)
                     if (abs_start < 10000):
                         print data
                         #print "frame: %s, start: %i, end: %i, start_codon %s, stop_codon %s" % (frame, start, end, nuc[start-1:start+2], nuc[end-3:end])
                     #print "adding data to answer: " + str(data)
                     answer.append(data)
-                orf_start = orf_start + 3
-            #for pro in nuc[frame:frame + length].translate(NCBI_TABLE).split("*"):
+                last_stop = this_stop + 3
+                            #for pro in nuc[frame:frame + length].translate(NCBI_TABLE).split("*"):
                 #if len(pro) >= MIN_ORF_LENGTH / 3:
                     #print("%s...%s - length %i, strand %i, frame %i" % (pro[:30], pro[-3:],  len(pro), strand, frame))
     #print seq_record.id
@@ -129,8 +117,9 @@ for start, end, strand, prot, frame in answer:
     if (gene_ind >= len(gene_coords)):
         break
     #add one to start because gene files have one-base offset
-    if start + 1 == gene_coords[gene_ind][0] and end == gene_coords[gene_ind][1]:
-        #this ORF is a gene
+    if end == gene_coords[gene_ind][1]:
+        #this ORF contains a gene
+        print "this ORF contains a gene: start %i, end %i, strand %i, frame %i" % (start, end, strand, frame)
         gene_orfs.append((start, end, strand, prot, frame))
         gene_ind += 1
     elif start > gene_coords[gene_ind][0]:
@@ -140,17 +129,28 @@ print "number of genes found: " + str(len(gene_orfs))
 for gene_orf in gene_orfs:
     answer.remove(gene_orf)
 
+#classify ORFs as: 
+#    1) intergenic (existing wholly between genes)
+#    2) overlapping (ending stop codon exists within a gene)
+#    3) in a gene shadow (within a gene that lies on the opposite strand)
+intergenic_orfs = []
+overlapping_orfs = []
+shadows_orfs = []
+for start, end, strand, prot, frame in answer:
+    orf = (start, end, strand, prot, frame)
+    intergenic_orfs.append(orf)
+
 
 if args['OUT_FILE'] is not None:
     #write file in GFF format
     out_file_name = args['OUT_FILE']
     OUT_FILE = open(out_file_name, 'w')
     for start, end, strand, prot, frame in answer:
-        #GFF: NC_000913 \t intergenic \t CDS \t start \t end \t . \t strand \t frame \t start_codon=
+        #GFF format: NC_000913 \t non-gene ORF \t . \t start \t end \t . \t strand \t frame \t start_codon=
         details = "start_codon=" + str(prot[0:3])
         strand = "+" if strand == 1 else "-"
         #add one to start because gene files have one-base offset
-        data = ["NC_000913", "intergenic", "CDS", str(start+1), str(end), ".", str(strand), str(frame), details]
+        data = ["NC_000913", "non-gene ORF", ".", str(start+1), str(end), ".", str(strand), str(frame), details]
         line = "\t".join(data) + "\n"
         OUT_FILE.write(line)
 #FORWARD STRAND WORKS
