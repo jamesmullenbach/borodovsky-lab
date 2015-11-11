@@ -161,8 +161,8 @@ for i in range(len(answer)):
                 answer[i] = (start, end, strand, prot, frame, "gene")
                 gene_orfs.append((start, end, strand, prot, frame, "gene"))
             else:
-                #this ORF is shadow
-                answer[i] = (start, end, strand, prot, frame, "shadow")
+                #this ORF is overlapping
+                answer[i] = (start, end, strand, prot, frame, "overlapping")
         else:
             #this ORF is overlapping
             answer[i] = (start, end, strand, prot, frame, "overlapping")

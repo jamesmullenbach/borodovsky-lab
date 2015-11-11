@@ -73,11 +73,13 @@ for line in GENE_LINES:
     if gene_filetype == "gff":
         start = int(values[3])
         end = int(values[4])
+        strand = values[6]
         details = values[len(values) - 1]
         gene_id = details.split(' ')[0]
     elif gene_filetype == "ptt":
 	start = int(values[0].split('..')[0])
         end = int(values[0].split('..')[1])
+        strand = values[1]
         #print "start: " + str(start) + " end: " + str(end)
     gene_length = end - start + 1
     #go through coverage file until you find an index >= start
@@ -190,8 +192,9 @@ for line in GENE_LINES:
 
     if args['out'] is not None:
         #write values to file
+        strand_str = "POSITIVE" if strand == '+' else "NEGATIVE"
         out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
-        out_line += "|strand=POSITIVE\n"
+        out_line += "|strand=" + strand_str + "\n"
         out_line += "total score: " + str(gene_score) + '\n'
         out_line += "average score: " + str(gene_average) + '\n'
         out_line += "score variance: " + str(gene_variance) + '\n'
@@ -201,18 +204,18 @@ for line in GENE_LINES:
 
 ##############PLOTTING#############
 #plot average scores with std error bars
-#plt.figure()
-#plt.plot(gene_lengths, gene_scores, 'ro')
+plt.figure()
+plt.plot(gene_lengths, gene_scores, 'ro')
 #plt.errorbar(gene_lengths, gene_scores, gene_stds, fmt='bo')
-#plt.xlabel('Gene length')
-#plt.ylabel('Gene average coverage score')
+plt.xlabel('Gene length')
+plt.ylabel('Gene average coverage score')
 #image_name = "score.png"
 #if args["noPeaks"] is not None:
 #    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
 #else:
 #    image_name = ROOT_PLOT_DIR + image_name
 #plt.savefig(image_name, bbox_inches='tight')
-#plt.show()
+plt.show()
 
 #plot gene variances versus length
 #plt.figure()
