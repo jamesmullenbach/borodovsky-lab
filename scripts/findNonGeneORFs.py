@@ -7,7 +7,7 @@ from Bio import SeqIO
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
 parser.add_argument('SEQUENCE_FILE', help="path to the sequence file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
-parser.add_argument('--OUT_FILE', help="name of file you would like to save the found ORFs to in GFF format")
+parser.add_argument('--out', help="name of file you would like to save the found ORFs to in GFF format")
 args = vars(parser.parse_args())
 
 sequence_file_name = args['SEQUENCE_FILE']
@@ -175,11 +175,15 @@ print "number of genes found: " + str(len(gene_orfs))
 for gene_orf in gene_orfs:
     answer.remove(gene_orf)
 
-if args['OUT_FILE'] is not None:
+if args['out'] is not None:
     #write file in GFF format
     print "about to write to file"
-    out_file_name = args['OUT_FILE']
-    OUT_FILE = open(out_file_name, 'w')
+    intergenic_file_name = args['out'] + "_intergenic.gff"
+    overlapping_file_name = args['out'] + "_overlapping.gff"
+    shadow_file_name = args['out'] + "_shadow.gff"
+    INTERGENIC_FILE = open(intergenic_file_name, 'w')
+    OVERLAPPING_FILE = open(overlapping_file_name, 'w')
+    SHADOW_FILE = open(shadow_file_name, 'w')
     for start, end, strand, prot, frame, category in answer:
         #GFF format: NC_000913 \t category \t . \t start \t end \t . \t strand \t frame \t start_codon=
         details = "stop_codon=" + str(prot[-3:])
@@ -188,8 +192,12 @@ if args['OUT_FILE'] is not None:
         data = ["NC_000913", category, ".", str(start+1), str(end), ".", str(strand), str(frame), details]
         line = "\t".join(data) + "\n"
         #print "line: " + str(line)
-        OUT_FILE.write(line)
-
+        if category == 'intergenic':
+            INTERGENIC_FILE.write(line)
+        elif category == 'overlapping':
+            OVERLAPPING_FILE.write(line)
+        elif category == 'shadow':
+            SHADOW_FILE.write(line)
 
 
 
