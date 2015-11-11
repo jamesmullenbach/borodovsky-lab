@@ -112,45 +112,64 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
     #print len(seq_record)
 answer.sort()
 #remove ORFs that are verified genes as found in GENES_FILE
-#ORFs are scurrently stored in answer, sorted by start nucleotide
+#ORFs are currently stored in answer, sorted by start nucleotide
 #classify ORFs as: 
 #    1) intergenic (existing wholly between genes)
-#    2) overlapping (ending stop codon exists within a gene)
-#    3) in a gene shadow (within a gene that lies on the opposite strand)
+#    2) in a gene shadow (within a gene that lies on the opposite strand)
+#    3) overlapping (anything else)
 gene_ind = 0
 gene_orfs = []
 non_gene_orfs = []
+
+#for every orf, look through genes to classify until a gene is found that can classify this ORF
 for i in range(len(answer)):
-    start, end, strand, prot, frame = answer[i][0], answer[i][1], answer[i][2], answer[i][3], answer[i][4]
+    #add one to start because gene files have one-base offset
+    start, end, strand, prot, frame = answer[i][0] + 1, answer[i][1], answer[i][2], answer[i][3], answer[i][4]
     if (gene_ind >= len(gene_coords)):
         break
-    #add one to start because gene files have one-base offset
-    if end == gene_coords[gene_ind][1] and start < gene_coords[gene_ind][0]:
-        #this ORF contains a gene
-        print "this ORF contains a gene: start %i, end %i, strand %i, frame %i" % (start, end, strand, frame)
-        answer[i] = (start, end, strand, prot, frame, "gene")
-        gene_orfs.append((start, end, strand, prot, frame, "gene"))
+ 
+    #a relevant gene is any gene that doesn't start and end before the ORF starts
+    #go to first gene that doesn't end before the ORF starts
+    relevant_gene = gene_coords[gene_ind]
+    while relevant_gene[1] < start:
         gene_ind += 1
-    elif start > gene_coords[gene_ind][0]:
-        if end > gene_coords[gene_ind][1]:
-            #this ORF starts inside a gene and ends outside one
+        relevant_gene = gene_coords[gene_ind]
+
+    #save gene data to separate vars 
+    gene_start = relevant_gene[0]
+    gene_end = relevant_gene[1]
+    gene_strand = relevant_gene[2]
+    
+    if gene_start < start:
+        if gene_end < end:
+            #this ORF is overlapping
             answer[i] = (start, end, strand, prot, frame, "overlapping")
-        elif end < gene_coords[gene_ind][1] and strand == gene_coords[gene_ind][2] * -1:
-            #this ORF lies in the shadow of a gene on the opposite strand
-            answer[i] = (start, end, strand, prot, frame, "shadow")
-        gene_ind += 1
-    elif start < gene_coords[gene_ind][0] and end > gene_coords[gene_ind][1]:
-        #this ORF starts outside a gene and ends inside one 
-        answer[i] = (start, end, strand, prot, frame, "overlapping")
-        gene_ind += 1
-    elif start > gene_coords[gene_ind][1]:
-        #this ORF starts after the end of current gene
-        #so move to the next gene
-        gene_ind += 1
-        if end < gene_coords[gene_ind][0]:
-            #this ORF starts after the end of a gene and ends before the start of the next
-            #so it is intergenic
-            answer[i] = (start, end, strand, prot, frame, "intergenic")
+        elif gene_end >= end:
+            if strand == gene_strand:
+                #this ORF is overlapping
+                answer[i] = (start, end, strand, prot, frame, "overlapping")
+            else:
+                #this ORF is shadow
+                answer[i] = (start, end, strand, prot, frame, "shadow")
+    elif gene_start >= start and gene_start <= end:
+        if gene_end < end:
+            #this ORF is overlapping
+            answer[i] = (start, end, strand, prot, frame, "overlapping")
+        elif gene_end == end:
+            if strand == gene_strand:
+                #this ORF is a gene 
+                answer[i] = (start, end, strand, prot, frame, "gene")
+                gene_orfs.append((start, end, strand, prot, frame, "gene"))
+            else:
+                #this ORF is shadow
+                answer[i] = (start, end, strand, prot, frame, "shadow")
+        else:
+            #this ORF is overlapping
+            answer[i] = (start, end, strand, prot, frame, "overlapping")
+    else:
+        #gene starts and ends after ORF ends
+        #this ORF is intergenic
+        answer[i] = (start, end, strand, prot, frame, "intergenic")
 
 print "number of genes found: " + str(len(gene_orfs))
 for gene_orf in gene_orfs:
@@ -158,20 +177,18 @@ for gene_orf in gene_orfs:
 
 if args['OUT_FILE'] is not None:
     #write file in GFF format
+    print "about to write to file"
     out_file_name = args['OUT_FILE']
     OUT_FILE = open(out_file_name, 'w')
-    for start, end, strand, prot, frame, category in non_gene_orfs:
-        #GFF format: NC_000913 \t non-gene ORF \t . \t start \t end \t . \t strand \t frame \t start_codon=
-        details = "start_codon=" + str(prot[0:3])
+    for start, end, strand, prot, frame, category in answer:
+        #GFF format: NC_000913 \t category \t . \t start \t end \t . \t strand \t frame \t start_codon=
+        details = "stop_codon=" + str(prot[-3:])
         strand = "+" if strand == 1 else "-"
         #add one to start because gene files have one-base offset
-        data = ["NC_000913", "non-gene ORF", ".", str(start+1), str(end), ".", str(strand), str(frame), details]
+        data = ["NC_000913", category, ".", str(start+1), str(end), ".", str(strand), str(frame), details]
         line = "\t".join(data) + "\n"
+        #print "line: " + str(line)
         OUT_FILE.write(line)
-#FORWARD STRAND WORKS
-#OPPOSITE STRAND NEEDS TO TEST
-
-
 
 
 
