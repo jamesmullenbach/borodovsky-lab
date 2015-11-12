@@ -15,6 +15,12 @@ parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you w
 parser.add_argument('--out', help="name of output file to create")
 parser.add_argument('--noPeaks', help="use this option to set a threshold value for coverage", type=int)
 parser.add_argument('--peaksOnly', help="use this option to consider only peaks in genes", type=int)
+parser.add_argument('--orf', help="set flag if dealing with ORFs, not verified genes", action="store_true")
+parser.add_argument('--plotScore', help="set flag if plot of average coverage score vs. length is desired", action="store_true")
+parser.add_argument('--plotSTD', help="set flag if plot of standard deviation vs. length is desired", action="store_true")
+parser.add_argument('--hist', help="give number of bins if histogram of average coverage score is desired", type=int)
+parser.add_argument('--histRange', help="give histogram lower range", type=int)
+
 args = vars(parser.parse_args())
 
 ROOT_PLOT_DIR = "/home/james/borodovsky-lab/plots/"
@@ -59,7 +65,7 @@ gene_lengths = []
 gene_variances = []
 gene_stds = []
 gene_numPeaks = []
-
+max_score = 0
 ######BEGIN LOOP THROUGH GENE FILE######
 for line in GENE_LINES:
     values = line.split('\t')
@@ -187,6 +193,9 @@ for line in GENE_LINES:
         gene_scores.append(gene_average)
         gene_variances.append(gene_variance)
         gene_stds.append(gene_variance ** 0.5)
+        if gene_average > max_score:
+            max_score = gene_average
+            max_gene = (start, end, strand, gene_average)
         if args['peaksOnly'] is not None:
             gene_numPeaks.append(gene_peaks)
 
@@ -200,69 +209,70 @@ for line in GENE_LINES:
         out_line += "score variance: " + str(gene_variance) + '\n'
         OUT_FILE.write(out_line)
 
-
+#print top ORF by score
+print "max score gene/ORF: " + str((max_gene[0], max_gene[1])) + " score: " + str(max_gene[3]) + " strand: " + str(max_gene[2])
 
 ##############PLOTTING#############
-#plot average scores with std error bars
-plt.figure()
-plt.plot(gene_lengths, gene_scores, 'ro')
-#plt.errorbar(gene_lengths, gene_scores, gene_stds, fmt='bo')
-plt.xlabel('Gene length')
-plt.ylabel('Gene average coverage score')
-#image_name = "score.png"
-#if args["noPeaks"] is not None:
-#    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-#else:
-#    image_name = ROOT_PLOT_DIR + image_name
-#plt.savefig(image_name, bbox_inches='tight')
-plt.show()
 
-#plot gene variances versus length
-#plt.figure()
-#plt.plot(gene_lengths, gene_variances, 'ro')
-#plt.xlabel('Gene length')
-#plt.ylabel('Gene score variance')
-#plt.show()
+whatisit = "Gene"
+if args['orf'] is not None:
+    whatisit = "ORF"
+
+#plot average scores with std error bars
+if args['plotScore'] is not None:
+    print "plotScore arg was not None"
+    plt.figure()
+    plt.plot(gene_lengths, gene_scores, 'ro')
+    #plt.errorbar(gene_lengths, gene_scores, gene_stds, fmt='bo')
+    plt.xlabel(whatisit + ' length')
+    plt.ylabel(whatisit + ' average coverage score')
+    #image_name = "score.png"
+    #if args["noPeaks"] is not None:
+    #    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+    #else:
+    #    image_name = ROOT_PLOT_DIR + image_name
+    #plt.savefig(image_name, bbox_inches='tight')
+    plt.show()
 
 #plot gene std deviations versus length
-plt.figure()
-plt.plot(gene_lengths, gene_stds, 'ro')
-plt.xlabel('Gene length')
-plt.ylabel('Gene score standard deviation')
-image_name = "std.png"
-if args["noPeaks"] is not None:
-    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-else:
-    image_name = ROOT_PLOT_DIR + image_name
-plt.savefig(image_name, bbox_inches="tight")
-#plt.show()
+if args['plotSTD'] is not None:
+    plt.figure()
+    plt.plot(gene_lengths, gene_stds, 'ro')
+    plt.xlabel(whatisit + ' length')
+    plt.ylabel(whatisit + ' score standard deviation')
+    image_name = "std.png"
+    if args["noPeaks"] is not None:
+        image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+    else:
+        image_name = ROOT_PLOT_DIR + image_name
+    #plt.savefig(image_name, bbox_inches="tight")
+    plt.show()
 
 #plot histogram of gene average score
-plt.figure()
-plt.hist(gene_scores, 200)
-plt.xlabel("Gene average coverage score")
-plt.ylabel("Frequency")
-image_name = "hist.png"
-if args["noPeaks"] is not None:
-    image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
-else:
-    image_name = ROOT_PLOT_DIR + image_name
-plt.savefig(image_name, bbox_inches="tight")
-plt.show()
-
-#plot 2d histogram of gene length and average score
-#plt.figure()
-#plt.hist2d(gene_lengths, gene_scores, bins=10)
-#plt.xlabel("Gene length")
-#plt.ylabel("Gene average coverage score")
-#plt.show()
+if args['hist'] is not None:
+    plt.figure()
+    lower = 10
+    if args['histRange'] is not None:
+        lower = args['histRange']
+    plt.hist(gene_scores, args['hist'], range=(lower, max(gene_scores)))
+    plt.xlabel(whatisit + " average coverage score")
+    plt.ylabel("Frequency")
+    image_name = "hist.png"
+    if args["noPeaks"] is not None:
+        image_name = ROOT_PLOT_DIR + str(THRESHOLD_COVERAGE) + image_name
+    else:
+        image_name = ROOT_PLOT_DIR + image_name
+    #plt.savefig(image_name, bbox_inches="tight")
+    titlestr = "Average score histogram with %i bins and minimum score %i" % (args['hist'], lower)
+    plt.title(titlestr)
+    plt.show()
 
 #plot number of peaks for each gene against length
 if len(gene_numPeaks) > 0:
     plt.figure()
     plt.plot(gene_lengths, gene_numPeaks, 'ro')
-    plt.xlabel("Gene length")
-    ylabelstr = "Gene number of peaks for peak value " + str(PEAK_VALUE)
+    plt.xlabel(whatisit + " length")
+    ylabelstr = whatisit + " number of peaks for peak value " + str(PEAK_VALUE)
     plt.ylabel(ylabelstr)
     image_name = ROOT_PLOT_DIR + str(PEAK_VALUE) + "peaks.png"
     plt.savefig(image_name, bbox_inches="tight")
