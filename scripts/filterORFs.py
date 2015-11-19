@@ -67,9 +67,9 @@ for line in GENE_LINES:
             if triple == start_codon:
                 found = True
                 this_start = i
+                numWithStart += 1
                 break
         i += 3
-    numWithStart += 1
     if found:
         strand_str = "POSITIVE" if strand == "+" else "NEGATIVE"
         out_line = ">" + gene_id + "|start=" + str(start + this_start + 1) + "|end=" + str(end)
