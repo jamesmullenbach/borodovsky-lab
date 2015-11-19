@@ -7,7 +7,8 @@ from Bio import SeqIO
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
 parser.add_argument('SEQUENCE_FILE', help="path to the sequence file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
-parser.add_argument('--out', help="name of file you would like to save the found ORFs to in GFF format")
+parser.add_argument('--out', help="directory in which you would like to save the found ORFs in GFF format")
+
 args = vars(parser.parse_args())
 
 sequence_file_name = args['SEQUENCE_FILE']
@@ -16,7 +17,7 @@ SEQUENCE_FILE = open(sequence_file_name, 'r')
 BIG_GENOME_STRING = SEQUENCE_FILE.read()
 
 gene_file_name = args['GENES_FILE']
-gene_filetype = gene_file_name.split('.')[1]
+gene_file_origname, gene_filetype = gene_file_name.split('.')
 if gene_filetype != 'gff' and gene_filetype != 'ptt':
     print "Acceptable file types for GENES_FILE are: .gff, .ptt"
     sys.exit()
@@ -73,7 +74,6 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
             #this loop finds all orfs of min length or greater and adds them to the answer list
             i = 0
             while last_stop < frame_len:
-                #search for orf_start
                 #search for first available stop codon
                 isStop = False
                 while (not isStop and i <= frame_len - 3):
@@ -103,7 +103,7 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
                         #print "frame: %s, start: %i, end: %i, start_codon %s, stop_codon %s" % (frame, start, end, nuc[start-1:start+2], nuc[end-3:end])
                     #print "adding data to answer: " + str(data)
                     answer.append(data)
-                last_stop = this_stop + 3
+                last_stop = this_stop
                             #for pro in nuc[frame:frame + length].translate(NCBI_TABLE).split("*"):
                 #if len(pro) >= MIN_ORF_LENGTH / 3:
                     #print("%s...%s - length %i, strand %i, frame %i" % (pro[:30], pro[-3:],  len(pro), strand, frame))
@@ -178,9 +178,9 @@ for gene_orf in gene_orfs:
 if args['out'] is not None:
     #write file in GFF format
     print "about to write to file"
-    intergenic_file_name = args['out'] + "_intergenic.gff"
-    overlapping_file_name = args['out'] + "_overlapping.gff"
-    shadow_file_name = args['out'] + "_shadow.gff"
+    intergenic_file_name = args['out'] + gene_file_origname + "_intergenic.gff"
+    overlapping_file_name = args['out'] + gene_file_origname + "_overlapping.gff"
+    shadow_file_name = args['out'] + gene_file_origname + "_shadow.gff"
     INTERGENIC_FILE = open(intergenic_file_name, 'w')
     OVERLAPPING_FILE = open(overlapping_file_name, 'w')
     SHADOW_FILE = open(shadow_file_name, 'w')
@@ -188,8 +188,7 @@ if args['out'] is not None:
         #GFF format: NC_000913 \t category \t . \t start \t end \t . \t strand \t frame \t start_codon=
         details = "stop_codon=" + str(prot[-3:])
         strand = "+" if strand == 1 else "-"
-        #add one to start because gene files have one-base offset
-        data = ["NC_000913", category, ".", str(start+1), str(end), ".", str(strand), str(frame), details]
+        data = ["NC_000913", category, ".", str(start), str(end), ".", str(strand), str(frame), details]
         line = "\t".join(data) + "\n"
         #print "line: " + str(line)
         if category == 'intergenic':
@@ -198,15 +197,5 @@ if args['out'] is not None:
             OVERLAPPING_FILE.write(line)
         elif category == 'shadow':
             SHADOW_FILE.write(line)
-
-
-
-
-
-
-
-
-
-
 
 
