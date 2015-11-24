@@ -3,6 +3,7 @@ import numpy
 import matplotlib.pyplot as plt
 import pylab
 import argparse
+from operator import itemgetter
 
 #take in GFF file and coverage file
 #for each gene in GFF file, search for ranges in coverage file
@@ -15,11 +16,12 @@ parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you w
 parser.add_argument('--out', help="name of output file to create")
 parser.add_argument('--noPeaks', help="use this option to set a threshold value for coverage", type=int)
 parser.add_argument('--peaksOnly', help="use this option to consider only peaks in genes", type=int)
-parser.add_argument('--orf', help="set flag if dealing with ORFs, not verified genes", action="store_true")
+parser.add_argument('--orf', help="set flag if dealing with ORFs, not verified genes, for plotting purposes", action="store_true")
 parser.add_argument('--plotScore', help="set flag if plot of average coverage score vs. length is desired", action="store_true")
 parser.add_argument('--plotSTD', help="set flag if plot of standard deviation vs. length is desired", action="store_true")
 parser.add_argument('--hist', help="give number of bins if histogram of average coverage score is desired", type=int)
 parser.add_argument('--histRange', help="give histogram lower range", type=int)
+parser.add_argument('--top50', help="use this flag to give an output file to write the top 50 gene/ORFs to")
 
 args = vars(parser.parse_args())
 
@@ -65,6 +67,7 @@ gene_lengths = []
 gene_variances = []
 gene_stds = []
 gene_numPeaks = []
+gene_data = []
 max_score = 0
 ######BEGIN LOOP THROUGH GENE FILE######
 for line in GENE_LINES:
@@ -187,12 +190,13 @@ for line in GENE_LINES:
     gene_variance = gene_variance / gene_length
   
     #remove outliers
-    if gene_average < 4000:
+    if gene_average < 1800:
         #store values
         gene_lengths.append(gene_length)
         gene_scores.append(gene_average)
         gene_variances.append(gene_variance)
         gene_stds.append(gene_variance ** 0.5)
+        gene_data.append((start, end, strand,gene_length,  gene_average, gene_variance ** 0.5))
         if gene_average > max_score:
             max_score = gene_average
             max_gene = (start, end, strand, gene_average)
@@ -217,6 +221,36 @@ print "max score gene/ORF: " + str((max_gene[0], max_gene[1])) + " score: " + st
 whatisit = "Gene"
 if args['orf'] is not None:
     whatisit = "ORF"
+
+
+#####sort and plot top 50 in terms of average coverage score, and save to file
+if args['top50'] is not None:
+    sorted_data = sorted(gene_data, key=itemgetter(4), reverse=True) #sort by average coverage descending
+    print "sorted_data[0]: " + str(sorted_data[0])
+    top50_lengths = [sorted_data[i][3] for i in range(50)]
+    top50_averages = [sorted_data[i][4] for i in range(50)]
+    plt.figure()
+    plt.plot(top50_lengths, top50_averages, 'ro')
+    plt.xlabel(whatisit + ' length')
+    plt.ylabel(whatisit + ' average coverage score')
+    plt.show()
+    #write values to file
+    OUT_FILE = open(args['top50'], 'w')
+    for i in range(50):
+        start, end, strand, gene_length, gene_average, gene_std = sorted_data[i]
+        details = "avg_coverage=" + str(gene_average)
+        data = ["NC_000913", "candidate ORF", ".", str(start), str(end), ".", str(strand), ".", details]
+        line = "\t".join(data) + "\n"
+        OUT_FILE.write(line)
+        #strand_str = "POSITIVE" if strand == '+' else "NEGATIVE"
+        #out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
+        #out_line += "|strand=" + strand_str + "\n"
+        #out_line += "gene length: " + str(gene_length) + '\n'
+        #out_line += "average score: " + str(gene_average) + '\n'
+        #out_line += "score standard deviation: " + str(gene_std) + '\n'
+        #OUT_FILE.write(out_line)
+    sys.exit(0)
+
 
 #plot average scores with std error bars
 if args['plotScore'] is not None:
