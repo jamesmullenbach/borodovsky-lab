@@ -3,6 +3,9 @@ import argparse
 from Bio.Seq import Seq
 from Bio.Alphabet.IUPAC import unambiguous_dna
 
+#script takes in a GFF of ORFs (result of findNonGeneORFs.py) and returns only those that have in-frame start codons
+
+#set up argument parser to take in sequence file, orf file, and optional output
 parser = argparse.ArgumentParser(description="script takes in a GFF of ORFs and returns only those with in-frame start codons")
 parser.add_argument('SEQUENCE_FILE', help="path to the sequence file you want to parse")
 parser.add_argument('ORFS_FILE', help="path to the ORF file (GFF or PTT) you want to use for ORFs")
@@ -21,43 +24,44 @@ BIG_GENOME_FILE = open(fasta_name, 'r')
 description = BIG_GENOME_FILE.readline()
 sequence_list = BIG_GENOME_FILE.read().splitlines()
 sequence = ""
+#put entire sequence into a single string
 for line in sequence_list:
     sequence += line
 
-gene_file_name = args['ORFS_FILE']
-gene_filetype = gene_file_name.split('.')[1]
-if gene_filetype != 'gff' and gene_filetype != 'ptt':
-    print "Acceptable file types for GENES_FILE are: .gff, .ptt"
+orf_file_name = args['ORFS_FILE']
+orf_filetype = orf_file_name.split('.')[1]
+if orf_filetype != 'gff' and orf_filetype != 'ptt':
+    print "Acceptable file types for ORFS_FILE are: .gff, .ptt"
     sys.exit()
-print "file type: " + gene_filetype
-GENES_FILE = open(gene_file_name, 'rb')
-if gene_filetype == 'ptt':
+print "file type: " + orf_filetype
+ORFS_FILE = open(orf_file_name, 'rb')
+if orf_filetype == 'ptt':
     #read off the three header lines in .ptt file
-    GENES_FILE.readline()
-    GENES_FILE.readline()
-    GENES_FILE.readline()
+    ORFS_FILE.readline()
+    ORFS_FILE.readline()
+    ORFS_FILE.readline()
 
-GENE_LINES = GENES_FILE.read().splitlines()
+ORF_LINES = ORFS_FILE.read().splitlines()
 
+#create output file - one of either --out or --gff is required
 out_name = args['out'] if args['out'] is not None else args['gff']
-#out_name = os.path.splitext(fasta_name)[0] + "_genes.txt"
 OUT_FILE = open(out_name, 'w')
 START_CODONS = ("ATG", "TTG", "GTG")
-num = len(GENE_LINES)
+num = len(ORF_LINES)
 numWithStart = 0
-for line in GENE_LINES:
+for line in ORF_LINES:
     values = line.split('\t')
-    #parse interval values and gene ids from gff lines
+    #parse interval values and stuff from gff lines
     #subtract one because python indexes from 0 and GFF indexes from 1
-    if gene_filetype == "gff":
+    if orf_filetype == "gff":
         start = int(values[3]) - 1
         end = int(values[4])
         details = values[len(values) - 1]
         gene_id = details.split(' ')[0]
         strand = values[6]
         frame = values[7]
-    elif gene_filetype == "ptt":
-	start = int(values[0].split('..')[0]) - 1
+    elif orf_filetype == "ptt":
+	    start = int(values[0].split('..')[0]) - 1
         end = int(values[0].split('..')[1])
         details = ""
         gene_id = ""
@@ -80,6 +84,7 @@ for line in GENE_LINES:
                 numWithStart += 1
                 break
         i += 3
+    #add to output file only if a start codon was just found
     if found:
         if args['out'] is not None:
             strand_str = "POSITIVE" if strand == "+" else "NEGATIVE"

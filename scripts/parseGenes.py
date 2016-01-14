@@ -2,6 +2,8 @@ import sys
 from Bio.Seq import Seq
 from Bio.Alphabet.IUPAC import unambiguous_dna
 
+#script to take in a genes file and a sequence file, and create an output file with the separate gene sequences
+
 if (len(sys.argv) < 3):
     print "Usage: python " + sys.argv[0] + " SEQUENCE_FILE.fa GENE_FILE OUTPUT_FILE_NAME"
     sys.exit()
@@ -15,6 +17,7 @@ sequence = ""
 for line in sequence_list:
     sequence += line
 
+#enforce correct file extension
 gene_file_name = sys.argv[2]
 gene_filetype = gene_file_name.split('.')[1]
 if gene_filetype != 'gff' and gene_filetype != 'ptt':
@@ -31,7 +34,6 @@ if gene_filetype == 'ptt':
 GENE_LINES = GENES_FILE.read().splitlines()
 
 out_name = sys.argv[3]
-#out_name = os.path.splitext(fasta_name)[0] + "_genes.txt"
 OUT_FILE = open(out_name, 'w')
 for line in GENE_LINES:
     values = line.split('\t')

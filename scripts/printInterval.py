@@ -1,8 +1,9 @@
-#handy script to print the sequence of a given FASTA file over the given interval
 import sys
 import argparse
 from Bio.Seq import Seq
 from Bio.Alphabet.IUPAC import unambiguous_dna
+
+#handy script to print the subsequence of a given FASTA file over the given interval
 
 parser = argparse.ArgumentParser(description="print the given interval of the given sequence")
 parser.add_argument('SEQUENCE_FILE', help="path to the sequence file you want to parse")
@@ -19,5 +20,6 @@ sequence = ''.join(sequence_list).replace("\n", "")
 if args['STRAND'] == 1:
     print sequence[args['START']-1:args['END']]
 elif args['STRAND'] == -1:
+    #make it a Seq object and reverse complement
     seq = Seq(sequence[args['START']-1:args['END']], unambiguous_dna)
     print str(Seq.reverse_complement(seq))

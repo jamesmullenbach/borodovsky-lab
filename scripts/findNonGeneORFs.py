@@ -2,20 +2,25 @@ import argparse
 import sys
 from Bio import SeqIO
 
+#script to find and output all the end-to-end open reading frames in a sequence that do not contain annotated genes
+
 #TODO find out why it's only getting ORFs on negative strand
 
-parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
+#set up argument parser
+parser = argparse.ArgumentParser(description="")
 parser.add_argument('SEQUENCE_FILE', help="path to the sequence file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
 parser.add_argument('--out', help="directory in which you would like to save the found ORFs in GFF format")
 
 args = vars(parser.parse_args())
 
+#open and read the sequence/genome file
 sequence_file_name = args['SEQUENCE_FILE']
 print sequence_file_name
 SEQUENCE_FILE = open(sequence_file_name, 'r')
 BIG_GENOME_STRING = SEQUENCE_FILE.read()
 
+#open gene file and enforce correct file extension
 gene_file_name = args['GENES_FILE']
 gene_file_origname, gene_filetype = gene_file_name.split('.')
 if gene_filetype != 'gff' and gene_filetype != 'ptt':
@@ -23,6 +28,8 @@ if gene_filetype != 'gff' and gene_filetype != 'ptt':
     sys.exit()
 print "file type: " + gene_filetype
 GENES_FILE = open(gene_file_name, 'rb')
+
+#read the genes file into a variable holding each gene's coordinates
 gene_coords = []
 if gene_filetype == 'ptt':
     #read off the three header lines in a standard .ptt file
@@ -42,41 +49,52 @@ elif gene_filetype == "gff":
         end = int(values[4])
         strand = 1 if values[6] == '+' else -1
         gene_coords.append((start, end, strand))
+#sort coordinates (by start position)
 gene_coords.sort()
+
+#print gene coords for sanity test
 print "gene_coords[0][0], gene_coords[0][1]: %i, %i" % (gene_coords[0][0], gene_coords[0][1])
 for gene_coord in gene_coords:
     if (gene_coord[0] < 10000):
         print "gene coord: %i, %i" % (gene_coord[0], gene_coord[1])
 
-NCBI_TABLE = 11
+#hard-coded minimum threshold longth to consider an open reading frame.
 MIN_ORF_LENGTH = 90
 
+#set up start and stop codon variables
 START_CODONS = ["ATG", "GTG", "TTG"]
 START_REGEX = "(A|G|T)TG"
 STOP_CODONS = ["TAA", "TGA", "TAG"]
 STOP_REGEX = "T(AA|GA|AG)"
+
+#variable to hold the parsed data
 answer = []
 i = 0
 for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
     seq_len = len(seq_record.seq)
+    #iterate over both strands
     for strand, nuc in [(+1, seq_record.seq), (-1, seq_record.seq.reverse_complement())]:
-        #iterate over both strands
+        #iterate over 3 frames for each separate strand
         for frame in range(3):
-            #iterate over 3 frames for each separate strand
             print "this frame: " + str(nuc[frame:frame + 30]) + "..." + str(nuc[-3:])
+
+            #helper variables for the frame
             frame_seq = nuc[frame:]
             frame_len = len(frame_seq)
+
             #initialize first stop codon and second stop codon
             orf_start = 0
             orf_end = 0
             last_stop = 0
             this_stop = 0
+
             #this loop finds all orfs of min length or greater and adds them to the answer list
             i = 0
             while last_stop < frame_len:
                 #search for first available stop codon
                 isStop = False
                 while (not isStop and i <= frame_len - 3):
+                    #look for triples at a time. stop when a stop codon is found
                     triple = frame_seq[i:i+3]
                     for stop in STOP_CODONS:
                         if triple == stop:
@@ -89,28 +107,26 @@ for seq_record in SeqIO.parse(sequence_file_name, "fasta"):
                     #so break
                     print "no stop codon found"
                     break
+
+                #do nothing if end-to-end ORF length is too short
                 if this_stop - last_stop + 1 >= MIN_ORF_LENGTH:
+                    #get absolute start and end coordinates
                     if strand == 1:
                         abs_start = frame + last_stop
                         abs_end = min(seq_len, frame + this_stop)
                     else:
                         abs_start = max(0, seq_len - frame - this_stop)
                         abs_end = seq_len - frame - last_stop
-                    #append found ORF to answer list
+
+                    #append found ORF's data to answer list
                     data = (abs_start, abs_end, strand, frame_seq[last_stop : this_stop], frame)
                     if (abs_start < 10000):
                         print data
-                        #print "frame: %s, start: %i, end: %i, start_codon %s, stop_codon %s" % (frame, start, end, nuc[start-1:start+2], nuc[end-3:end])
-                    #print "adding data to answer: " + str(data)
                     answer.append(data)
                 last_stop = this_stop
-                            #for pro in nuc[frame:frame + length].translate(NCBI_TABLE).split("*"):
-                #if len(pro) >= MIN_ORF_LENGTH / 3:
-                    #print("%s...%s - length %i, strand %i, frame %i" % (pro[:30], pro[-3:],  len(pro), strand, frame))
-    #print seq_record.id
-    #print repr(seq_record.seq)
-    #print len(seq_record)
+#sort by absolute start position
 answer.sort()
+
 #remove ORFs that are verified genes as found in GENES_FILE
 #ORFs are currently stored in answer, sorted by start nucleotide
 #classify ORFs as: 
@@ -125,10 +141,13 @@ non_gene_orfs = []
 for i in range(len(answer)):
     #add one to start because gene files have one-base offset
     start, end, strand, prot, frame = answer[i][0] + 1, answer[i][1], answer[i][2], answer[i][3], answer[i][4]
+
+    #quit the loop when you reach the end of the gene file
     if (gene_ind >= len(gene_coords)):
         break
  
-    #a relevant gene is any gene that doesn't start and end before the ORF starts
+    #a relevant gene is any gene that doesn't start AND end before the ORF starts
+    #in that case you should consider the next gene in start index order
     #go to first gene that doesn't end before the ORF starts
     relevant_gene = gene_coords[gene_ind]
     while relevant_gene[1] < start:
@@ -158,6 +177,7 @@ for i in range(len(answer)):
         elif gene_end == end:
             if strand == gene_strand:
                 #this ORF is a gene 
+                #add it to both answer and gene_orfs, to be removed from answer later
                 answer[i] = (start, end, strand, prot, frame, "gene")
                 gene_orfs.append((start, end, strand, prot, frame, "gene"))
             else:
@@ -172,12 +192,13 @@ for i in range(len(answer)):
         answer[i] = (start, end, strand, prot, frame, "intergenic")
 
 print "number of genes found: " + str(len(gene_orfs))
+#remove genes
 for gene_orf in gene_orfs:
     answer.remove(gene_orf)
 
 if args['out'] is not None:
-    #write file in GFF format
-    print "about to write to file"
+    #write files in GFF format
+    print "about to write to files"
     intergenic_file_name = args['out'] + gene_file_origname + "_intergenic.gff"
     overlapping_file_name = args['out'] + gene_file_origname + "_overlapping.gff"
     shadow_file_name = args['out'] + gene_file_origname + "_shadow.gff"

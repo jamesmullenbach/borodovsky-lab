@@ -5,11 +5,12 @@ import pylab
 import argparse
 from operator import itemgetter
 
-#take in GFF file and coverage file
-#for each gene in GFF file, search for ranges in coverage file
+#script takes in GFF file and coverage file
+#for each gene/orf in GFF file, search for ranges in coverage file
 #over each range, get average and variance, accounting for 0's which are omitted
-#need to figure out the strand the ribosomes were on
+#TODO: incorporate strand information
 
+#create argument parser with lots of options for plotting
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
 parser.add_argument('COVERAGE_FILE', help="path to the coverage file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
@@ -27,6 +28,8 @@ args = vars(parser.parse_args())
 
 ROOT_PLOT_DIR = "/home/james/borodovsky-lab/plots/"
 THRESHOLD_COVERAGE = sys.maxint
+#determine the gene average score above which to discard a gene because it is an outlier
+OUTLIER_THRESHOLD = 1800
 PEAK_VALUE = 0
 if args['out'] is not None:
     out_name = args['out']
@@ -46,6 +49,7 @@ BIG_COVERAGE_FILE = open(coverage_name, 'r')
 description = BIG_COVERAGE_FILE.readline()
 coverage_list = BIG_COVERAGE_FILE.read().splitlines()
 
+#open gene/orf file and enforce correct file extension
 gene_file_name = args['GENES_FILE']
 gene_filetype = gene_file_name.split('.')[1]
 if gene_filetype != 'gff' and gene_filetype != 'ptt':
@@ -86,7 +90,7 @@ for line in GENE_LINES:
         details = values[len(values) - 1]
         gene_id = details.split(' ')[0]
     elif gene_filetype == "ptt":
-	start = int(values[0].split('..')[0])
+        start = int(values[0].split('..')[0])
         end = int(values[0].split('..')[1])
         strand = values[1]
         #print "start: " + str(start) + " end: " + str(end)
@@ -105,25 +109,20 @@ for line in GENE_LINES:
         #add value to running total
         coverage_value = min(float(line_data[3]), THRESHOLD_COVERAGE)
         gene_score += coverage_value
-        #print "adding value to score: " + str(line_data[3])
     while (base <= end):
-	coverage_line += 1
+        coverage_line += 1
         if (coverage_line >= len(coverage_list)):
             #we have reached the end of the coverage file
             #last gene has some locations without scores
             #break while
             break
         line_data = coverage_list[coverage_line].split('\t')
-        #print "line_data: " + str(line_data)
         base = int(line_data[1])
-        #print "base: " + str(base) + ", start: " + str(start)
         if (base >= start):
             #add value to running total
             coverage_value = min(float(line_data[3]), THRESHOLD_COVERAGE)
             gene_score += coverage_value
-           #print "adding value to score: " + str(line_data[3])
     gene_average = gene_score / gene_length
-    #print "gene average: " + str(gene_average)
 
     if args['peaksOnly'] is not None:
         ##################PEAKS CALCULATION###############
@@ -148,7 +147,6 @@ for line in GENE_LINES:
                 coverage_value = float(line_data[3])
                 if (coverage_value - gene_average) > PEAK_VALUE:
                     gene_peaks += 1
-        #print "addin " + str(gene_peaks) + " to gene_numPeaks"
 
     #########VARIANCE CALCULATION###############
     #go back through the array to get the variance
@@ -159,7 +157,7 @@ for line in GENE_LINES:
     score = min(THRESHOLD_COVERAGE, float(line_data[3]))
     last_base = base
     if (base > start):
-        #handle edge case in which first nonzero-coverage entry is after start
+        #handle case in which first nonzero-coverage entry is after start
         gene_variance += ((gene_average) ** 2) * (base - start)
         gene_variance += (gene_average - score) ** 2
     while (base <= end):
@@ -190,7 +188,7 @@ for line in GENE_LINES:
     gene_variance = gene_variance / gene_length
   
     #remove outliers
-    if gene_average < 1800:
+    if gene_average < OUTLIER_THRESHOLD:
         #store values
         gene_lengths.append(gene_length)
         gene_scores.append(gene_average)

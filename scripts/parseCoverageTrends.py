@@ -1,14 +1,15 @@
-#parse a coverage file and classify each gene as upward or downward trending
 import sys
 import numpy
 import matplotlib.pyplot as plt
 import pylab
 import argparse
 
+#parse a coverage file and classify each gene as upward or downward trending
 #take in GFF file and coverage file
 #for each gene in GFF file, search for ranges in coverage file
-#need to figure out the strand the ribosomes were on
+#TODO: incorporate strand information
 
+#set up argument parser
 parser = argparse.ArgumentParser(description="parser for coverage file that classifies genes as upward or downward trending")
 parser.add_argument('COVERAGE_FILE', help="path to the coverage file you want to parse")
 parser.add_argument('GENES_FILE', help="path to the gene file (GFF or PTT) you want to use for genes")
@@ -19,12 +20,15 @@ if args['out'] is not None:
     out_name = args['out']
     OUT_FILE = open(out_name, 'w')
 
+OUTLIER_THRESHOLD = 4000
+
 coverage_name = args['COVERAGE_FILE']
 BIG_COVERAGE_FILE = open(coverage_name, 'r')
 # don't read first line into the sequence
 description = BIG_COVERAGE_FILE.readline()
 coverage_list = BIG_COVERAGE_FILE.read().splitlines()
 
+#enforce correct file extension
 gene_file_name = args['GENES_FILE']
 gene_filetype = gene_file_name.split('.')[1]
 if gene_filetype != 'gff' and gene_filetype != 'ptt':
@@ -62,13 +66,13 @@ for line in GENE_LINES:
         start = int(values[3])
         end = int(values[4])
         details = values[len(values) - 1]
-	strand = values[6] 
+        strand = values[6] 
         gene_id = details.split(' ')[0]
     elif gene_filetype == "ptt":
-	start = int(values[0].split('..')[0])
+        start = int(values[0].split('..')[0])
         end = int(values[0].split('..')[1])
-	strand = values[1]
-        #print "start: " + str(start) + " end: " + str(end)
+        strand = values[1]
+
     gene_length = end - start + 1
     #go through coverage file until you find an index >= start
     if (coverage_line >= len(coverage_list)):
@@ -91,34 +95,32 @@ for line in GENE_LINES:
         else:
             if (base <= end):
                 gene_right_score += coverage_value
-        #print "adding value to score: " + str(line_data[3])
     while (base <= end):
-	coverage_line += 1
+        coverage_line += 1
         if (coverage_line >= len(coverage_list)):
             #we have reached the end of the coverage file
             #last gene has some locations without scores
             #break while
             break
         line_data = coverage_list[coverage_line].split('\t')
-        #print "line_data: " + str(line_data)
         base = int(line_data[1])
-        #print "base: " + str(base) + ", start: " + str(start)
         if (base >= start):
             #add value to running total
             coverage_value = float(line_data[3])
             gene_score += coverage_value
+            #add up left and right half scores of each gene
             if (base < (start + gene_length / 2)):
                 gene_left_score += coverage_value
             else:
                 if (base <= end):
                     gene_right_score += coverage_value
-           #print "adding value to score: " + str(line_data[3])
     gene_average = gene_score / gene_length
-    #print "gene average: " + str(gene_average)
     trend = ""
-    if gene_average < 4000:
+
+    #ignore outliers
+    if gene_average < OUTLIER_THRESHOLD:
         if gene_right_score > gene_left_score:
-	    if strand == "+":
+            if strand == "+":
                 #upward trending
                 gene_upwards.append(gene_average)
                 gene_upwards_lengths.append(gene_length)
