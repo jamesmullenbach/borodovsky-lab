@@ -9,6 +9,9 @@ from operator import itemgetter
 #for each gene/orf in GFF file, search for ranges in coverage file
 #over each range, get average and variance, accounting for 0's which are omitted
 #TODO: incorporate strand information
+#gene file has genes that are on direct or complementary strand
+#if we combine the separate files for each strand into one, and keep the strand information
+#then we can use the whole GFF file and know the strand information as well, so we won't add coverage from the opposite strand
 
 #create argument parser with lots of options for plotting
 parser = argparse.ArgumentParser(description="parser for coverage file using GFF or PTT files")
@@ -203,7 +206,7 @@ for line in GENE_LINES:
 
     if args['out'] is not None:
         #write values to file
-        strand_str = "POSITIVE" if strand == '+' else "NEGATIVE"
+        strand_str = "DIRECT" if strand == '+' else "COMPLEMENTARY"
         out_line = ">" + gene_id + "|start=" + str(start) + "|end=" + str(end)
         out_line += "|strand=" + strand_str + "\n"
         out_line += "total score: " + str(gene_score) + '\n'

@@ -46,7 +46,7 @@ for line in GENE_LINES:
         gene_id = details.split(' ')[0]
         strand = values[6]
     elif gene_filetype == "ptt":
-	start = int(values[0].split('..')[0]) - 1
+        start = int(values[0].split('..')[0]) - 1
         end = int(values[0].split('..')[1])
         details = ""
         gene_id = ""
