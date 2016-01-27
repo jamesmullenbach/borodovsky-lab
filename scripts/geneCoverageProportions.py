@@ -25,7 +25,7 @@ if gene_filetype == 'ptt':
     GENES_FILE.readline() 
 
 #number of genes to consider
-NUM_GENES = 200
+NUM_GENES = 100
 
 #open files
 POS_STRAND_FILE = open(args['DIRECTORY'] + "Unique_positive_combined.bed", 'r')
@@ -80,6 +80,7 @@ for i in range(NUM_GENES):
     elif strand == "-":
         #get data from negative strand file
         #first go to first negative line that is greater than or equal to start
+        #this actually goes backward through the gene, but it's okay in this case because it just adds the coverage scores
         while (x_neg < start):
             ind_neg += 1
             x_neg = int(neg_lines[ind_neg].split('\t')[1])
