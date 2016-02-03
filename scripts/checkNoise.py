@@ -34,12 +34,12 @@ x_neg = int(neg_lines[ind_neg].split('\t')[1])
 OFFSET = 30
 
 #array to hold values at k nt upstream of stop codon, OFFSET < k  < 0
-nt_data = [0 for _ in range(OFFSET)]
+nt_data = [0 for _ in range(OFFSET + 1)]
 for line in gene_lines_rand:
     start, end, strand = line[0], line[1], line[2]
     coverage = 0
     if strand == "+":
-        while x_pos <= end - OFFSET and ind_pos < len(pos_lines) - 1:
+        while x_pos <= end - OFFSET - 1 and ind_pos < len(pos_lines) - 1:
             ind_pos += 1
             x_pos = int(pos_lines[ind_pos].split('\t')[1])
         while x_pos < end and ind_pos < len(pos_lines) - 1:
@@ -47,28 +47,29 @@ for line in gene_lines_rand:
             x_pos = int(pos_lines[ind_pos].split('\t')[1])
             ind_pos += 1
             dist_from_stop = end - x_pos
-            if dist_from_stop < OFFSET and dist_from_stop > 0:
+            if dist_from_stop <= OFFSET and dist_from_stop >= 0:
                 nt_data[dist_from_stop] += score
     elif strand == "-":
         #looking for OFFSET nt upstream from the 3' end, which is actually OFFSET after the start as defined by GFF, PTT
         while x_neg < start and ind_neg < len(neg_lines) - 1: 
             ind_neg += 1
             x_neg = int(neg_lines[ind_neg].split('\t')[1])
-        while x_neg < start + OFFSET and ind_neg < len(neg_lines) - 1:
+        while x_neg < start + OFFSET + 1 and ind_neg < len(neg_lines) - 1:
             score = int(neg_lines[ind_neg].split('\t')[3])
             x_neg = int(neg_lines[ind_neg].split('\t')[1]) 
             ind_neg += 1
             dist_from_stop = x_neg - start
-            if (dist_from_stop < OFFSET and dist_from_stop > 0):
+            if (dist_from_stop <= OFFSET and dist_from_stop >= 0):
                 nt_data[dist_from_stop] += score
 
 #reverse data to get more readable order
 nt_data.reverse()
+print "nt data: " + str(nt_data)
 
 #PLOTTING
 plt.figure()
 #plt.plot(noiseData, 'ro')
-plt.plot(range(-1 * OFFSET, 0), nt_data, 'ro')
+plt.plot(range(-1 * OFFSET, 1), nt_data, 'ro')
 plt.grid(True)
 #plt.hist(noiseData, 100)
 plt.xlabel('nt upstream from stop codon')
