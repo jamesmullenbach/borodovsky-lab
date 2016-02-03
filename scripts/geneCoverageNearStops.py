@@ -18,14 +18,23 @@ NUM_GENES = 5
 gene_lines_rand = []
 while len(gene_lines_rand) < NUM_GENES:
     index = random.randint(0, len(gene_lines) - 1)
-    if index == len(gene_lines) - 1:
-        start2 = sys.maxint
-    else:
-        line1 = geneTools.getLineData(gene_lines[index], gene_filetype)
-        line2 = geneTools.getLineData(gene_lines[index + 1], gene_filetype)
-        start1, start2 = line1[0], line2[0]
-    if start1 < start2 - 50 and line1 not in gene_lines_rand:
-        gene_lines_rand.append(line1)
+    line1 = geneTools.getLineData(gene_lines[index], gene_filetype)
+    if line1[2] == "-":
+        if index == 0:
+            start2 = -1 * sysmaxint
+        else:
+            line2 = geneTools.getLineData(gene_lines[index - 1], gene_filetype)
+            start2 = line2[0]
+        if start2 < start1 - 50 and line1 not in gene_lines_rand:
+            gene_lines_rand.append(line1)
+    elif line1[2] == "+":
+        if index == len(gene_lines) - 1:
+            start2 = sys.maxint
+        else:
+            line2 = geneTools.getLineData(gene_lines[index + 1], gene_filetype)
+            start2 = line2[0]
+        if start1 < start2 - 50 and line1 not in gene_lines_rand:
+            gene_lines_rand.append(line1)
 gene_lines_rand.sort()
 
 pos_lines, neg_lines = geneTools.readCoverageLines(args['POSITIVE_COVERAGE_FILE'])
