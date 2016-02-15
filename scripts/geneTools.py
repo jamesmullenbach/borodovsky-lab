@@ -1,4 +1,6 @@
 import sys
+from Bio.Seq import Seq
+from Bio.Alphabet.IUPAC import unambiguous_dna
 
 #return lines and FILE
 def readORFLines(filename):
@@ -40,3 +42,17 @@ def getLineData(line, filetype):
         print "Gene/ORF file must be in .GFF or .PTT format"
         sys.exit(0)
     return start, end, strand
+
+#handy script to print the subsequence of a given FASTA file over the given interval
+def getSubsequence(sequence_file, start, end, strand): 
+    SEQUENCE_FILE = open(sequence_file, 'r')
+    header = SEQUENCE_FILE.readline()
+    sequence_list = SEQUENCE_FILE.readlines()
+    sequence = ''.join(sequence_list).replace("\n", "")
+    if strand == "+":
+        res = sequence[start-1:end]
+    elif strand == "-":
+        #make it a Seq object and reverse complement
+        seq = Seq(sequence[start-1:end], unambiguous_dna)
+        res = str(Seq.reverse_complement(seq))
+    return res
