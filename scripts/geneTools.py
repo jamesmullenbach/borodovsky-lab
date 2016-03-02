@@ -56,3 +56,7 @@ def getSubsequence(sequence_file, start, end, strand):
         seq = Seq(sequence[start-1:end], unambiguous_dna)
         res = str(Seq.reverse_complement(seq))
     return res
+
+#get coverage from the specified file over the specified interval
+def getIntervalCoverage(coverage_file, start, end): 
+    

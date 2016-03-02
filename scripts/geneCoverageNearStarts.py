@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import random
 import sys
 
+#TODO save the 100 genes used every time in a temp file, can keep it/rename it if needed
+#save the intervals and inside/outside coverage, and then use those to investigate why a certain position has much higher coverage
+#maybe make a script to print coverage data for a given interval and given coverage file
+
 #look for the amount of noise by checking coverage values at OFFSETnt upstream from gene stops
 parser = argparse.ArgumentParser(description="parser for a gene and a coverage file")
 parser.add_argument("GENES_FILE", help="path to gene file you want to use")
@@ -130,10 +134,12 @@ for line in gene_lines_rand:
                     in_gene += score
                 else:
                     out_gene += score
-    if in_gene < out_gene:
+    #if in_gene < out_gene:
         #convention that genes are read left to right, so left side is out of the gene when examining starts
-        subseq = geneTools.getSubsequence(SEQUENCE_FILENAME, start-30, start+2, strand)
-        RESULTS_FILE.write('\t'.join([str(start), str(end), strand, str(out_gene), str(in_gene), subseq + "..."]) + '\n')
+        #subseq = geneTools.getSubsequence(SEQUENCE_FILENAME, start-30, start+2, strand)
+        #RESULTS_FILE.write('\t'.join([str(start), str(end), strand, str(out_gene), str(in_gene), subseq + "..."]) + '\n')
+    subseq = geneTools.getSubsequence(SEQUENCE_FILENAME, start-30, start+2, strand)
+    RESULTS_FILE.write('\t'.join([str(start), str(end), strand, str(out_gene), str(in_gene), subseq + "..."]) + '\n')
 
 in_gene_avg = 0
 out_gene_avg = 0
